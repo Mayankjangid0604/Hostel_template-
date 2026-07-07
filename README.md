@@ -10,13 +10,44 @@ The world's largest premium template marketplace dedicated exclusively to studen
 - 10 quality tier cards linking to collections
 
 **Tier Collections** (`/tiers/1/` through `/tiers/10/`)
-- Each tier page shows all templates at that quality level
-- Tier 1: 10 templates @ ₹2,000
-- Tier 2: 20 templates @ ₹5,000
-- Tier 3: 30 templates @ ₹8,000
-- ... continuing to...
-- Tier 10: 100 templates @ ₹90,000+
-- **Total: 550 unique templates**
+- Each tier page lists **every** template at that quality level — fully populated, no placeholders
+- Each template has a **unique name**, an **individual market-set price**, category, description, feature chips and a working details modal
+- Every card supports **filter** (by hostel type), **search** (by name) and **sort** (by price / name / featured)
+- **Total: 550 unique template listings** across the ten tiers
+
+**Custom Design** (`/custom/`)
+- Bespoke website design service for hostels that need more than a template
+- Template-vs-custom comparison, process, inclusions, pricing (from ₹90,000) and a project-brief form that composes a WhatsApp message
+
+### Price ranges (market-set, unique per template)
+
+| Tier | Templates | Price range |
+|------|-----------|-------------|
+| 1 · Launch | 10 | ₹1,499 – ₹2,999 |
+| 2 · Presence | 20 | ₹3,999 – ₹5,999 |
+| 3 · Signature | 30 | ₹6,999 – ₹9,999 |
+| 4 · Prestige | 40 | ₹10,999 – ₹14,999 |
+| 5 · Flagship | 50 | ₹16,999 – ₹21,999 |
+| 6 · Ultra | 60 | ₹23,999 – ₹29,999 |
+| 7 · Elite | 70 | ₹32,999 – ₹39,999 |
+| 8 · Premium | 80 | ₹45,999 – ₹55,999 |
+| 9 · Exclusive | 90 | ₹64,999 – ₹79,999 |
+| 10 · Masterpiece | 100 | ₹84,999 – ₹1,29,999 |
+| **Custom** | bespoke | **from ₹90,000** |
+
+### Built live-demo templates
+
+Five fully-built, clickable demo websites back the catalog and show the quality climbing tier by tier:
+
+| Demo | Tier | Style |
+|------|------|-------|
+| `templates/launch-basic/` (StudyHub) | ★ | Minimal single-page |
+| `templates/campus-corporate/` (Meridian Residency) | ★★ | Corporate, professional |
+| `templates/scholars-editorial/` (The Scholars' House) | ★★★★ | Dark editorial storytelling |
+| `templates/aurora-glass/` (Aurora Co-Living) | ★★★★★★ | Glassmorphism + dark/light theme |
+| `templates/luxe-residence/` (The Vantage) | ★★★★★★★★ | Luxury serviced residence |
+
+Their cards in the tier pages carry a **Live Demo** button; every other listing opens a rich **details modal** and a prefilled WhatsApp enquiry. New demos slot in by adding a folder under `templates/` and mapping it in the generator (`DEMOS`).
 
 ## Quality Tiers
 

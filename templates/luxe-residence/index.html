@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Vantage — Premium Student Residence, Bengaluru</title>
+<meta name="description" content="The Vantage is a premium student residence in Bengaluru for postgraduate and professional students — serviced suites, a private library, curated dining and concierge-level living.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0c0b0a;--noir2:#141210;--panel:#1b1815;--line:rgba(214,192,152,.16);--ink:#f5efe4;--dim:#a89e8c;--faint:#6f665a;--gold:#d6c098;--gold-2:#e8d4a8;--champ:#c9a86a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--noir);color:var(--ink);font-family:'Outfit',system-ui,sans-serif;font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.12;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+.over{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--champ);font-weight:400;display:block;margin-bottom:22px}
+.gold-text{background:linear-gradient(120deg,var(--gold),var(--gold-2),var(--champ));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 40px;font-family:'Outfit',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:400;transition:.4s;cursor:pointer;border:1px solid var(--gold);color:var(--gold-2);background:transparent}
+.btn:hover{background:var(--gold);color:var(--noir);box-shadow:0 0 40px rgba(214,192,152,.3)}
+.btn-fill{background:linear-gradient(120deg,var(--gold),var(--champ));color:var(--noir);border-color:transparent}
+.btn-fill:hover{filter:brightness(1.1)}
+.prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--champ),var(--gold-2));width:0;z-index:90}
+nav{position:fixed;inset:0 0 auto;z-index:80;transition:.4s;padding:26px 0}
+nav.scr{background:rgba(12,11,10,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:16px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.mark{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:.32em;text-transform:uppercase}
+.menu{display:flex;gap:36px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+.menu a:hover{color:var(--gold-2)}
+.menu .res{border:1px solid var(--gold);padding:10px 22px;color:var(--gold-2)}
+.menu .res:hover{background:var(--gold);color:var(--noir)}
+@media(max-width:880px){.menu a:not(.res){display:none}}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(120% 90% at 70% 10%,#1e1a14,var(--noir) 68%)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 32%,rgba(214,192,152,.14),transparent 42%)}
+.hero-in{position:relative;z-index:1;max-width:60ch}
+.hero h1{font-size:clamp(48px,7.4vw,102px);margin:26px 0 28px}
+.hero h1 em{font-style:italic}
+.hero p{color:var(--dim);font-size:18px;max-width:46ch;margin-bottom:42px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--faint)}
+.strip{border-block:1px solid var(--line);padding:40px 0;background:var(--noir2)}
+.strip-in{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.strip b{font-family:'Cormorant Garamond',serif;font-size:40px;display:block;color:var(--gold-2)}
+.strip span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+@media(max-width:720px){.strip-in{grid-template-columns:repeat(2,1fr);gap:36px}}
+section{padding:130px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.two.rev>.fig{order:2}
+.fig{aspect-ratio:4/5;position:relative;overflow:hidden;background:linear-gradient(160deg,#26211a,var(--noir2))}
+.fig::after{content:"";position:absolute;inset:18px;border:1px solid var(--line)}
+.fig .tag{position:absolute;bottom:26px;left:30px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--dim);z-index:1}
+.two h2{font-size:clamp(34px,4.6vw,58px);margin-bottom:24px}
+.two p{color:var(--dim);margin-bottom:20px;font-size:16px}
+.amenity-list{list-style:none;margin-top:24px}
+.amenity-list li{padding:15px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;font-size:14px;letter-spacing:.02em}
+.amenity-list li span{color:var(--faint)}
+@media(max-width:860px){.two,.two.rev{grid-template-columns:1fr;gap:40px}.two.rev>.fig{order:0}}
+.suites{border-top:1px solid var(--line)}
+.suite{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center;padding:70px 0;border-bottom:1px solid var(--line)}
+.suite:nth-child(even){grid-template-columns:1.2fr 1fr}.suite:nth-child(even) .s-fig{order:2}
+.s-fig{aspect-ratio:5/4;position:relative;background:linear-gradient(150deg,#2a2419,var(--noir2));overflow:hidden}
+.s-fig::after{content:"";position:absolute;inset:16px;border:1px solid var(--line)}
+.s-fig .no{position:absolute;top:22px;right:28px;font-family:'Cormorant Garamond',serif;font-size:60px;color:rgba(214,192,152,.28)}
+.s-info .over{margin-bottom:14px}
+.s-info h3{font-size:clamp(28px,3.4vw,42px);margin-bottom:16px}
+.s-info>p{color:var(--dim);margin-bottom:22px;max-width:52ch}
+.s-meta{display:flex;gap:36px;padding:20px 0;border-block:1px solid var(--line);margin-bottom:26px;flex-wrap:wrap}
+.s-meta b{font-family:'Cormorant Garamond',serif;font-size:22px;display:block}
+.s-meta span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+.s-rate{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--gold-2);margin-bottom:26px}
+.s-rate small{font-family:'Outfit';font-size:11px;letter-spacing:.14em;color:var(--faint)}
+.quote{text-align:center;background:var(--noir2);border-block:1px solid var(--line)}
+.quote blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(26px,3.6vw,42px);line-height:1.4;max-width:22ch;margin:0 auto}
+.quote blockquote::before{content:"“";color:var(--gold)}
+.quote cite{display:block;margin-top:30px;font-style:normal;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--champ)}
+.reserve{text-align:center;background:radial-gradient(90% 80% at 50% 120%,#231d14,var(--noir) 66%)}
+.reserve h2{font-size:clamp(36px,5.4vw,66px);margin:24px 0}
+.reserve p{color:var(--dim);max-width:50ch;margin:0 auto 44px}
+.reserve-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.reserve-meta{margin-top:52px;display:flex;gap:44px;justify-content:center;flex-wrap:wrap;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+.reserve-meta a:hover{color:var(--gold-2)}
+footer{border-top:1px solid var(--line);padding:44px 0;text-align:center;font-size:12px;color:var(--faint);letter-spacing:.04em}
+footer .mark{font-size:20px;display:block;margin-bottom:14px}
+footer a{color:var(--dim)}footer a:hover{color:var(--gold-2)}
+.reveal{opacity:0;transform:translateY(32px);transition:1s ease}.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div>
+<nav id="nav"><div class="wrap nav-in">
+  <a class="mark" href="#">Vantage</a>
+  <div class="menu"><a href="#residence">Residence</a><a href="#suites">Suites</a><a href="#reserve" class="res">Reserve</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-in">
+  <span class="over">Premium Student Residence · Koramangala, Bengaluru</span>
+  <h1>Live at the <em class="gold-text">vantage</em> point.</h1>
+  <p>A serviced residence for postgraduate and professional students who expect more — private suites, a curated library, chef-led dining and a team that anticipates.</p>
+  <div class="hero-actions">
+    <a class="btn btn-fill" href="#suites">View the Suites</a>
+    <a class="btn" href="#reserve">Request an Invitation</a>
+  </div>
+</div>
+<span class="hero-scroll">Scroll</span>
+</header>
+
+<div class="strip"><div class="wrap strip-in">
+  <div class="reveal"><b>48</b><span>Private Suites</span></div>
+  <div class="reveal"><b>3:1</b><span>Staff to Resident</span></div>
+  <div class="reveal"><b>24/7</b><span>Concierge</span></div>
+  <div class="reveal"><b>1</b><span>Private Library</span></div>
+</div></div>
+
+<section id="residence"><div class="wrap two">
+  <div class="fig reveal"><span class="tag">The reading library, open through the night.</span></div>
+  <div class="reveal">
+    <span class="over">The Residence</span>
+    <h2>A standard of living usually reserved for <em style="font-style:italic">later in life.</em></h2>
+    <p>The Vantage was built for students who are done compromising — researchers, PG scholars, young professionals completing their qualifications. People for whom where they live is no longer an afterthought.</p>
+    <p>Every service that a good hotel provides, arranged around the rhythm of academic life.</p>
+    <ul class="amenity-list">
+      <li>Serviced suites, cleaned daily <span>Included</span></li>
+      <li>Chef-led breakfast &amp; dinner <span>Included</span></li>
+      <li>Private library &amp; study lounges <span>24 hours</span></li>
+      <li>Concierge &amp; laundry valet <span>Daily</span></li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="quote"><div class="wrap reveal">
+  <blockquote>I stopped noticing the building and started noticing my work. That is the highest compliment I can pay a place to live.</blockquote>
+  <cite>Dr. Kavya Reddy · PhD Researcher, IISc</cite>
+</div></section>
+
+<section id="suites" style="padding-top:60px"><div class="wrap">
+  <div style="max-width:60ch;margin-bottom:20px" class="reveal">
+    <span class="over">The Suites</span>
+    <h2 style="font-size:clamp(32px,4.4vw,54px)">Three ways to reside</h2>
+  </div>
+  <div class="suites">
+    <article class="suite reveal">
+      <div class="s-fig"><span class="no">01</span></div>
+      <div class="s-info">
+        <span class="over">The Scholar Suite</span>
+        <h3>Private studio, quietly perfect</h3>
+        <p>A serviced studio with a proper desk, a reading chair and blackout comfort — sized for one resident who values solitude and silence.</p>
+        <div class="s-meta"><div><b>32 m²</b><span>Suite</span></div><div><b>1</b><span>Resident</span></div><div><b>Daily</b><span>Service</span></div></div>
+        <div class="s-rate">₹42,000 <small>/ MONTH · FULLY SERVICED</small></div>
+        <a class="btn" href="https://wa.me/919530301131?text=I%27d%20like%20to%20enquire%20about%20The%20Scholar%20Suite%20at%20The%20Vantage.">Enquire</a>
+      </div>
+    </article>
+    <article class="suite reveal">
+      <div class="s-fig"><span class="no">02</span></div>
+      <div class="s-info">
+        <span class="over">The Fellow Suite</span>
+        <h3>A residence with a sitting room</h3>
+        <p>A one-bedroom suite with a separate lounge for hosting a study group or simply keeping work and rest apart. The residence's most requested layout.</p>
+        <div class="s-meta"><div><b>52 m²</b><span>Suite</span></div><div><b>1–2</b><span>Residents</span></div><div><b>Lounge</b><span>Private</span></div></div>
+        <div class="s-rate">₹58,000 <small>/ MONTH · FULLY SERVICED</small></div>
+        <a class="btn" href="https://wa.me/919530301131?text=I%27d%20like%20to%20enquire%20about%20The%20Fellow%20Suite%20at%20The%20Vantage.">Enquire</a>
+      </div>
+    </article>
+    <article class="suite reveal">
+      <div class="s-fig"><span class="no">03</span></div>
+      <div class="s-info">
+        <span class="over">The Vantage Suite</span>
+        <h3>The corner residence</h3>
+        <p>The finest suite in the building — top-floor corner, private terrace, kitchenette and priority on every service. For the resident who wants the very best address.</p>
+        <div class="s-meta"><div><b>78 m²</b><span>Suite</span></div><div><b>1–2</b><span>Residents</span></div><div><b>Terrace</b><span>Private</span></div></div>
+        <div class="s-rate">₹86,000 <small>/ MONTH · FULLY SERVICED</small></div>
+        <a class="btn btn-fill" href="https://wa.me/919530301131?text=I%27d%20like%20to%20enquire%20about%20The%20Vantage%20Suite.">Request the Vantage Suite</a>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section id="reserve" class="reserve"><div class="wrap reveal">
+  <span class="over">Reserve</span>
+  <h2>Residence is by <em class="gold-text" style="font-style:italic">invitation.</em></h2>
+  <p>The Vantage keeps forty-eight suites and a short waiting list. Request an invitation and our residency director will arrange a private viewing.</p>
+  <div class="reserve-row">
+    <a class="btn btn-fill" href="https://wa.me/919530301131?text=Hello%20The%20Vantage%2C%20I%27d%20like%20to%20request%20an%20invitation%20and%20private%20viewing.">Request an Invitation</a>
+    <a class="btn" href="mailto:websitecontact@saahvik.com?subject=The%20Vantage%20Residency%20Enquiry">Write to the Director</a>
+  </div>
+  <div class="reserve-meta">
+    <a href="tel:+919530301131">+91 95303 01131</a>
+    <span>Koramangala, Bengaluru</span>
+    <span>Viewings by appointment</span>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span class="mark">Vantage</span>
+  © 2026 The Vantage Student Residence, Bengaluru · Website by <a href="https://www.saahvik.com">Saahvik</a> · Template: Vantage Premium ★★★★★★★★
+</div></footer>
+
+<script>
+var prog=document.getElementById('prog'),nav=document.getElementById('nav'),tick=false;
+function sc(){if(tick)return;tick=true;requestAnimationFrame(function(){
+  var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+  prog.style.width=(h>0?y/h*100:0)+'%';nav.classList.toggle('scr',y>40);tick=false;
+});}
+addEventListener('scroll',sc,{passive:true});sc();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>

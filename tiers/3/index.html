@@ -3,73 +3,681 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Signature Tier (★★★) - 30 Student Hostel Templates | Saahvik</title>
-<meta name="description" content="Browse 30 Signature tier templates for student hostels starting at ₹8000. Distinct art direction with smooth motion and booking-focused UX">
+<title>Signature Tier (★★★) — 30 Student Hostel Templates | Saahvik</title>
+<meta name="description" content="Browse all 30 Signature-tier student hostel website templates from Saahvik, priced ₹6,999–₹9,999. Filter by hostel type, search and preview every design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{ --bg:#0b0c10; --bg-soft:#111218; --panel:#16181f; --line:rgba(255,255,255,.08); --ink:#f4f4f2; --ink-dim:#a3a6ad; --ink-faint:#6b6e76; --accent:#00d9ff; --gold:#d8b26e; --radius:18px; }
-*{ margin:0; padding:0; box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
-body{ background:var(--bg); color:var(--ink); font-family:'Inter',system-ui,sans-serif; line-height:1.6; }
-h1,h2,h3{ font-family:'Fraunces',serif; font-weight:600; }
-a{ color:inherit; text-decoration:none; }
-.wrap{ max-width:1240px; margin:0 auto; padding:0 24px; }
-.eyebrow{ display:inline-flex; align-items:center; gap:10px; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--accent); font-weight:700; }
-.eyebrow::before{ content:""; width:24px; height:1px; background:var(--accent); }
-.btn{ display:inline-flex; align-items:center; gap:10px; padding:14px 28px; border-radius:10px; font-weight:600; font-size:14px; transition:.25s; border:1px solid transparent; cursor:pointer; }
-.btn-primary{ background:var(--accent); color:#000; }
-.btn-primary:hover{ background:#00f0ff; transform:translateY(-2px); }
-.btn-secondary{ border-color:var(--line); color:var(--ink); }
-.btn-secondary:hover{ border-color:var(--accent); color:var(--accent); }
-nav{ position:fixed; inset:0 0 auto; z-index:50; backdrop-filter:blur(14px); background:rgba(11,12,16,.82); border-bottom:1px solid var(--line); }
-.nav-in{ display:flex; align-items:center; justify-content:space-between; height:72px; }
-.nav-back{ font-size:14px; font-weight:600; color:var(--ink-dim); }
-.nav-back:hover{ color:var(--accent); }
-.header{ background:linear-gradient(160deg,rgba(0,217,255,0.11),transparent); border-bottom:1px solid var(--line); padding:100px 0 60px; text-align:center; }
-.header .tier-badge{ display:inline-block; font-size:18px; letter-spacing:2px; color:var(--accent); margin:12px 0; font-weight:700; }
-.header p{ font-size:16px; color:var(--ink-dim); max-width:70ch; margin:0 auto; line-height:1.7; }
-section{ padding:80px 0; }
-.coming-soon{ text-align:center; padding:60px 20px; }
-.coming-soon h2{ font-size:36px; margin:20px 0; }
-.coming-soon p{ font-size:16px; color:var(--ink-dim); margin:16px 0; }
-footer{ border-top:1px solid var(--line); padding:40px 0 24px; }
-.footer-base{ display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; font-size:12px; color:var(--ink-faint); text-align:center; }
+:root{--bg:#0b0c10;--bg-soft:#111218;--panel:#16181f;--panel-2:#1b1e27;--line:rgba(255,255,255,.08);
+--ink:#f4f4f2;--dim:#a3a6ad;--faint:#6b6e76;--accent:#34d399;--gold:#d8b26e;--radius:16px;}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:600}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:9px;font-weight:600;font-size:13.5px;transition:.22s;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.btn-primary{background:var(--accent);color:#08252b}
+.btn-primary:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.btn-secondary{border-color:var(--line);color:var(--ink)}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+nav{position:fixed;inset:0 0 auto;z-index:50;backdrop-filter:blur(14px);background:rgba(11,12,16,.84);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav-back{font-size:14px;font-weight:600;color:var(--ink-dim,var(--dim))}
+.nav-back:hover{color:var(--accent)}
+.logo{font-family:'Fraunces',serif;font-size:22px;font-weight:700}
+.logo span{color:var(--accent)}
+.header{background:linear-gradient(160deg,rgba(255,255,255,.05),transparent);border-bottom:1px solid var(--line);padding:110px 0 56px;text-align:center;position:relative;overflow:hidden}
+.header::before{content:"";position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,#34d3991f,transparent 60%);pointer-events:none}
+.header .inner{position:relative;z-index:1}
+.header .eyebrow{justify-content:center;margin-bottom:18px}
+.header h1{font-size:clamp(34px,4.6vw,54px);margin-bottom:14px}
+.tier-stars{font-size:16px;letter-spacing:2px;color:var(--accent);margin:10px 0}
+.header p{font-size:15.5px;color:var(--dim);max-width:66ch;margin:12px auto 0;line-height:1.7}
+.header .price-pill{display:inline-block;margin-top:22px;padding:9px 22px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--dim)}
+.header .price-pill b{color:var(--accent)}
+.toolbar{position:sticky;top:70px;z-index:40;background:rgba(11,12,16,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:16px 0}
+.toolbar-in{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--dim);font-size:12.5px;font-weight:500;cursor:pointer;transition:.2s;font-family:inherit}
+.chip:hover{color:var(--ink);border-color:var(--accent)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#08252b;font-weight:700}
+.search{flex:1;min-width:180px;display:flex;gap:10px}
+.search input{flex:1;padding:9px 15px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:9px;font-family:inherit;font-size:13.5px}
+.search input:focus{outline:none;border-color:var(--accent)}
+.search select{padding:9px 12px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:9px;font-family:inherit;font-size:13px;cursor:pointer}
+section{padding:56px 0 90px}
+.count-row{color:var(--faint);font-size:13px;margin-bottom:24px}
+.count-row b{color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.32s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 20px 46px rgba(0,0,0,.4)}
+.card.hide{display:none}
+.thumb{height:172px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:16px}
+.thumb .mini{position:absolute;inset:auto 16px 0 16px;height:70%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-bottom:0;border-radius:8px 8px 0 0;padding:12px;transition:.32s}
+.card:hover .thumb .mini{transform:translateY(-6px)}
+.mini i{display:block;border-radius:3px;background:rgba(255,255,255,.22)}
+.mini i:nth-child(1){width:30%;height:6px;margin-bottom:8px}
+.mini i:nth-child(2){width:78%;height:11px;margin-bottom:7px;background:rgba(255,255,255,.34)}
+.mini i:nth-child(3){width:55%;height:6px}
+.badge{position:absolute;top:14px;left:14px;z-index:2;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:999px;background:rgba(8,10,16,.72);color:var(--accent);border:1px solid var(--accent)}
+.body{padding:22px;flex:1;display:flex;flex-direction:column}
+.meta{display:flex;justify-content:space-between;align-items:center;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.meta .st{color:var(--accent);letter-spacing:1px}
+.card h3{font-size:20px;font-weight:700;margin-bottom:5px}
+.card .cat{font-size:12px;color:var(--dim);margin-bottom:12px}
+.card .desc{font-size:13px;color:var(--dim);margin-bottom:16px;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.feats{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.feat{font-size:10px;padding:4px 9px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--dim)}
+.price{font-size:22px;font-weight:800;color:var(--accent);margin-bottom:14px;font-family:'Fraunces',serif}
+.price small{font-size:11px;color:var(--faint);font-weight:400;font-family:'Inter'}
+.actions{display:flex;gap:9px}
+.actions .btn{flex:1;padding:11px 12px;font-size:12px}
+.empty{text-align:center;padding:80px 20px;color:var(--faint);display:none}
+.empty h3{font-size:24px;color:var(--dim);margin-bottom:10px}
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-bg{position:absolute;inset:0;background:rgba(4,5,8,.78);backdrop-filter:blur(4px)}
+.modal-box{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:20px;max-width:640px;width:100%;max-height:88vh;overflow-y:auto;padding:38px}
+.modal-box .x{position:absolute;top:18px;right:20px;width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:18px;cursor:pointer}
+.modal-box .x:hover{border-color:var(--accent);color:var(--accent)}
+.m-star{font-size:15px;letter-spacing:2px;color:var(--accent)}
+.modal-box h2{font-size:30px;margin:10px 0 6px}
+.m-cat{color:var(--dim);font-size:14px;margin-bottom:20px}
+.m-price{font-size:34px;font-weight:800;color:var(--accent);font-family:'Fraunces',serif;margin-bottom:24px}
+.m-price small{font-size:13px;color:var(--faint);font-weight:400;font-family:'Inter'}
+.m-desc{color:var(--dim);font-size:15px;margin-bottom:24px;line-height:1.7}
+.m-spec{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.m-spec div{border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.m-spec span{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:5px}
+.m-spec b{font-size:14px;color:var(--ink);font-weight:600}
+.m-feats{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:28px}
+.m-actions{display:flex;gap:12px;flex-wrap:wrap}
+.m-actions .btn{flex:1;min-width:150px;padding:14px}
+footer{border-top:1px solid var(--line);padding:40px 0 26px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px;color:var(--faint)}
+.foot a{color:var(--dim)}.foot a:hover{color:var(--accent)}
+.reveal{opacity:0;transform:translateY(18px);transition:.5s ease}.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media(max-width:600px){.m-spec{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<nav>
-  <div class="wrap nav-in">
-    <a class="nav-back" href="/">← Back to All Tiers</a>
-  </div>
-</nav>
 
-<header class="header">
-  <div class="wrap">
-    <span class="eyebrow">Signature Tier</span>
-    <h1>30 Premium Student Hostel Templates</h1>
-    <div class="tier-badge">★★★</div>
-    <p>Distinct art direction with smooth motion and booking-focused UX</p>
-  </div>
-</header>
+<nav><div class="wrap nav-in">
+  <a class="nav-back" href="/">← All Tiers</a>
+  <a class="logo" href="/">Saahvik<span>.</span></a>
+  <a class="btn btn-primary" href="/custom/" style="padding:9px 18px;font-size:12.5px">Custom Design</a>
+</div></nav>
 
-<section>
-  <div class="wrap coming-soon">
-    <h2>Coming Soon</h2>
-    <p>All 30 premium Signature tier templates are currently being finalized.</p>
-    <p>Starting at ₹8000 each</p>
-    <div style="margin-top:30px">
-      <a class="btn btn-primary" href="https://wa.me/919530301131?text=Hi%20Saahvik%2C%20I%27m%20interested%20in%20the%20Signature%20tier%20templates.">Get Notified on WhatsApp</a>
+<header class="header"><div class="wrap inner">
+  <span class="eyebrow">Signature Tier</span>
+  <h1>30 Signature Student Hostel Templates</h1>
+  <div class="tier-stars">★★★</div>
+  <p>Every one of the 30 templates in this tier is listed below — each with its own name, identity and price. Filter by hostel type, search by name, or sort by price.</p>
+  <div class="price-pill">Priced from <b>₹6,999</b> to <b>₹9,999</b> · one-time</div>
+</div></header>
+
+<div class="toolbar"><div class="wrap toolbar-in">
+  <div class="chips"><button class="chip on" data-filter="all">All</button><button class="chip" data-filter="boys">Boys</button><button class="chip" data-filter="girls">Girls</button><button class="chip" data-filter="coaching">Coaching</button><button class="chip" data-filter="pg">PG</button><button class="chip" data-filter="college">College</button><button class="chip" data-filter="coed">Co-Living</button></div>
+  <div class="search">
+    <input id="q" type="text" placeholder="Search 30 templates by name…" aria-label="Search templates">
+    <select id="sort" aria-label="Sort templates">
+      <option value="featured">Featured</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+      <option value="name">Name: A–Z</option>
+    </select>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="count-row"><b id="shown">30</b> of 30 templates shown</div>
+  <div class="grid" id="grid">
+      <article class="card reveal" data-category="pg" data-name="calmcourt" data-price="6999" data-idx="30">
+        <div class="thumb" style="background:linear-gradient(135deg,#1f3a8a,#0ea5e9)"><span class="badge">Editor's Pick</span><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Editorial</span></div>
+          <h3>CalmCourt</h3>
+          <div class="cat">PG for Students</div>
+          <p class="desc">A magazine-style layout that tells the hostel's story through type and rhythm.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹6,999 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20CalmCourt%20template%20(Rs.6,999)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="coed" data-name="zenridge" data-price="7099" data-idx="31">
+        <div class="thumb" style="background:linear-gradient(135deg,#831843,#f472b6)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Dark Theme</span></div>
+          <h3>ZenRidge</h3>
+          <div class="cat">Student Co-Living</div>
+          <p class="desc">A sleek dark-mode interface that feels premium and modern for student co-living.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹7,099 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20ZenRidge%20template%20(Rs.7,099)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="girls" data-name="royalhaven" data-price="7199" data-idx="32">
+        <div class="thumb" style="background:linear-gradient(135deg,#052e16,#34d399)"><span class="badge">Popular</span><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Light Theme</span></div>
+          <h3>RoyalHaven</h3>
+          <div class="cat">Girls Hostel</div>
+          <p class="desc">A bright, airy design that reassures parents and reads beautifully on any screen.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹7,199 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20RoyalHaven%20template%20(Rs.7,199)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="pg" data-name="aurorasuite" data-price="7299" data-idx="33">
+        <div class="thumb" style="background:linear-gradient(135deg,#3b0764,#a78bfa)"><span class="badge">Featured</span><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Colorful</span></div>
+          <h3>AuroraSuite</h3>
+          <div class="cat">PG for Students</div>
+          <p class="desc">A vibrant, energetic palette built to appeal to younger students.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹7,299 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20AuroraSuite%20template%20(Rs.7,299)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="coed" data-name="chhatracove" data-price="7399" data-idx="34">
+        <div class="thumb" style="background:linear-gradient(135deg,#7c2d12,#fb923c)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Monochrome</span></div>
+          <h3>ChhatraCove</h3>
+          <div class="cat">Student Co-Living</div>
+          <p class="desc">A restrained black-and-white system where structure and spacing do the talking.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹7,399 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20ChhatraCove%20template%20(Rs.7,399)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="girls" data-name="purecircle" data-price="7499" data-idx="35">
+        <div class="thumb" style="background:linear-gradient(135deg,#1e293b,#64748b)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Academic</span></div>
+          <h3>PureCircle</h3>
+          <div class="cat">Girls Hostel</div>
+          <p class="desc">A scholarly aesthetic foregrounding results, study spaces and academic culture.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹7,499 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20PureCircle%20template%20(Rs.7,499)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="pg" data-name="luminabasera" data-price="7599" data-idx="36">
+        <div class="thumb" style="background:linear-gradient(135deg,#0c4a6e,#38bdf8)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Startup</span></div>
+          <h3>LuminaBasera</h3>
+          <div class="cat">PG for Students</div>
+          <p class="desc">A crisp, product-style landing design with strong calls to action.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹7,599 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20LuminaBasera%20template%20(Rs.7,599)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="coed" data-name="grandloft" data-price="7699" data-idx="37">
+        <div class="thumb" style="background:linear-gradient(135deg,#4a044e,#e879f9)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Tech-Inspired</span></div>
+          <h3>GrandLoft</h3>
+          <div class="cat">Student Co-Living</div>
+          <p class="desc">A developer-flavoured interface with mono type and terminal motifs.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹7,699 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20GrandLoft%20template%20(Rs.7,699)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="girls" data-name="saraswatiretreat" data-price="7799" data-idx="38">
+        <div class="thumb" style="background:linear-gradient(135deg,#422006,#facc15)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Youth-Focused</span></div>
+          <h3>SaraswatiRetreat</h3>
+          <div class="cat">Girls Hostel</div>
+          <p class="desc">A playful, high-energy design tuned for first-year and undergraduate students.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹7,799 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20SaraswatiRetreat%20template%20(Rs.7,799)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="pg" data-name="brightcommons" data-price="7899" data-idx="39">
+        <div class="thumb" style="background:linear-gradient(135deg,#134e4a,#2dd4bf)"><span class="badge">Popular</span><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>International</span></div>
+          <h3>BrightCommons</h3>
+          <div class="cat">PG for Students</div>
+          <p class="desc">A globally-minded layout suited to hostels hosting students from many regions.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹7,899 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20BrightCommons%20template%20(Rs.7,899)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="coed" data-name="metrocasa" data-price="7999" data-idx="40">
+        <div class="thumb" style="background:linear-gradient(135deg,#1f3a8a,#0ea5e9)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Minimal Luxury</span></div>
+          <h3>MetroCasa</h3>
+          <div class="cat">Student Co-Living</div>
+          <p class="desc">Quiet luxury — generous spacing, fine type and understated premium detail.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹7,999 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20MetroCasa%20template%20(Rs.7,999)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="girls" data-name="northnest" data-price="8099" data-idx="41">
+        <div class="thumb" style="background:linear-gradient(135deg,#831843,#f472b6)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Community Living</span></div>
+          <h3>NorthNest</h3>
+          <div class="cat">Girls Hostel</div>
+          <p class="desc">A design centred on community, events and the people who live here.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹8,099 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20NorthNest%20template%20(Rs.8,099)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="pg" data-name="studycommons" data-price="8199" data-idx="42">
+        <div class="thumb" style="background:linear-gradient(135deg,#052e16,#34d399)"><span class="badge">Featured</span><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Parents-First</span></div>
+          <h3>StudyCommons</h3>
+          <div class="cat">PG for Students</div>
+          <p class="desc">A reassurance-led layout built to answer every question a parent will ask.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹8,199 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20StudyCommons%20template%20(Rs.8,199)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="coed" data-name="shikshaspace" data-price="8299" data-idx="43">
+        <div class="thumb" style="background:linear-gradient(135deg,#3b0764,#a78bfa)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Safety-Focused</span></div>
+          <h3>ShikshaSpace</h3>
+          <div class="cat">Student Co-Living</div>
+          <p class="desc">A security-forward design that leads with safety systems and trust signals.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹8,299 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20ShikshaSpace%20template%20(Rs.8,299)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="girls" data-name="focussuite" data-price="8399" data-idx="44">
+        <div class="thumb" style="background:linear-gradient(135deg,#7c2d12,#fb923c)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Budget-Friendly</span></div>
+          <h3>FocusSuite</h3>
+          <div class="cat">Girls Hostel</div>
+          <p class="desc">A clear, honest layout that makes affordable girls hostel look genuinely good.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹8,399 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20FocusSuite%20template%20(Rs.8,399)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="pg" data-name="terraabode" data-price="8599" data-idx="45">
+        <div class="thumb" style="background:linear-gradient(135deg,#1e293b,#64748b)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Premium Residence</span></div>
+          <h3>TerraAbode</h3>
+          <div class="cat">PG for Students</div>
+          <p class="desc">An elevated, serviced-residence aesthetic for premium student housing.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹8,599 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20TerraAbode%20template%20(Rs.8,599)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="coed" data-name="studystudio" data-price="8699" data-idx="46">
+        <div class="thumb" style="background:linear-gradient(135deg,#0c4a6e,#38bdf8)"><span class="badge">Popular</span><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Bold</span></div>
+          <h3>StudyStudio</h3>
+          <div class="cat">Student Co-Living</div>
+          <p class="desc">Oversized type and strong contrast make this student co-living template impossible to ignore.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹8,699 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20StudyStudio%20template%20(Rs.8,699)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="girls" data-name="thrivestudio" data-price="8799" data-idx="47">
+        <div class="thumb" style="background:linear-gradient(135deg,#4a044e,#e879f9)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Warm</span></div>
+          <h3>ThriveStudio</h3>
+          <div class="cat">Girls Hostel</div>
+          <p class="desc">A warm, homely palette that makes students feel they've found a second home.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹8,799 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20ThriveStudio%20template%20(Rs.8,799)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="pg" data-name="aspirebasera" data-price="8899" data-idx="48">
+        <div class="thumb" style="background:linear-gradient(135deg,#422006,#facc15)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Refined</span></div>
+          <h3>AspireBasera</h3>
+          <div class="cat">PG for Students</div>
+          <p class="desc">A refined, detail-obsessed layout with elegant micro-interactions.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹8,899 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20AspireBasera%20template%20(Rs.8,899)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="coed" data-name="meritperch" data-price="8999" data-idx="49">
+        <div class="thumb" style="background:linear-gradient(135deg,#134e4a,#2dd4bf)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Cinematic</span></div>
+          <h3>MeritPerch</h3>
+          <div class="cat">Student Co-Living</div>
+          <p class="desc">A scroll-driven, cinematic experience with reveal choreography and pacing.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹8,999 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20MeritPerch%20template%20(Rs.8,999)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="girls" data-name="saraswatihalo" data-price="9099" data-idx="50">
+        <div class="thumb" style="background:linear-gradient(135deg,#1f3a8a,#0ea5e9)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Immersive</span></div>
+          <h3>SaraswatiHalo</h3>
+          <div class="cat">Girls Hostel</div>
+          <p class="desc">An immersive, motion-rich journey through the hostel's spaces and story.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹9,099 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20SaraswatiHalo%20template%20(Rs.9,099)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="pg" data-name="northperch" data-price="9199" data-idx="51">
+        <div class="thumb" style="background:linear-gradient(135deg,#831843,#f472b6)"><span class="badge">Featured</span><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Glass & Gradient</span></div>
+          <h3>NorthPerch</h3>
+          <div class="cat">PG for Students</div>
+          <p class="desc">Layered gradients and glass surfaces create a rich, tactile depth.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹9,199 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20NorthPerch%20template%20(Rs.9,199)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="coed" data-name="saraswativilla" data-price="9299" data-idx="52">
+        <div class="thumb" style="background:linear-gradient(135deg,#052e16,#34d399)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Minimal</span></div>
+          <h3>SaraswatiVilla</h3>
+          <div class="cat">Student Co-Living</div>
+          <p class="desc">A pared-back, whitespace-driven layout that puts room pricing and enquiries front and centre.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹9,299 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20SaraswatiVilla%20template%20(Rs.9,299)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="girls" data-name="luxecommons" data-price="9399" data-idx="53">
+        <div class="thumb" style="background:linear-gradient(135deg,#3b0764,#a78bfa)"><span class="badge">Popular</span><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Corporate</span></div>
+          <h3>LuxeCommons</h3>
+          <div class="cat">Girls Hostel</div>
+          <p class="desc">A professional, trust-building layout ideal for institutionally-run girls hostel.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹9,399 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20LuxeCommons%20template%20(Rs.9,399)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="pg" data-name="campushalo" data-price="9499" data-idx="54">
+        <div class="thumb" style="background:linear-gradient(135deg,#7c2d12,#fb923c)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Modern</span></div>
+          <h3>CampusHalo</h3>
+          <div class="cat">PG for Students</div>
+          <p class="desc">A contemporary design with confident typography and clean card systems for pg for students.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹9,499 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20CampusHalo%20template%20(Rs.9,499)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="coed" data-name="anantabloom" data-price="9599" data-idx="55">
+        <div class="thumb" style="background:linear-gradient(135deg,#1e293b,#64748b)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Glassmorphism</span></div>
+          <h3>AnantaBloom</h3>
+          <div class="cat">Student Co-Living</div>
+          <p class="desc">Frosted-glass panels over animated gradients give this student co-living template a futuristic feel.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹9,599 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20AnantaBloom%20template%20(Rs.9,599)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="girls" data-name="campuscove" data-price="9699" data-idx="56">
+        <div class="thumb" style="background:linear-gradient(135deg,#0c4a6e,#38bdf8)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Editorial</span></div>
+          <h3>CampusCove</h3>
+          <div class="cat">Girls Hostel</div>
+          <p class="desc">A magazine-style layout that tells the hostel's story through type and rhythm.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹9,699 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20CampusCove%20template%20(Rs.9,699)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="pg" data-name="shikshavasa" data-price="9799" data-idx="57">
+        <div class="thumb" style="background:linear-gradient(135deg,#4a044e,#e879f9)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Dark Theme</span></div>
+          <h3>ShikshaVasa</h3>
+          <div class="cat">PG for Students</div>
+          <p class="desc">A sleek dark-mode interface that feels premium and modern for pg for students.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹9,799 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20ShikshaVasa%20template%20(Rs.9,799)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="coed" data-name="vidhyahome" data-price="9899" data-idx="58">
+        <div class="thumb" style="background:linear-gradient(135deg,#422006,#facc15)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Light Theme</span></div>
+          <h3>VidhyaHome</h3>
+          <div class="cat">Student Co-Living</div>
+          <p class="desc">A bright, airy design that reassures parents and reads beautifully on any screen.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹9,899 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20VidhyaHome%20template%20(Rs.9,899)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal" data-category="girls" data-name="aryaprism" data-price="9999" data-idx="59">
+        <div class="thumb" style="background:linear-gradient(135deg,#134e4a,#2dd4bf)"><div class="mini"><i></i><i></i><i></i></div></div>
+        <div class="body">
+          <div class="meta"><span class="st">★★★</span><span>Colorful</span></div>
+          <h3>AryaPrism</h3>
+          <div class="cat">Girls Hostel</div>
+          <p class="desc">A vibrant, energetic palette built to appeal to younger students.</p>
+          <div class="feats"><span class="feat">Responsive</span><span class="feat">SEO-Ready</span><span class="feat">WhatsApp</span><span class="feat">Room Pricing</span></div>
+          <div class="price">₹9,999 <small>one-time</small></div>
+          <div class="actions">
+            <button class="btn btn-primary" data-open>View Details</button>
+            <a class="btn btn-secondary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20AryaPrism%20template%20(Rs.9,999)%20-%20Signature%20tier.">Enquire</a>
+          </div>
+        </div>
+      </article></div>
+  <div class="empty" id="empty"><h3>No templates match your search</h3><p>Try a different keyword or clear the filters.</p></div>
+</div></section>
+
+<footer><div class="wrap foot">
+  <span>© 2026 Saahvik · Signature Tier · 30 student-hostel templates</span>
+  <span><a href="/">← All Tiers</a> &nbsp;·&nbsp; <a href="/custom/">Custom Design</a> &nbsp;·&nbsp; <a href="https://wa.me/919530301131">WhatsApp</a></span>
+</div></footer>
+
+<div class="modal" id="modal">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-box">
+    <button class="x" data-close aria-label="Close">×</button>
+    <div class="m-star" id="mStar"></div>
+    <h2 id="mName"></h2>
+    <div class="m-cat" id="mCat"></div>
+    <div class="m-price" id="mPrice"></div>
+    <p class="m-desc" id="mDesc"></p>
+    <div class="m-spec">
+      <div><span>Ideal For</span><b id="mIdeal"></b></div>
+      <div><span>Design Style</span><b id="mStyle"></b></div>
+      <div><span>Pages Included</span><b id="mPages"></b></div>
+      <div><span>Technology</span><b id="mTech"></b></div>
     </div>
+    <div class="m-feats" id="mFeats"></div>
+    <div class="m-actions" id="mActions"></div>
   </div>
-</section>
+</div>
 
-<footer>
-  <div class="wrap footer-base">
-    <span>© 2026 Saahvik Student Hostel Templates</span>
-    <span><a href="/">← Back to All Tiers</a></span>
-  </div>
-</footer>
+<script>
+var DATA={"30": {"idx": 30, "name": "CalmCourt", "stars": "\u2605\u2605\u2605", "cat": "PG for Students", "style": "Editorial", "price": "\u20b96,999", "desc": "A magazine-style layout that tells the hostel's story through type and rhythm.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20CalmCourt%20template%20(Rs.6,999)%20-%20Signature%20tier."}, "31": {"idx": 31, "name": "ZenRidge", "stars": "\u2605\u2605\u2605", "cat": "Student Co-Living", "style": "Dark Theme", "price": "\u20b97,099", "desc": "A sleek dark-mode interface that feels premium and modern for student co-living.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20ZenRidge%20template%20(Rs.7,099)%20-%20Signature%20tier."}, "32": {"idx": 32, "name": "RoyalHaven", "stars": "\u2605\u2605\u2605", "cat": "Girls Hostel", "style": "Light Theme", "price": "\u20b97,199", "desc": "A bright, airy design that reassures parents and reads beautifully on any screen.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20RoyalHaven%20template%20(Rs.7,199)%20-%20Signature%20tier."}, "33": {"idx": 33, "name": "AuroraSuite", "stars": "\u2605\u2605\u2605", "cat": "PG for Students", "style": "Colorful", "price": "\u20b97,299", "desc": "A vibrant, energetic palette built to appeal to younger students.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20AuroraSuite%20template%20(Rs.7,299)%20-%20Signature%20tier."}, "34": {"idx": 34, "name": "ChhatraCove", "stars": "\u2605\u2605\u2605", "cat": "Student Co-Living", "style": "Monochrome", "price": "\u20b97,399", "desc": "A restrained black-and-white system where structure and spacing do the talking.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20ChhatraCove%20template%20(Rs.7,399)%20-%20Signature%20tier."}, "35": {"idx": 35, "name": "PureCircle", "stars": "\u2605\u2605\u2605", "cat": "Girls Hostel", "style": "Academic", "price": "\u20b97,499", "desc": "A scholarly aesthetic foregrounding results, study spaces and academic culture.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20PureCircle%20template%20(Rs.7,499)%20-%20Signature%20tier."}, "36": {"idx": 36, "name": "LuminaBasera", "stars": "\u2605\u2605\u2605", "cat": "PG for Students", "style": "Startup", "price": "\u20b97,599", "desc": "A crisp, product-style landing design with strong calls to action.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20LuminaBasera%20template%20(Rs.7,599)%20-%20Signature%20tier."}, "37": {"idx": 37, "name": "GrandLoft", "stars": "\u2605\u2605\u2605", "cat": "Student Co-Living", "style": "Tech-Inspired", "price": "\u20b97,699", "desc": "A developer-flavoured interface with mono type and terminal motifs.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20GrandLoft%20template%20(Rs.7,699)%20-%20Signature%20tier."}, "38": {"idx": 38, "name": "SaraswatiRetreat", "stars": "\u2605\u2605\u2605", "cat": "Girls Hostel", "style": "Youth-Focused", "price": "\u20b97,799", "desc": "A playful, high-energy design tuned for first-year and undergraduate students.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20SaraswatiRetreat%20template%20(Rs.7,799)%20-%20Signature%20tier."}, "39": {"idx": 39, "name": "BrightCommons", "stars": "\u2605\u2605\u2605", "cat": "PG for Students", "style": "International", "price": "\u20b97,899", "desc": "A globally-minded layout suited to hostels hosting students from many regions.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20BrightCommons%20template%20(Rs.7,899)%20-%20Signature%20tier."}, "40": {"idx": 40, "name": "MetroCasa", "stars": "\u2605\u2605\u2605", "cat": "Student Co-Living", "style": "Minimal Luxury", "price": "\u20b97,999", "desc": "Quiet luxury \u2014 generous spacing, fine type and understated premium detail.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20MetroCasa%20template%20(Rs.7,999)%20-%20Signature%20tier."}, "41": {"idx": 41, "name": "NorthNest", "stars": "\u2605\u2605\u2605", "cat": "Girls Hostel", "style": "Community Living", "price": "\u20b98,099", "desc": "A design centred on community, events and the people who live here.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20NorthNest%20template%20(Rs.8,099)%20-%20Signature%20tier."}, "42": {"idx": 42, "name": "StudyCommons", "stars": "\u2605\u2605\u2605", "cat": "PG for Students", "style": "Parents-First", "price": "\u20b98,199", "desc": "A reassurance-led layout built to answer every question a parent will ask.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20StudyCommons%20template%20(Rs.8,199)%20-%20Signature%20tier."}, "43": {"idx": 43, "name": "ShikshaSpace", "stars": "\u2605\u2605\u2605", "cat": "Student Co-Living", "style": "Safety-Focused", "price": "\u20b98,299", "desc": "A security-forward design that leads with safety systems and trust signals.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20ShikshaSpace%20template%20(Rs.8,299)%20-%20Signature%20tier."}, "44": {"idx": 44, "name": "FocusSuite", "stars": "\u2605\u2605\u2605", "cat": "Girls Hostel", "style": "Budget-Friendly", "price": "\u20b98,399", "desc": "A clear, honest layout that makes affordable girls hostel look genuinely good.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20FocusSuite%20template%20(Rs.8,399)%20-%20Signature%20tier."}, "45": {"idx": 45, "name": "TerraAbode", "stars": "\u2605\u2605\u2605", "cat": "PG for Students", "style": "Premium Residence", "price": "\u20b98,599", "desc": "An elevated, serviced-residence aesthetic for premium student housing.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20TerraAbode%20template%20(Rs.8,599)%20-%20Signature%20tier."}, "46": {"idx": 46, "name": "StudyStudio", "stars": "\u2605\u2605\u2605", "cat": "Student Co-Living", "style": "Bold", "price": "\u20b98,699", "desc": "Oversized type and strong contrast make this student co-living template impossible to ignore.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20StudyStudio%20template%20(Rs.8,699)%20-%20Signature%20tier."}, "47": {"idx": 47, "name": "ThriveStudio", "stars": "\u2605\u2605\u2605", "cat": "Girls Hostel", "style": "Warm", "price": "\u20b98,799", "desc": "A warm, homely palette that makes students feel they've found a second home.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20ThriveStudio%20template%20(Rs.8,799)%20-%20Signature%20tier."}, "48": {"idx": 48, "name": "AspireBasera", "stars": "\u2605\u2605\u2605", "cat": "PG for Students", "style": "Refined", "price": "\u20b98,899", "desc": "A refined, detail-obsessed layout with elegant micro-interactions.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20AspireBasera%20template%20(Rs.8,899)%20-%20Signature%20tier."}, "49": {"idx": 49, "name": "MeritPerch", "stars": "\u2605\u2605\u2605", "cat": "Student Co-Living", "style": "Cinematic", "price": "\u20b98,999", "desc": "A scroll-driven, cinematic experience with reveal choreography and pacing.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20MeritPerch%20template%20(Rs.8,999)%20-%20Signature%20tier."}, "50": {"idx": 50, "name": "SaraswatiHalo", "stars": "\u2605\u2605\u2605", "cat": "Girls Hostel", "style": "Immersive", "price": "\u20b99,099", "desc": "An immersive, motion-rich journey through the hostel's spaces and story.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20SaraswatiHalo%20template%20(Rs.9,099)%20-%20Signature%20tier."}, "51": {"idx": 51, "name": "NorthPerch", "stars": "\u2605\u2605\u2605", "cat": "PG for Students", "style": "Glass & Gradient", "price": "\u20b99,199", "desc": "Layered gradients and glass surfaces create a rich, tactile depth.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20NorthPerch%20template%20(Rs.9,199)%20-%20Signature%20tier."}, "52": {"idx": 52, "name": "SaraswatiVilla", "stars": "\u2605\u2605\u2605", "cat": "Student Co-Living", "style": "Minimal", "price": "\u20b99,299", "desc": "A pared-back, whitespace-driven layout that puts room pricing and enquiries front and centre.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20SaraswatiVilla%20template%20(Rs.9,299)%20-%20Signature%20tier."}, "53": {"idx": 53, "name": "LuxeCommons", "stars": "\u2605\u2605\u2605", "cat": "Girls Hostel", "style": "Corporate", "price": "\u20b99,399", "desc": "A professional, trust-building layout ideal for institutionally-run girls hostel.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20LuxeCommons%20template%20(Rs.9,399)%20-%20Signature%20tier."}, "54": {"idx": 54, "name": "CampusHalo", "stars": "\u2605\u2605\u2605", "cat": "PG for Students", "style": "Modern", "price": "\u20b99,499", "desc": "A contemporary design with confident typography and clean card systems for pg for students.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20CampusHalo%20template%20(Rs.9,499)%20-%20Signature%20tier."}, "55": {"idx": 55, "name": "AnantaBloom", "stars": "\u2605\u2605\u2605", "cat": "Student Co-Living", "style": "Glassmorphism", "price": "\u20b99,599", "desc": "Frosted-glass panels over animated gradients give this student co-living template a futuristic feel.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20AnantaBloom%20template%20(Rs.9,599)%20-%20Signature%20tier."}, "56": {"idx": 56, "name": "CampusCove", "stars": "\u2605\u2605\u2605", "cat": "Girls Hostel", "style": "Editorial", "price": "\u20b99,699", "desc": "A magazine-style layout that tells the hostel's story through type and rhythm.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20CampusCove%20template%20(Rs.9,699)%20-%20Signature%20tier."}, "57": {"idx": 57, "name": "ShikshaVasa", "stars": "\u2605\u2605\u2605", "cat": "PG for Students", "style": "Dark Theme", "price": "\u20b99,799", "desc": "A sleek dark-mode interface that feels premium and modern for pg for students.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20ShikshaVasa%20template%20(Rs.9,799)%20-%20Signature%20tier."}, "58": {"idx": 58, "name": "VidhyaHome", "stars": "\u2605\u2605\u2605", "cat": "Student Co-Living", "style": "Light Theme", "price": "\u20b99,899", "desc": "A bright, airy design that reassures parents and reads beautifully on any screen.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20VidhyaHome%20template%20(Rs.9,899)%20-%20Signature%20tier."}, "59": {"idx": 59, "name": "AryaPrism", "stars": "\u2605\u2605\u2605", "cat": "Girls Hostel", "style": "Colorful", "price": "\u20b99,999", "desc": "A vibrant, energetic palette built to appeal to younger students.", "feats": ["Responsive", "SEO-Ready", "WhatsApp", "Room Pricing"], "pages": "3\u20135 pages", "tech": "HTML5 \u00b7 CSS3 \u00b7 JS \u00b7 Scroll Animations", "demo": "", "wa": "https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20AryaPrism%20template%20(Rs.9,999)%20-%20Signature%20tier."}};
+var grid=document.getElementById('grid'),cards=[].slice.call(grid.children);
+var chips=document.querySelectorAll('.chip'),q=document.getElementById('q'),sort=document.getElementById('sort');
+var shown=document.getElementById('shown'),empty=document.getElementById('empty');
+var filter='all';
+function apply(){
+  var term=q.value.trim().toLowerCase();var n=0;
+  cards.forEach(function(c){
+    var okCat=filter==='all'||c.dataset.category===filter;
+    var okTerm=!term||c.dataset.name.indexOf(term)>-1;
+    var vis=okCat&&okTerm;c.classList.toggle('hide',!vis);if(vis)n++;
+  });
+  shown.textContent=n;empty.style.display=n?'none':'block';
+}
+function sortCards(){
+  var v=sort.value,arr=cards.slice();
+  arr.sort(function(a,b){
+    if(v==='price-asc')return a.dataset.price-b.dataset.price;
+    if(v==='price-desc')return b.dataset.price-a.dataset.price;
+    if(v==='name')return a.dataset.name<b.dataset.name?-1:1;
+    return a.dataset.idx-b.dataset.idx;
+  });
+  arr.forEach(function(c){grid.appendChild(c);});
+}
+chips.forEach(function(ch){ch.addEventListener('click',function(){
+  chips.forEach(function(x){x.classList.remove('on');});ch.classList.add('on');
+  filter=ch.dataset.filter;apply();
+});});
+q.addEventListener('input',apply);
+sort.addEventListener('change',sortCards);
+// modal
+var modal=document.getElementById('modal');
+function openModal(idx){
+  var d=DATA[idx];if(!d)return;
+  document.getElementById('mStar').textContent=d.stars;
+  document.getElementById('mName').textContent=d.name;
+  document.getElementById('mCat').textContent=d.cat+' · '+d.style+' design';
+  document.getElementById('mPrice').innerHTML=d.price+' <small>one-time licence</small>';
+  document.getElementById('mDesc').textContent=d.desc;
+  document.getElementById('mIdeal').textContent=d.cat;
+  document.getElementById('mStyle').textContent=d.style;
+  document.getElementById('mPages').textContent=d.pages;
+  document.getElementById('mTech').textContent=d.tech;
+  document.getElementById('mFeats').innerHTML=d.feats.map(function(f){return '<span class="feat">'+f+'</span>';}).join('');
+  var act='';
+  if(d.demo)act+='<a class="btn btn-primary" href="'+d.demo+'">Open Live Demo</a>';
+  act+='<a class="btn btn-primary" href="'+d.wa+'">Enquire on WhatsApp</a>';
+  act+='<a class="btn btn-secondary" href="tel:+919530301131">Call Us</a>';
+  document.getElementById('mActions').innerHTML=act;
+  modal.classList.add('open');
+  try{var r=JSON.parse(localStorage.getItem('saahvik-recent')||'[]');r=r.filter(function(x){return x!==d.name;});r.unshift(d.name);localStorage.setItem('saahvik-recent',JSON.stringify(r.slice(0,8)));}catch(e){}
+}
+grid.addEventListener('click',function(e){
+  var btn=e.target.closest('[data-open]');if(!btn)return;
+  var card=e.target.closest('.card');if(card)openModal(card.dataset.idx);
+});
+modal.addEventListener('click',function(e){if(e.target.hasAttribute('data-close'))modal.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')modal.classList.remove('open');});
+// reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08});
+cards.forEach(function(c){io.observe(c);});
+</script>
 </body>
 </html>

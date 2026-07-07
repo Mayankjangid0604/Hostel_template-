@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian Student Residency — Trusted Hostel for College Students, Pune</title>
+<meta name="description" content="Meridian Student Residency offers professionally managed hostel accommodation for college students in Pune — furnished rooms, mess, Wi-Fi, security and a proven 12-year track record.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#12284c;--navy-2:#1c3a66;--blue:#2563eb;--sky:#e8f0fe;--ink:#1a2233;--dim:#5b6577;--line:#e4e9f2;--bg:#fff;--soft:#f6f8fc;--green:#16a34a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.kick{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);background:var(--sky);padding:7px 15px;border-radius:8px;margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:9px;font-weight:700;font-size:14.5px;transition:.2s;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:#1d4fd8;transform:translateY(-2px);box-shadow:0 12px 26px rgba(37,99,235,.28)}
+.btn-outline{border-color:var(--line);color:var(--navy)}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{font-weight:800;font-size:20px;color:var(--navy);display:flex;align-items:center;gap:10px}
+.brand .dot{width:11px;height:11px;background:var(--blue);border-radius:3px}
+.menu{display:flex;gap:30px;font-size:14.5px;font-weight:600;color:var(--dim)}
+.menu a:hover{color:var(--blue)}
+.nav-cta{padding:10px 20px;font-size:13.5px}
+@media(max-width:860px){.menu{display:none}}
+.hero{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;padding:80px 0 90px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-140px;top:-120px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,.4),transparent 65%)}
+.hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative;z-index:1}
+.hero .kick{background:rgba(255,255,255,.12);color:#bcd2ff}
+.hero h1{font-size:clamp(34px,4.6vw,54px);font-weight:800;line-height:1.1;margin-bottom:18px}
+.hero p{color:#c3d1ee;font-size:17px;max-width:48ch;margin-bottom:30px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:36px}
+.hero-trust{display:flex;gap:30px;flex-wrap:wrap}
+.hero-trust b{display:block;font-size:26px;font-weight:800}
+.hero-trust span{font-size:12.5px;color:#9db1dd}
+.hero-card{background:#fff;color:var(--ink);border-radius:16px;padding:26px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.hero-card h3{font-size:17px;color:var(--navy);margin-bottom:16px}
+.hc-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.hc-row:last-of-type{border:0}
+.hc-row b{color:var(--navy)}
+.hc-tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:6px;background:#eafaf0;color:var(--green)}
+.hero-card .btn{width:100%;margin-top:14px}
+@media(max-width:860px){.hero-in{grid-template-columns:1fr}}
+section{padding:84px 0}
+.head{text-align:center;max-width:640px;margin:0 auto 52px}
+.head h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;color:var(--navy);margin-bottom:12px}
+.head p{color:var(--dim)}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.feat{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:28px 24px;transition:.25s}
+.feat:hover{border-color:var(--blue);box-shadow:0 16px 34px rgba(18,40,76,.08);transform:translateY(-4px)}
+.feat .ic{width:46px;height:46px;border-radius:11px;background:var(--sky);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+.feat h3{font-size:17px;color:var(--navy);margin-bottom:7px}
+.feat p{font-size:14px;color:var(--dim)}
+#rooms{background:var(--soft);border-block:1px solid var(--line)}
+.rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.room{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.room:hover{box-shadow:0 20px 44px rgba(18,40,76,.12);transform:translateY(-5px)}
+.room-top{height:80px;background:linear-gradient(135deg,var(--navy),var(--blue));display:flex;align-items:center;padding:0 24px;color:#fff;font-weight:800;font-size:18px}
+.room-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.room-price{font-size:28px;font-weight:800;color:var(--navy);margin-bottom:4px}
+.room-price small{font-size:13px;color:var(--dim);font-weight:500}
+.room ul{list-style:none;margin:16px 0;flex:1}
+.room li{font-size:14px;padding:6px 0;color:var(--ink);display:flex;gap:9px}
+.room li::before{content:"✓";color:var(--green);font-weight:800}
+.room .btn{width:100%}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;text-align:center}
+.stat b{display:block;font-size:44px;font-weight:800;color:var(--blue);line-height:1}
+.stat span{font-size:13px;color:var(--dim);margin-top:8px;display:block}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
+.rev .st{color:#f5b301;margin-bottom:12px;letter-spacing:2px}
+.rev p{font-size:14.5px;color:var(--ink);margin-bottom:16px}
+.rev b{font-size:14px;color:var(--navy)}
+.rev span{font-size:12.5px;color:var(--dim);display:block}
+#contact{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-grid h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;margin-bottom:14px}
+.contact-grid>div>p{color:#c3d1ee;margin-bottom:26px}
+.cinfo{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.14);align-items:center;font-size:15px}
+.cinfo .ic{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+form{background:#fff;color:var(--ink);border-radius:16px;padding:32px}
+form h3{color:var(--navy);font-size:20px;margin-bottom:6px}
+form>p{font-size:13.5px;color:var(--dim);margin-bottom:20px}
+label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px}
+input,select,textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:9px;font-family:inherit;font-size:14.5px;margin-bottom:15px;background:var(--soft)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);background:#fff}
+form .btn{width:100%}
+.form-ok{display:none;background:#eafaf0;border:1px solid #b7e4c7;color:#116b3d;border-radius:9px;padding:13px;font-size:13.5px;margin-top:12px;font-weight:600}
+footer{background:#0d1c37;color:#8fa3cf;padding:32px 0;font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer a{color:#c3d1ee}footer a:hover{color:#fff}
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;box-shadow:0 12px 28px rgba(37,211,102,.4)}
+.reveal{opacity:0;transform:translateY(22px);transition:.6s ease}.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav-in">
+  <a class="brand" href="#"><span class="dot"></span>Meridian Residency</a>
+  <div class="menu"><a href="#features">Features</a><a href="#rooms">Rooms</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+  <a class="btn btn-primary nav-cta" href="#contact">Book a Visit</a>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-in">
+  <div>
+    <span class="kick">College Student Hostel · Viman Nagar, Pune</span>
+    <h1>Professionally managed accommodation for serious students.</h1>
+    <p>For twelve years, Meridian Student Residency has given college students a secure, well-run place to live and study — furnished rooms, hygienic mess, reliable Wi-Fi and staff who actually answer the phone.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#rooms">View Rooms &amp; Pricing</a>
+      <a class="btn btn-outline" style="border-color:rgba(255,255,255,.3);color:#fff" href="tel:+919530301131">Call +91 95303 01131</a>
+    </div>
+    <div class="hero-trust">
+      <div><b>12 yrs</b><span>Trusted operation</span></div>
+      <div><b>320+</b><span>Students housed</span></div>
+      <div><b>4.7★</b><span>Google rating</span></div>
+    </div>
+  </div>
+  <aside class="hero-card">
+    <h3>Room Availability · This Month</h3>
+    <div class="hc-row"><span>Single Occupancy</span><b>₹11,000</b></div>
+    <div class="hc-row"><span>Double Sharing</span><span class="hc-tag">Available</span></div>
+    <div class="hc-row"><span>Triple Sharing</span><span class="hc-tag">Available</span></div>
+    <a class="btn btn-primary" href="https://wa.me/919530301131?text=Hi%20Meridian%20Residency%2C%20I%27d%20like%20to%20check%20room%20availability.">Enquire on WhatsApp</a>
+  </aside>
+</div></header>
+
+<section id="features"><div class="wrap">
+  <div class="head reveal"><span class="kick">Why Meridian</span><h2>Everything managed, nothing to worry about</h2><p>We run the residency so students and parents can focus on what matters.</p></div>
+  <div class="feats">
+    <div class="feat reveal"><div class="ic">🛏️</div><h3>Furnished Rooms</h3><p>Bed, mattress, study desk, wardrobe and fan or AC — move in with just your bags.</p></div>
+    <div class="feat reveal"><div class="ic">🍽️</div><h3>Hygienic Mess</h3><p>Three fresh meals daily from an in-house kitchen with a dietitian-planned menu.</p></div>
+    <div class="feat reveal"><div class="ic">🔒</div><h3>24×7 Security</h3><p>CCTV, biometric gate access and a resident manager present around the clock.</p></div>
+    <div class="feat reveal"><div class="ic">📶</div><h3>Reliable Wi-Fi</h3><p>150 Mbps leased line with backup so assignments and classes never stall.</p></div>
+    <div class="feat reveal"><div class="ic">🧹</div><h3>Housekeeping</h3><p>Daily room cleaning and twice-weekly laundry included in your rent.</p></div>
+    <div class="feat reveal"><div class="ic">⚡</div><h3>Power Backup</h3><p>Full generator backup keeps lights, fans and Wi-Fi running through outages.</p></div>
+  </div>
+</div></section>
+
+<section id="rooms"><div class="wrap">
+  <div class="head reveal"><span class="kick">Rooms &amp; Pricing</span><h2>Transparent monthly rates</h2><p>All-inclusive pricing. No hidden mess or maintenance charges.</p></div>
+  <div class="rooms">
+    <div class="room reveal"><div class="room-top">Single Occupancy</div><div class="room-body">
+      <div class="room-price">₹11,000<small> /month</small></div>
+      <ul><li>Private furnished room</li><li>Attached washroom</li><li>AC + study desk</li><li>All meals included</li></ul>
+      <a class="btn btn-primary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20a%20Single%20Occupancy%20room%20at%20Meridian%20Residency.">Enquire</a>
+    </div></div>
+    <div class="room reveal"><div class="room-top">Double Sharing</div><div class="room-body">
+      <div class="room-price">₹7,500<small> /month</small></div>
+      <ul><li>Two beds, two desks</li><li>Attached washroom</li><li>AC + wardrobe each</li><li>All meals included</li></ul>
+      <a class="btn btn-primary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20a%20Double%20Sharing%20room%20at%20Meridian%20Residency.">Enquire</a>
+    </div></div>
+    <div class="room reveal"><div class="room-top">Triple Sharing</div><div class="room-body">
+      <div class="room-price">₹5,500<small> /month</small></div>
+      <ul><li>Three beds with storage</li><li>Shared washroom</li><li>Cooler + fan</li><li>All meals included</li></ul>
+      <a class="btn btn-primary" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20a%20Triple%20Sharing%20room%20at%20Meridian%20Residency.">Enquire</a>
+    </div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="stats">
+    <div class="stat reveal"><b>320+</b><span>Students currently housed</span></div>
+    <div class="stat reveal"><b>12</b><span>Years of operation</span></div>
+    <div class="stat reveal"><b>98%</b><span>Parent satisfaction</span></div>
+    <div class="stat reveal"><b>5 min</b><span>To major colleges</span></div>
+  </div>
+</div></section>
+
+<section id="reviews" style="background:var(--soft);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="head reveal"><span class="kick">Reviews</span><h2>What students and parents say</h2></div>
+  <div class="revs">
+    <div class="rev reveal"><div class="st">★★★★★</div><p>"Well-managed and genuinely safe. As a parent in another city, the manager's monthly updates gave me real peace of mind."</p><b>Sunil Deshpande</b><span>Parent · Nagpur</span></div>
+    <div class="rev reveal"><div class="st">★★★★★</div><p>"Lived here through all three years of engineering. Food is consistent, Wi-Fi never let me down during online exams."</p><b>Aditya Kulkarni</b><span>Engineering student</span></div>
+    <div class="rev reveal"><div class="st">★★★★★</div><p>"Clean rooms, professional staff, and everything works. Exactly what you want from a student residency."</p><b>Priya Menon</b><span>Commerce student</span></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap contact-grid">
+  <div class="reveal">
+    <span class="kick" style="background:rgba(255,255,255,.12);color:#bcd2ff">Book a Visit</span>
+    <h2>See the residency in person</h2>
+    <p>Walk in any day between 9 AM and 7 PM, or request a guided visit below. We'll show you the rooms, mess and study areas.</p>
+    <div class="cinfo"><div class="ic">📍</div><div><b>Meridian Student Residency</b><br>Clover Park, Viman Nagar, Pune 411014</div></div>
+    <div class="cinfo"><div class="ic">📞</div><div><b>+91 95303 01131</b><br>Call or WhatsApp, 8 AM – 9 PM</div></div>
+    <div class="cinfo"><div class="ic">✉️</div><div><b>websitecontact@saahvik.com</b></div></div>
+  </div>
+  <form id="vf" novalidate>
+    <h3>Request a Guided Visit</h3><p>We'll confirm your slot on WhatsApp.</p>
+    <label for="n">Student / Parent Name</label><input id="n" type="text" placeholder="Full name" required>
+    <label for="p">WhatsApp Number</label><input id="p" type="tel" placeholder="10-digit number" required>
+    <label for="r">Preferred Room</label>
+    <select id="r"><option>Single Occupancy</option><option selected>Double Sharing</option><option>Triple Sharing</option><option>Not sure yet</option></select>
+    <button class="btn btn-primary" type="submit">Send Request</button>
+    <div class="form-ok" id="ok">✅ Opening WhatsApp with your request — hit send to confirm your slot.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© 2026 Meridian Student Residency, Pune. All rights reserved.</span>
+  <span>Website by <a href="https://www.saahvik.com">Saahvik</a> · Template: Meridian Presence ★★</span>
+</div></footer>
+
+<a class="wa" href="https://wa.me/919530301131?text=Hi%20Meridian%20Residency!" aria-label="WhatsApp">💬</a>
+
+<script>
+document.getElementById('vf').addEventListener('submit',function(e){
+  e.preventDefault();var n=document.getElementById('n'),p=document.getElementById('p');
+  if(!n.value.trim()||!p.value.trim()){n.reportValidity();p.reportValidity();return;}
+  var t='Hi Meridian Residency! I%27d like to book a visit.%0AName: '+encodeURIComponent(n.value)+'%0APhone: '+encodeURIComponent(p.value)+'%0ARoom: '+encodeURIComponent(document.getElementById('r').value);
+  document.getElementById('ok').style.display='block';
+  window.open('https://wa.me/919530301131?text='+t,'_blank');
+});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>

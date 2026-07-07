@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Scholars' House — A Coaching Hostel Built Around Focus, Kota</title>
+<meta name="description" content="The Scholars' House is a premium coaching hostel in Kota for JEE and NEET aspirants — silent study floors, mentor check-ins, exam-grade nutrition and rooms designed for deep work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0e0f;--bg2:#151517;--panel:#1a1a1d;--line:rgba(255,255,255,.1);--ink:#f0ede6;--dim:#9b968c;--faint:#69655d;--accent:#c8553d;--accent2:#e08a6f;--paper:#f3efe6}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Newsreader',Georgia,serif;font-weight:400;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+.narrow{max-width:760px}
+.label{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent2);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:11px;padding:15px 32px;font-size:13px;letter-spacing:.08em;transition:.3s;cursor:pointer;border:1px solid var(--accent);color:var(--ink);background:transparent;font-family:'Inter',sans-serif;font-weight:500}
+.btn:hover{background:var(--accent);color:#fff}
+.btn-fill{background:var(--accent);color:#fff}.btn-fill:hover{background:var(--accent2);border-color:var(--accent2)}
+nav{position:fixed;inset:0 0 auto;z-index:60;background:rgba(14,14,15,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:78px}
+.mark{font-family:'Newsreader',serif;font-size:23px;letter-spacing:.02em}
+.mark em{font-style:italic;color:var(--accent2)}
+.menu{display:flex;gap:34px;font-size:13px;letter-spacing:.04em;color:var(--dim)}
+.menu a:hover{color:var(--ink)}
+@media(max-width:820px){.menu{display:none}}
+.hero{padding:150px 0 90px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-30%;right:-10%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(200,85,61,.14),transparent 62%)}
+.hero-in{position:relative;z-index:1}
+.hero .label{margin-bottom:26px;display:block}
+.hero h1{font-size:clamp(44px,7vw,86px);letter-spacing:-.02em;margin-bottom:28px;max-width:16ch}
+.hero h1 em{font-style:italic;color:var(--accent2)}
+.hero-lead{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-top:40px}
+.hero-lead p{color:var(--dim);font-size:17px;max-width:44ch}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:720px){.hero-lead{grid-template-columns:1fr;gap:26px}}
+.marq{border-bottom:1px solid var(--line);overflow:hidden;padding:20px 0;background:var(--bg2)}
+.marq-t{display:flex;gap:50px;white-space:nowrap;animation:sl 30s linear infinite;font-family:'Newsreader',serif;font-style:italic;font-size:22px;color:var(--faint)}
+@keyframes sl{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marq-t{animation:none;white-space:normal;flex-wrap:wrap;justify-content:center}}
+section{padding:110px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.two.rev>.fig{order:2}
+.fig{aspect-ratio:4/5;background:linear-gradient(160deg,var(--panel),var(--bg2));border:1px solid var(--line);position:relative}
+.fig::after{content:"";position:absolute;inset:16px;border:1px solid var(--line)}
+.fig .cap{position:absolute;bottom:22px;left:24px;right:24px;font-family:'Newsreader',serif;font-style:italic;font-size:16px;color:var(--dim);z-index:1}
+.two h2{font-size:clamp(30px,4vw,46px);margin-bottom:22px}
+.two h2 em{font-style:italic;color:var(--accent2)}
+.two p{color:var(--dim);margin-bottom:18px;font-size:16.5px}
+.big-quote{text-align:center}
+.big-quote blockquote{font-family:'Newsreader',serif;font-size:clamp(26px,3.6vw,40px);line-height:1.45;max-width:20ch;margin:0 auto;font-style:italic}
+.big-quote blockquote::before{content:"“";color:var(--accent)}
+.big-quote cite{display:block;margin-top:28px;font-style:normal;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent2)}
+#offer{background:var(--paper);color:#211f1b}
+#offer .label{color:var(--accent)}
+#offer h2{font-size:clamp(30px,4vw,46px);margin-bottom:14px}
+.rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;border:1px solid #d9d2c4;margin-top:50px}
+.rm{padding:38px 32px;border-right:1px solid #d9d2c4;border-bottom:1px solid #d9d2c4}
+.rm .no{font-family:'Newsreader',serif;font-style:italic;font-size:15px;color:var(--accent)}
+.rm h3{font-family:'Newsreader',serif;font-size:27px;margin:8px 0 8px;color:#211f1b}
+.rm .pr{font-family:'Newsreader',serif;font-size:24px;color:#211f1b;margin-bottom:14px}
+.rm .pr small{font-family:'Inter';font-size:12px;color:#7a7469}
+.rm ul{list-style:none;margin-bottom:22px}
+.rm li{font-size:14px;padding:6px 0;color:#4a463d;border-bottom:1px dashed #d9d2c4}
+.rm .btn{border-color:var(--accent);color:var(--accent)}
+.rm .btn:hover{background:var(--accent);color:#fff}
+.tl{max-width:720px;margin:50px auto 0;position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.tk{position:relative;padding-bottom:34px}
+.tk::before{content:"";position:absolute;left:-31px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--accent)}
+.tk time{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2)}
+.tk h3{font-family:'Newsreader',serif;font-size:22px;margin:6px 0}
+.tk p{color:var(--dim);font-size:15px;max-width:52ch}
+#enquire{border-top:1px solid var(--line);text-align:center}
+#enquire h2{font-size:clamp(32px,4.6vw,54px);margin:20px 0}
+#enquire p{color:var(--dim);max-width:52ch;margin:0 auto 34px}
+.enq-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;font-size:13px;color:var(--faint)}
+footer a{color:var(--dim)}footer a:hover{color:var(--accent2)}
+.reveal{opacity:0;transform:translateY(28px);transition:.8s ease}.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media(max-width:820px){.two,.two.rev{grid-template-columns:1fr;gap:34px}.two.rev>.fig{order:0}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav-in">
+  <a class="mark" href="#">The Scholars' <em>House</em></a>
+  <div class="menu"><a href="#story">The Idea</a><a href="#offer">Rooms</a><a href="#day">A Day Here</a><a href="#enquire">Enquire</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-in">
+  <span class="label">Coaching Hostel · Rajeev Gandhi Nagar, Kota</span>
+  <h1>A house built around <em>focus.</em></h1>
+  <div class="hero-lead">
+    <p>Kota has hundreds of hostels. The Scholars' House was designed for one thing the others treat as an afterthought — the deep, uninterrupted concentration that clears JEE and NEET.</p>
+    <div class="hero-actions">
+      <a class="btn btn-fill" href="#offer">See the Rooms</a>
+      <a class="btn" href="#enquire">Book a Visit</a>
+    </div>
+  </div>
+</div></header>
+
+<div class="marq" aria-hidden="true"><div class="marq-t">
+  <span>Silent study floors</span><span>·</span><span>Mentor check-ins</span><span>·</span><span>Exam-grade nutrition</span><span>·</span><span>Doubt-hour rooms</span><span>·</span>
+  <span>Silent study floors</span><span>·</span><span>Mentor check-ins</span><span>·</span><span>Exam-grade nutrition</span><span>·</span><span>Doubt-hour rooms</span><span>·</span>
+</div></div>
+
+<section id="story"><div class="wrap two">
+  <div class="fig reveal"><span class="cap">The third-floor silent study wing, open 5 AM–1 AM.</span></div>
+  <div class="reveal">
+    <span class="label">The Idea</span>
+    <h2 style="margin-top:14px">We removed everything that <em>breaks concentration.</em></h2>
+    <p>No television lounge on the study floors. No corridor noise after 9 PM. No unreliable Wi-Fi that turns a physics doubt into a two-hour detour. Every decision in this building was made by asking one question: does it help a student sit and study for four uninterrupted hours?</p>
+    <p>What remained is quiet, structure, good food and adults who notice when a student goes quiet in the wrong way.</p>
+  </div>
+</div></section>
+
+<section style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap big-quote reveal">
+  <blockquote>The building doesn't help you study. It just stops getting in the way.</blockquote>
+  <cite>Rohit Agarwal · AIR 842, JEE Advanced 2025</cite>
+</div></section>
+
+<section id="offer"><div class="wrap">
+  <div class="narrow reveal"><span class="label">The Rooms</span><h2 style="margin-top:14px">Three rooms, one philosophy</h2><p style="color:#5a554a">Every room includes all meals, silent-floor access, laundry and mentor check-ins. Prices are monthly and all-inclusive.</p></div>
+  <div class="rooms">
+    <div class="rm reveal"><div class="no">Room I</div><h3>The Single Study</h3><div class="pr">₹16,500<small> / month</small></div><ul><li>Private room + attached bath</li><li>Full-size study desk &amp; lamp</li><li>AC, wardrobe, bookshelf</li><li>Silent-floor placement</li></ul><a class="btn" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20The%20Single%20Study%20room%20at%20The%20Scholars%27%20House.">Enquire</a></div>
+    <div class="rm reveal"><div class="no">Room II</div><h3>The Twin Focus</h3><div class="pr">₹11,000<small> / month</small></div><ul><li>Two beds, two desks</li><li>Matched by study schedule</li><li>AC + attached bath</li><li>Silent-floor placement</li></ul><a class="btn" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20The%20Twin%20Focus%20room%20at%20The%20Scholars%27%20House.">Enquire</a></div>
+    <div class="rm reveal"><div class="no">Room III</div><h3>The Triple</h3><div class="pr">₹8,000<small> / month</small></div><ul><li>Three beds with storage</li><li>Shared desks &amp; bath</li><li>Air cooler + fan</li><li>Study-hall access</li></ul><a class="btn" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20The%20Triple%20room%20at%20The%20Scholars%27%20House.">Enquire</a></div>
+  </div>
+</div></section>
+
+<section id="day" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="narrow reveal"><span class="label">A Day Here</span><h2 style="margin-top:14px">Structure, not <em>surveillance</em></h2></div>
+  <div class="tl reveal">
+    <div class="tk"><time>5:30 AM</time><h3>Silent floors open</h3><p>Early risers claim the quietest desks before the building wakes.</p></div>
+    <div class="tk"><time>8:00 AM</time><h3>Breakfast &amp; a mentor word</h3><p>A resident mentor sits at breakfast — an easy place to raise a worry before class.</p></div>
+    <div class="tk"><time>9 AM–6 PM</time><h3>Coaching &amp; self-study</h3><p>Packed lunch on request; the building rests so you can return to silence.</p></div>
+    <div class="tk"><time>7:00 PM</time><h3>Doubt hour</h3><p>Two rooms open for group problem-solving — the only sanctioned noise of the evening.</p></div>
+    <div class="tk"><time>9:00 PM</time><h3>The house goes quiet</h3><p>Corridors settle, silent floors reopen, and the last four hours belong to you.</p></div>
+  </div>
+</div></section>
+
+<section id="enquire"><div class="wrap reveal">
+  <span class="label">Enquire</span>
+  <h2>Come see the silence for yourself.</h2>
+  <p>Visits daily, 9 AM to 7 PM. Bring a parent — we'll walk you through the study floors, the mess and a sample room.</p>
+  <div class="enq-row">
+    <a class="btn btn-fill" href="https://wa.me/919530301131?text=Hello%20The%20Scholars%27%20House%2C%20I%27d%20like%20to%20book%20a%20visit.">Book a Visit on WhatsApp</a>
+    <a class="btn" href="tel:+919530301131">Call +91 95303 01131</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  © 2026 The Scholars' House, Kota · <a href="mailto:websitecontact@saahvik.com">websitecontact@saahvik.com</a><br>
+  Website by <a href="https://www.saahvik.com">Saahvik</a> · Template: Scholars Prestige ★★★★
+</div></footer>
+
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
