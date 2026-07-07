@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyHub Hostel — Student Accommodation Near Coaching Centers</title>
+<meta name="description" content="StudyHub is a modern hostel for students preparing for competitive exams. AC rooms, nutritious meals, high-speed WiFi and a focused study environment.">
+<style>
+:root{--blue:#0066cc;--text:#222;--light:#f5f5f5;--border:#ddd}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,sans-serif;line-height:1.6;color:var(--text)}
+.container{max-width:1000px;margin:0 auto;padding:0 20px}
+header{background:var(--blue);color:#fff;padding:60px 20px;text-align:center}
+header h1{font-size:48px;margin:20px 0}
+header p{font-size:18px;opacity:.95}
+nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+nav .container{display:flex;justify-content:space-between;align-items:center;padding:15px 20px}
+nav a{margin:0 20px;color:var(--blue);text-decoration:none;font-weight:600}
+nav a:hover{text-decoration:underline}
+section{padding:60px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin:30px 0}
+.card{border:1px solid var(--border);border-radius:8px;padding:20px;background:#fff}
+.card h3{color:var(--blue);margin:10px 0}
+.card p{color:#666}
+.price-box{background:var(--light);padding:30px;text-align:center;border-radius:8px;margin:20px 0}
+.price-box .amount{font-size:36px;color:var(--blue);font-weight:bold}
+.price-box .period{color:#666;font-size:14px}
+.rooms{margin:40px 0}
+.room{background:var(--light);padding:20px;margin:15px 0;border-radius:8px}
+.room h4{color:var(--blue);margin:10px 0}
+.room ul{margin:10px 0 10px 20px}
+.room li{margin:5px 0}
+.cta{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:600;margin:10px 10px 10px 0}
+.cta:hover{background:#0052a3}
+footer{background:var(--light);border-top:1px solid var(--border);padding:40px 20px;text-align:center;color:#666}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>StudyHub Hostel</h1>
+    <p>Your focused study home near coaching centers</p>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <strong>StudyHub</strong>
+    <div>
+      <a href="#rooms">Rooms</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="container">
+  <h2>Welcome to StudyHub</h2>
+  <p>StudyHub is a modern student hostel designed for serious learners. Located within walking distance of major coaching institutes, we provide the perfect accommodation for students preparing for competitive exams like JEE, NEET and other entrance tests.</p>
+
+  <div class="price-box">
+    <p style="color:#666;margin-bottom:10px">Starting from</p>
+    <div class="amount">₹6,500/month</div>
+    <div class="period">All inclusive • AC rooms • 4 meals daily</div>
+  </div>
+
+  <h3>Why Choose StudyHub?</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>🏠 Comfortable Rooms</h3>
+      <p>AC rooms with study tables, individual lockers and comfortable beds</p>
+    </div>
+    <div class="card">
+      <h3>🍛 Nutritious Meals</h3>
+      <p>Home-style vegetarian and non-vegetarian food, 4 times a day</p>
+    </div>
+    <div class="card">
+      <h3>📚 Study Hall</h3>
+      <p>Quiet, well-lit study hall open 24 hours with power backup</p>
+    </div>
+    <div class="card">
+      <h3>📶 High-Speed WiFi</h3>
+      <p>150 Mbps WiFi with backup connection throughout the hostel</p>
+    </div>
+    <div class="card">
+      <h3>🛡️ Security</h3>
+      <p>24×7 CCTV monitoring, biometric entry and resident warden</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Power Backup</h3>
+      <p>Full generator backup for fans, lights and WiFi</p>
+    </div>
+  </div>
+</section>
+
+<section id="rooms" class="container">
+  <h2>Our Room Types</h2>
+
+  <div class="rooms">
+    <div class="room">
+      <h4>Single AC Room — ₹10,500/month</h4>
+      <p>Your private room with attached washroom. Perfect for students who prefer privacy and quiet.</p>
+      <ul>
+        <li>Single bed with quality mattress</li>
+        <li>Attached washroom with hot water</li>
+        <li>Study table and personal locker</li>
+        <li>AC and ceiling fan</li>
+      </ul>
+    </div>
+
+    <div class="room">
+      <h4>Double Sharing AC — ₹7,500/month</h4>
+      <p>Share with one roommate. The most popular choice, offers privacy and affordability.</p>
+      <ul>
+        <li>Two single beds</li>
+        <li>Attached washroom (shared with one person)</li>
+        <li>Two study tables</li>
+        <li>AC and ceiling fan</li>
+      </ul>
+    </div>
+
+    <div class="room">
+      <h4>Triple Sharing Non-AC — ₹5,500/month</h4>
+      <p>Budget-friendly option for students seeking economy accommodation with good facilities.</p>
+      <ul>
+        <li>Three beds with storage</li>
+        <li>Shared washroom (cleaned twice daily)</li>
+        <li>Common study area access</li>
+        <li>Ceiling fan and cooler</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="facilities" class="container">
+  <h2>Facilities Included</h2>
+  <ul style="list-style:none;margin:20px 0">
+    <li style="padding:10px;border-bottom:1px solid var(--border)">✓ 4 nutritious meals daily (breakfast, lunch, snacks, dinner)</li>
+    <li style="padding:10px;border-bottom:1px solid var(--border)">✓ 24×7 WiFi with backup connection</li>
+    <li style="padding:10px;border-bottom:1px solid var(--border)">✓ Individual study tables and common study hall</li>
+    <li style="padding:10px;border-bottom:1px solid var(--border)">✓ Laundry service (twice weekly)</li>
+    <li style="padding:10px;border-bottom:1px solid var(--border)">✓ Housekeeping and room cleaning</li>
+    <li style="padding:10px;border-bottom:1px solid var(--border)">✓ 24×7 security with CCTV and warden</li>
+    <li style="padding:10px">✓ Power backup for all facilities</li>
+  </ul>
+</section>
+
+<section id="contact" class="container">
+  <h2>Get in Touch</h2>
+  <p style="margin:20px 0">Interested in a room at StudyHub? Contact us today!</p>
+
+  <div style="background:var(--light);padding:30px;border-radius:8px">
+    <p><strong>Phone:</strong> <a href="tel:+919530301131" style="color:var(--blue)">+91 95303 01131</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919530301131?text=Hi%20StudyHub%2C%20I%27m%20interested%20in%20your%20accommodation." style="color:var(--blue)">Message Us</a></p>
+    <p><strong>Email:</strong> websitecontact@saahvik.com</p>
+    <p style="margin-top:20px">
+      <a class="cta" href="https://wa.me/919530301131?text=Hi%20StudyHub%2C%20I%27d%20like%20to%20book%20a%20visit%20and%20see%20the%20rooms.">Book a Visit on WhatsApp</a>
+      <a class="cta" href="tel:+919530301131">Call Now</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 StudyHub Hostel. All rights reserved.</p>
+    <p style="font-size:12px;margin-top:10px">Website by <a href="https://www.saahvik.com" style="color:var(--blue)">Saahvik</a> • Template: StudyHub Launch (★)</p>
+  </div>
+</footer>
+
+</body>
+</html>
