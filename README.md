@@ -1,59 +1,77 @@
-# Saahvik — Premium Website Template Ecosystem
+# Saahvik — Premium Student Hostel Website Templates
 
-A growing collection of premium, production-ready website templates for the accommodation and hospitality industry — hostels, PGs, co-living spaces, boutique hotels, resorts, villas, homestays and more — plus the marketplace that showcases them.
+The world's largest premium template marketplace dedicated exclusively to student hostels, PGs, and student accommodation businesses.
 
-**Live structure**
+## Marketplace Structure
 
-```
-index.html                      → Saahvik marketplace (catalog, tiers, process, contact)
-templates/
-  urbannest/index.html          → ★★★   Boys hostel / student accommodation · single-page
-  vedika/index.html             → ★★★   Girls hostel & PG · single-page
-  commonwealth/index.html       → ★★★★  Co-living community · single-page · dark/light theme
-  meridian/                     → ★★★★  Boutique hotel · multi-page
-    index.html                  →        Home
-    rooms.html                  →        Rooms & suites with tariffs
-    reservations.html           →        Reservation request flow
-    style.css                   →        Shared design system for the template
-  serai/index.html              → ★★★★★ Luxury desert resort · immersive single-page
-```
+**Homepage** (`/index.html`)
+- Premium hero introducing the 550+ template ecosystem
+- Why Choose Saahvik (6 value propositions)
+- 10 quality tier cards linking to collections
 
-## Design principles
+**Tier Collections** (`/tiers/1/` through `/tiers/10/`)
+- Each tier page shows all templates at that quality level
+- Tier 1: 10 templates @ ₹2,000
+- Tier 2: 20 templates @ ₹5,000
+- Tier 3: 30 templates @ ₹8,000
+- ... continuing to...
+- Tier 10: 100 templates @ ₹90,000+
+- **Total: 550 unique templates**
 
-Every template in the catalog follows the same non-negotiables:
+## Quality Tiers
 
-- **A unique identity** — its own typography pairing, colour system, layout language, motion style and copywriting voice. No recolours, no repeated layouts.
-- **Real content** — complete, realistic copy for a plausible client. No lorem ipsum, no unfinished sections.
-- **Conversion-first UX** — every page funnels to an enquiry: WhatsApp deep links with pre-filled messages, click-to-call, and enquiry forms that compose a WhatsApp message from the visitor's answers.
-- **Zero build step** — plain HTML/CSS/JS. Any page can be opened directly in a browser, dropped onto any static host, and edited by hand.
-- **Self-contained visuals** — art direction is done with gradients, CSS scenes and SVG-free compositions so demos never ship broken image links; client photography slots in at customisation time.
-- **Accessible & responsive** — semantic markup, labelled forms, `prefers-reduced-motion` support, and mobile-first layouts throughout.
-- **SEO-ready** — meaningful titles, meta descriptions and heading structure on every page.
+| Tier | Name | Templates | Starting Price | Design Focus |
+|------|------|-----------|-----------------|--------------|
+| 1 | Launch | 10 | ₹2,000 | Clean, fast essentials |
+| 2 | Presence | 20 | ₹5,000 | Branding with galleries & reviews |
+| 3 | Signature | 30 | ₹8,000 | Art direction & smooth motion |
+| 4 | Prestige | 40 | ₹12,000 | Editorial layouts & interactions |
+| 5 | Flagship | 50 | ₹18,000 | Immersive scroll & cinematic pacing |
+| 6 | Ultra | 60 | ₹25,000 | Advanced animations & glassmorphism |
+| 7 | Elite | 70 | ₹35,000 | Motion design & editorial storytelling |
+| 8 | Premium | 80 | ₹50,000 | Luxury-grade bespoke visuals |
+| 9 | Exclusive | 90 | ₹70,000 | 3D elements & immersive experiences |
+| 10 | Masterpiece | 100 | ₹90,000+ | Bespoke-quality custom-grade |
 
-## Quality tiers
+## Template Categories
 
-| Tier | Name | What it adds |
-|------|------|--------------|
-| ★ | Launch | Clean, fast, conversion-focused essentials |
-| ★★ | Presence | Stronger branding, galleries, reviews |
-| ★★★ | Signature | Distinct art direction, smooth motion, booking-oriented UX |
-| ★★★★ | Prestige | Editorial layouts, advanced interaction, multi-page architecture, theming |
-| ★★★★★ | Flagship | Immersive scroll experiences, cinematic pacing, bespoke-level detail |
+All 550 templates are designed exclusively for student accommodation, including:
 
-The catalog targets **100 templates**, each star level shipping in single-page and multi-page variants. The five templates above are the first entries and set the quality bar; new templates are added to `templates/<slug>/` and registered as a card in the marketplace catalog in `index.html`.
+- **Boys Hostels**
+- **Girls Hostels**
+- **Student Accommodation**
+- **Coaching Hostels** (JEE/NEET)
+- **PG for Students**
+- **College Dorms**
+- **University Hostels**
 
-## Adding a new template
+Each template within a category is visually unique with different:
+- Layout approaches
+- Typography systems
+- Color schemes
+- Visual themes (minimal, corporate, luxury, modern, glassmorphism, editorial, etc.)
+- Feature sets
 
-1. Create `templates/<slug>/index.html` (plus extra pages and a shared `style.css` for multi-page templates).
-2. Give it a distinct identity: new font pairing, palette, layout system and copy voice.
-3. Wire every CTA to WhatsApp (`https://wa.me/919530301131`) with a template-specific pre-filled message, plus `tel:` and `mailto:` links.
-4. Credit the footer: `Website by Saahvik · Template: <Name> <stars>`.
-5. Add a catalog card in `index.html` with tier, category filter tags, feature chips, and Live Demo / Enquire actions.
+## Key Features
+
+Every template includes:
+
+✓ **Live Demo** - Fully functional preview  
+✓ **Responsive Design** - Mobile-first, all devices  
+✓ **SEO Optimization** - Search engine ready  
+✓ **WhatsApp Integration** - Pre-configured inquiry buttons  
+✓ **No Build Step** - Plain HTML/CSS/JS, deploy anywhere  
+✓ **Accessibility** - WCAG compliance, dark mode support  
+✓ **Fast Performance** - Optimized code, minimal dependencies  
+✓ **Professional Content** - No lorem ipsum, complete copy  
 
 ## Contact
 
 - **Website:** [www.saahvik.com](https://www.saahvik.com)
+- **Marketplace:** [www.saahvik.com/templet_hostel_website](https://www.saahvik.com/templet_hostel_website)
 - **Email:** [websitecontact@saahvik.com](mailto:websitecontact@saahvik.com)
-- **Phone / WhatsApp:** +91 95303 01131
+- **Phone/WhatsApp:** +91 95303 01131
 
-© Saahvik. All templates are original works.
+---
+
+© 2026 Saahvik. All templates are original works designed exclusively for student hostel businesses.
