@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UrbanNest Boys Hostel — Safe, Modern Student Living in Kota</title>
+<meta name="description" content="UrbanNest is a modern boys hostel for students and young professionals in Kota — AC rooms, nutritious mess, high-speed Wi-Fi, study halls and 24×7 security. Book a visit on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f2557; --navy-deep:#0a1a3f; --blue:#2563eb; --sky:#38bdf8;
+  --amber:#f59e0b; --amber-dark:#d97706;
+  --paper:#f7f9fc; --white:#fff; --ink:#16213c; --ink-dim:#5a6478;
+  --line:#e4e9f2; --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Sora',sans-serif;line-height:1.15}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+.kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);background:#e5efff;padding:7px 16px;border-radius:999px;margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 28px;border-radius:12px;font-weight:700;font-size:15px;transition:.22s;border:2px solid transparent;cursor:pointer;font-family:'Sora',sans-serif}
+.btn-amber{background:var(--amber);color:#241500}
+.btn-amber:hover{background:var(--amber-dark);color:#fff;transform:translateY(-2px);box-shadow:0 10px 26px rgba(245,158,11,.35)}
+.btn-line{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--blue)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{font-family:'Sora',sans-serif;font-weight:800;font-size:21px;color:var(--navy)}
+.brand b{color:var(--amber)}
+.menu{display:flex;gap:28px;font-size:14.5px;font-weight:600;color:var(--ink-dim)}
+.menu a:hover{color:var(--blue)}
+.nav-book{padding:10px 20px;font-size:13.5px}
+@media(max-width:880px){.menu{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--navy-deep),var(--navy) 55%,#173a80);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.28),transparent 65%)}
+.hero::before{content:"";position:absolute;left:-120px;bottom:-200px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.16),transparent 65%)}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:90px 0 100px}
+.hero .kicker{background:rgba(56,189,248,.15);color:var(--sky)}
+.hero h1{font-size:clamp(36px,5vw,58px);font-weight:800;margin-bottom:20px}
+.hero h1 span{color:var(--amber)}
+.hero p{color:#c6d3ee;font-size:17.5px;max-width:52ch;margin-bottom:34px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hero-badges{display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:#a9bbe0}
+.hero-badges b{display:block;font-family:'Sora',sans-serif;font-size:22px;color:#fff}
+/* hero visual card */
+.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:26px;backdrop-filter:blur(8px)}
+.hero-card h3{font-size:16px;margin-bottom:16px;color:#fff}
+.slot{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.slot span{font-size:14px;color:#dbe6ff;font-weight:600}
+.slot em{font-style:normal;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px}
+.ok{background:rgba(52,211,153,.18);color:#6ee7b7}
+.few{background:rgba(245,158,11,.2);color:#fcd34d}
+.full{background:rgba(248,113,113,.16);color:#fca5a5}
+.hero-card .btn{width:100%;margin-top:8px}
+@media(max-width:880px){.hero-in{grid-template-columns:1fr;padding:64px 0 72px}}
+
+/* ticker strip */
+.strip{background:var(--amber);color:#241500;font-weight:700;font-size:14px;padding:12px 0;overflow:hidden;white-space:nowrap}
+.strip .wrap{display:flex;gap:48px;justify-content:center;flex-wrap:wrap}
+@media(max-width:700px){.strip .wrap{gap:20px;font-size:12.5px}}
+
+section{padding:92px 0}
+.sec-head{max-width:640px;margin-bottom:52px}
+.sec-head h2{font-size:clamp(28px,3.8vw,40px);font-weight:800;color:var(--navy);margin-bottom:14px}
+.sec-head p{color:var(--ink-dim);font-size:16.5px}
+
+/* rooms */
+.rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.room{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.28s;display:flex;flex-direction:column}
+.room:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(15,37,87,.12)}
+.room-top{height:170px;position:relative;display:flex;align-items:flex-end;padding:18px}
+.room-top .price{background:#fff;border-radius:10px;padding:8px 16px;font-family:'Sora',sans-serif;font-weight:800;color:var(--navy);font-size:17px;box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.room-top .price small{font-weight:600;color:var(--ink-dim);font-size:12px}
+.room-top .pop{position:absolute;top:16px;right:16px;background:var(--amber);color:#241500;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.room-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.room-body h3{font-size:21px;color:var(--navy);margin-bottom:8px}
+.room-body p{font-size:14.5px;color:var(--ink-dim);margin-bottom:18px}
+.room-body ul{list-style:none;margin-bottom:22px;flex:1}
+.room-body li{font-size:14px;padding:7px 0;border-bottom:1px dashed var(--line);color:var(--ink);display:flex;gap:10px;align-items:center}
+.room-body li::before{content:"✓";color:var(--blue);font-weight:800}
+.room .btn{width:100%}
+
+/* facilities */
+#facilities{background:#fff;border-block:1px solid var(--line)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:18px}
+.fact{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;transition:.24s}
+.fact:hover{border-color:var(--blue);background:#f0f6ff}
+.fact .ic{width:46px;height:46px;border-radius:12px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+.fact h3{font-size:16.5px;color:var(--navy);margin-bottom:6px}
+.fact p{font-size:13.5px;color:var(--ink-dim)}
+
+/* mess */
+.mess-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.day{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 16px;text-align:center}
+.day h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.day p{font-size:13px;color:var(--ink-dim);line-height:1.8}
+.mess-note{margin-top:26px;background:#fff8ec;border:1px solid #f3dfb6;border-radius:14px;padding:18px 22px;font-size:14px;color:#7c5808}
+
+/* reviews */
+#reviews{background:var(--navy);color:#fff}
+#reviews .sec-head h2{color:#fff}
+#reviews .sec-head p{color:#b9c8ea}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.rev{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:28px}
+.rev .stars{color:var(--amber);letter-spacing:3px;margin-bottom:14px}
+.rev p{font-size:15px;color:#dbe4f7;margin-bottom:20px}
+.rev-by{display:flex;align-items:center;gap:12px}
+.rev-by .av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:15px;color:#fff}
+.rev-by b{display:block;font-size:14.5px}
+.rev-by span{font-size:12.5px;color:#9db1dd}
+
+/* faq */
+.faq{max-width:780px}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+summary{padding:20px 24px;font-family:'Sora',sans-serif;font-weight:700;font-size:15.5px;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::after{content:"+";font-size:22px;color:var(--blue);transition:.2s;flex-shrink:0}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 24px 20px;font-size:14.5px;color:var(--ink-dim)}
+
+/* contact */
+#contact{background:linear-gradient(160deg,var(--navy-deep),var(--navy));color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact-grid h2{font-size:clamp(28px,3.6vw,40px);font-weight:800;margin-bottom:16px}
+.contact-grid>div>p{color:#bccbec;margin-bottom:30px}
+.cline{display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:15px}
+.cline b{font-family:'Sora',sans-serif}
+.cline .ic{width:42px;height:42px;border-radius:12px;background:rgba(245,158,11,.16);color:var(--amber);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+form{background:#fff;border-radius:20px;padding:32px;color:var(--ink)}
+form h3{font-size:20px;color:var(--navy);margin-bottom:6px}
+form>p{font-size:13.5px;color:var(--ink-dim);margin-bottom:22px}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--navy)}
+input,select,textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-family:inherit;font-size:14.5px;margin-bottom:16px;background:var(--paper);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);background:#fff}
+form .btn{width:100%}
+.form-ok{display:none;background:#e8faf0;border:1px solid #a7e8c5;color:#116b3d;border-radius:10px;padding:14px 16px;font-size:14px;margin-top:14px;font-weight:600}
+@media(max-width:880px){.contact-grid{grid-template-columns:1fr}}
+
+footer{background:var(--navy-deep);color:#8fa3cf;padding:34px 0;font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer a{color:#c6d3ee}
+footer a:hover{color:var(--amber)}
+
+/* floating whatsapp */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:70;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(37,211,102,.4);transition:.2s;font-size:26px}
+.wa-float:hover{transform:scale(1.08)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:.65s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="#">Urban<b>Nest</b></a>
+    <div class="menu">
+      <a href="#rooms">Rooms</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#mess">Mess</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn-amber nav-book" href="#contact">Book a Visit</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <span class="kicker">Boys Hostel · Talwandi, Kota</span>
+      <h1>Focus on your <span>goals.</span> We'll handle the rest.</h1>
+      <p>UrbanNest is a modern boys hostel built for serious students and young professionals — quiet study halls, four nutritious meals a day, high-speed Wi-Fi and a 5-minute walk from major coaching institutes.</p>
+      <div class="hero-actions">
+        <a class="btn btn-amber" href="#rooms">See Rooms &amp; Pricing</a>
+        <a class="btn btn-line" href="tel:+919530301131">📞 Call Now</a>
+      </div>
+      <div class="hero-badges">
+        <div><b>250+</b>Residents</div>
+        <div><b>4.8★</b>Google Rating</div>
+        <div><b>24×7</b>Security &amp; Warden</div>
+        <div><b>4</b>Meals Daily</div>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <h3>Live Availability — July 2026</h3>
+      <div class="slot"><span>Single AC Room</span><em class="few">2 left</em></div>
+      <div class="slot"><span>Double Sharing AC</span><em class="ok">Available</em></div>
+      <div class="slot"><span>Triple Sharing Non-AC</span><em class="ok">Available</em></div>
+      <div class="slot"><span>Dormitory (6-bed)</span><em class="full">Waitlist</em></div>
+      <a class="btn btn-amber" href="https://wa.me/919530301131?text=Hi%2C%20I%20want%20to%20check%20room%20availability%20at%20UrbanNest.">Check on WhatsApp</a>
+    </aside>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <span>✦ 5 min from Coaching Hub</span>
+    <span>✦ RO + UV Drinking Water</span>
+    <span>✦ Power Backup</span>
+    <span>✦ Laundry Included</span>
+    <span>✦ CCTV Covered Campus</span>
+  </div>
+</div>
+
+<section id="rooms">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Rooms &amp; Pricing</span>
+      <h2>Pick the room that fits your budget</h2>
+      <p>All plans include four meals, Wi-Fi, laundry, housekeeping and electricity for fans and lights. No hidden charges — ever.</p>
+    </div>
+    <div class="rooms">
+      <article class="room reveal">
+        <div class="room-top" style="background:linear-gradient(140deg,#173a80,#38bdf8)">
+          <span class="price">₹14,500 <small>/month</small></span>
+        </div>
+        <div class="room-body">
+          <h3>Single AC Room</h3>
+          <p>Your own private room with attached washroom — total focus, zero distractions.</p>
+          <ul>
+            <li>Private room, attached washroom</li>
+            <li>Split AC + study table &amp; chair</li>
+            <li>Personal cupboard with lock</li>
+            <li>Balcony in select rooms</li>
+          </ul>
+          <a class="btn btn-navy" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20Single%20AC%20Room%20at%20UrbanNest.">Enquire on WhatsApp</a>
+        </div>
+      </article>
+      <article class="room reveal">
+        <div class="room-top" style="background:linear-gradient(140deg,#0f2557,#2563eb)">
+          <span class="pop">Most Popular</span>
+          <span class="price">₹9,500 <small>/month</small></span>
+        </div>
+        <div class="room-body">
+          <h3>Double Sharing AC</h3>
+          <p>The best balance of comfort, company and cost — our residents' favourite.</p>
+          <ul>
+            <li>Two single beds with mattresses</li>
+            <li>Split AC + two study desks</li>
+            <li>Attached washroom &amp; geyser</li>
+            <li>Individual cupboards</li>
+          </ul>
+          <a class="btn btn-navy" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20Double%20Sharing%20AC%20room%20at%20UrbanNest.">Enquire on WhatsApp</a>
+        </div>
+      </article>
+      <article class="room reveal">
+        <div class="room-top" style="background:linear-gradient(140deg,#334155,#94a3b8)">
+          <span class="price">₹6,500 <small>/month</small></span>
+        </div>
+        <div class="room-body">
+          <h3>Triple Sharing Non-AC</h3>
+          <p>A budget-friendly room with everything a focused student actually needs.</p>
+          <ul>
+            <li>Three beds with storage below</li>
+            <li>High-speed ceiling fans + cooler</li>
+            <li>Shared washroom (cleaned 2× daily)</li>
+            <li>Common study hall access</li>
+          </ul>
+          <a class="btn btn-navy" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20Triple%20Sharing%20room%20at%20UrbanNest.">Enquire on WhatsApp</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="facilities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Facilities</span>
+      <h2>Everything included. Nothing extra to arrange.</h2>
+      <p>We designed UrbanNest so parents stop worrying and students stop wasting time on chores.</p>
+    </div>
+    <div class="facts">
+      <div class="fact reveal"><div class="ic">📶</div><h3>200 Mbps Wi-Fi</h3><p>Dedicated leased line with backup connection across every floor.</p></div>
+      <div class="fact reveal"><div class="ic">📚</div><h3>Silent Study Hall</h3><p>Open 5 AM – 1 AM with individual desks and reading lamps.</p></div>
+      <div class="fact reveal"><div class="ic">🍛</div><h3>4 Meals a Day</h3><p>Breakfast, lunch, evening snacks and dinner — hygienic in-house kitchen.</p></div>
+      <div class="fact reveal"><div class="ic">🛡️</div><h3>24×7 Security</h3><p>CCTV coverage, biometric entry and a resident warden on every wing.</p></div>
+      <div class="fact reveal"><div class="ic">🧺</div><h3>Laundry &amp; Housekeeping</h3><p>Twice-weekly laundry and daily room cleaning included in rent.</p></div>
+      <div class="fact reveal"><div class="ic">⚡</div><h3>Full Power Backup</h3><p>Generator backup keeps fans, lights and Wi-Fi running through cuts.</p></div>
+      <div class="fact reveal"><div class="ic">💧</div><h3>RO + UV Water</h3><p>Purified drinking water coolers on every floor, serviced monthly.</p></div>
+      <div class="fact reveal"><div class="ic">🏸</div><h3>Recreation Zone</h3><p>Table tennis, chess, badminton court and a TV lounge for weekends.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="mess">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Mess Menu</span>
+      <h2>Food that tastes like home</h2>
+      <p>A rotating weekly menu planned with a nutritionist — because good marks start with good meals.</p>
+    </div>
+    <div class="mess-grid reveal">
+      <div class="day"><h4>Monday</h4><p>Poha &amp; chai<br>Dal, rice, roti, aloo-gobhi<br>Rajma chawal</p></div>
+      <div class="day"><h4>Tuesday</h4><p>Idli sambhar<br>Kadhi, rice, roti, bhindi<br>Paneer butter masala</p></div>
+      <div class="day"><h4>Wednesday</h4><p>Paratha &amp; curd<br>Chole, rice, roti, salad<br>Veg pulao &amp; raita</p></div>
+      <div class="day"><h4>Thursday</h4><p>Upma &amp; chai<br>Dal fry, jeera rice, lauki<br>Chhole bhature</p></div>
+      <div class="day"><h4>Friday</h4><p>Sandwich &amp; juice<br>Mix dal, rice, seasonal sabzi<br>Pav bhaji night</p></div>
+      <div class="day"><h4>Saturday</h4><p>Chhola kulcha<br>Dal makhani, rice, roti<br>Biryani special</p></div>
+      <div class="day"><h4>Sunday</h4><p>Aloo puri &amp; halwa<br>Special thali lunch<br>Pizza / pasta night</p></div>
+    </div>
+    <p class="mess-note reveal">🥗 Evening snacks (4:30 PM) rotate daily — samosa, fruit chaat, maggi, sprouts and more. Special diet requests during exams are always accommodated.</p>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker" style="background:rgba(245,158,11,.16);color:var(--amber)">Resident Reviews</span>
+      <h2>Trusted by students. Approved by parents.</h2>
+      <p>Real feedback from residents and families across our Google and Justdial profiles.</p>
+    </div>
+    <div class="revs">
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"I stayed at UrbanNest for my two years of JEE prep. The silent study hall and fixed meal timings kept my routine on track. Got into NIT Trichy this year!"</p>
+        <div class="rev-by"><div class="av" style="background:#2563eb">AR</div><div><b>Aarav Sharma</b><span>JEE Aspirant · 2 years</span></div></div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"As a parent 600 km away, the biometric entry updates and warden's monthly calls gave me complete peace of mind. The mess food is genuinely good."</p>
+        <div class="rev-by"><div class="av" style="background:#d97706">SK</div><div><b>Sunita Khandelwal</b><span>Parent · Jaipur</span></div></div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Shifted here after a bad PG experience. Cleanliness is on another level — washrooms cleaned twice a day, fresh sheets weekly. Worth every rupee."</p>
+        <div class="rev-by"><div class="av" style="background:#0e7490">VP</div><div><b>Vishal Prajapat</b><span>NEET Aspirant · 1 year</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">FAQ</span>
+      <h2>Questions parents usually ask</h2>
+    </div>
+    <div class="faq reveal">
+      <details open>
+        <summary>What is the admission process?</summary>
+        <p>Book a visit on WhatsApp, tour the hostel, choose your room and reserve it with a one-month refundable security deposit. Aadhaar and one passport photo are required at check-in.</p>
+      </details>
+      <details>
+        <summary>What are the entry and exit timings?</summary>
+        <p>The gate closes at 10:30 PM. Late entry for classes or tests is allowed with prior notice to the warden. Parents receive an SMS on every biometric entry and exit.</p>
+      </details>
+      <details>
+        <summary>Is there a notice period for leaving?</summary>
+        <p>Yes — one month's written notice. The security deposit is refunded in full within 7 days of checkout after room inspection.</p>
+      </details>
+      <details>
+        <summary>Can parents visit and stay?</summary>
+        <p>Parents are welcome every day between 8 AM and 8 PM. We also keep two guest rooms that parents can book for overnight stays at nominal charges.</p>
+      </details>
+      <details>
+        <summary>What happens if a student falls ill?</summary>
+        <p>A doctor visits on call within 30 minutes, and our tie-up hospital is 2 km away. The warden informs parents immediately and arranges special mess food during recovery.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="kicker" style="background:rgba(245,158,11,.16);color:var(--amber)">Book a Visit</span>
+      <h2>Come see UrbanNest for yourself</h2>
+      <p>Walk in any day between 9 AM and 7 PM, or book a guided tour below. We'll show you the rooms, mess, study hall — everything.</p>
+      <div class="cline"><div class="ic">📍</div><div><b>UrbanNest Boys Hostel</b><br>Plot 14, Indraprastha Nagar, Talwandi, Kota, Rajasthan 324005</div></div>
+      <div class="cline"><div class="ic">📞</div><div><b>+91 95303 01131</b><br>Call or WhatsApp, 8 AM – 10 PM</div></div>
+      <div class="cline"><div class="ic">✉️</div><div><b>websitecontact@saahvik.com</b><br>We reply within a few hours</div></div>
+    </div>
+    <form class="reveal" id="visitForm" novalidate>
+      <h3>Book a Free Guided Visit</h3>
+      <p>Fill this in and we'll confirm your slot on WhatsApp.</p>
+      <label for="name">Student's Name</label>
+      <input id="name" name="name" type="text" placeholder="e.g. Rohan Verma" required>
+      <label for="phone">WhatsApp Number</label>
+      <input id="phone" name="phone" type="tel" placeholder="e.g. 98765 43210" required>
+      <label for="room">Preferred Room Type</label>
+      <select id="room" name="room">
+        <option>Single AC Room</option>
+        <option selected>Double Sharing AC</option>
+        <option>Triple Sharing Non-AC</option>
+        <option>Not sure yet</option>
+      </select>
+      <label for="msg">Anything we should know?</label>
+      <textarea id="msg" name="msg" rows="3" placeholder="Joining month, coaching institute, food preferences…"></textarea>
+      <button class="btn btn-amber" type="submit">Send Visit Request</button>
+      <div class="form-ok" id="formOk">✅ Opening WhatsApp with your request — hit send and we'll confirm your slot!</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 UrbanNest Boys Hostel, Kota. All rights reserved.</span>
+    <span>Website by <a href="https://www.saahvik.com">Saahvik</a> · Template: UrbanNest ★★★</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919530301131?text=Hi%20UrbanNest!" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+// visit form → prefilled WhatsApp message
+document.getElementById('visitForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const f=e.target;
+  if(!f.name.value.trim()||!f.phone.value.trim()){f.reportValidity();return}
+  const text=`Hi UrbanNest! I'd like to book a visit.%0AName: ${encodeURIComponent(f.name.value)}%0APhone: ${encodeURIComponent(f.phone.value)}%0ARoom: ${encodeURIComponent(f.room.value)}%0ANote: ${encodeURIComponent(f.msg.value||'—')}`;
+  document.getElementById('formOk').style.display='block';
+  window.open('https://wa.me/919530301131?text='+text,'_blank');
+});
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
