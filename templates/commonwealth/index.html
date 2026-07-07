@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commonwealth Co-living — Live Better, Together. Bengaluru</title>
+<meta name="description" content="Commonwealth is a designer co-living community in Indiranagar, Bengaluru — furnished suites, coworking lounge, chef's kitchen, gym and 200+ young professionals. One membership, everything included.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1117; --panel:#151b24; --panel-2:#1b232e; --line:rgba(255,255,255,.09);
+  --ink:#eef2f6; --dim:#94a3b3; --faint:#5c6a78;
+  --mint:#34d399; --mint-deep:#059669; --lime:#a3e635;
+  --shadow:0 24px 60px rgba(0,0,0,.5);
+}
+[data-theme="light"]{
+  --bg:#f4f6f3; --panel:#ffffff; --panel-2:#eaf0ea; --line:rgba(10,30,20,.1);
+  --ink:#122018; --dim:#4d5f56; --faint:#8a9a91;
+  --shadow:0 24px 60px rgba(18,32,24,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;transition:background .35s,color .35s}
+a{color:inherit;text-decoration:none}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.pill{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--mint);border:1px solid var(--mint);border-radius:999px;padding:6px 16px;margin-bottom:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;border-radius:14px;font-weight:600;font-size:15px;transition:.22s;cursor:pointer;border:1px solid transparent;font-family:inherit}
+.btn-mint{background:var(--mint);color:#06251a}
+.btn-mint:hover{background:var(--lime);transform:translateY(-2px);box-shadow:0 14px 32px rgba(52,211,153,.3)}
+.btn-ghost{border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--mint);color:var(--mint)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:60;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{font-weight:700;font-size:19px;display:flex;align-items:center;gap:10px}
+.brand .dot{width:12px;height:12px;border-radius:3px;background:var(--mint);transform:rotate(45deg)}
+.menu{display:flex;gap:30px;font-size:14px;color:var(--dim)}
+.menu a:hover{color:var(--mint)}
+.nav-right{display:flex;gap:12px;align-items:center}
+.theme-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:17px;cursor:pointer;transition:.2s}
+.theme-btn:hover{border-color:var(--mint)}
+.nav-cta{padding:10px 20px;font-size:13.5px;border-radius:11px}
+@media(max-width:900px){.menu{display:none}}
+
+/* hero */
+.hero{padding:170px 0 110px;position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;pointer-events:none}
+.b1{width:520px;height:520px;background:var(--mint);top:-220px;right:-140px;opacity:.16}
+.b2{width:420px;height:420px;background:#3b82f6;bottom:-260px;left:-140px;opacity:.12}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;position:relative}
+.hero h1{font-size:clamp(40px,5.6vw,68px);line-height:1.04;font-weight:700;letter-spacing:-.02em;margin-bottom:24px}
+.hero h1 .hl{color:var(--mint);position:relative}
+.hero p{color:var(--dim);font-size:17.5px;max-width:50ch;margin-bottom:36px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:36px;margin-top:52px;flex-wrap:wrap}
+.hm b{display:block;font-size:26px;font-weight:700}
+.hm span{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--faint);letter-spacing:.06em}
+/* hero terminal card */
+.term{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.term-bar{display:flex;gap:7px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.term-bar i{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.term-bar i:first-child{background:#f87171}.term-bar i:nth-child(2){background:#fbbf24}.term-bar i:nth-child(3){background:var(--mint)}
+.term-body{padding:26px;font-family:'IBM Plex Mono',monospace;font-size:13.5px;line-height:2.1}
+.term-body .c{color:var(--faint)}
+.term-body .k{color:var(--mint)}
+.term-body .v{color:var(--ink)}
+.cursor{display:inline-block;width:8px;height:16px;background:var(--mint);vertical-align:middle;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media(max-width:900px){.hero-in{grid-template-columns:1fr}.hero{padding:130px 0 80px}}
+
+section{padding:100px 0}
+.sec-head{margin-bottom:56px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(30px,4vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.1;max-width:22ch}
+.sec-head p{color:var(--dim);max-width:42ch}
+
+/* bento amenities */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:16px}
+.cell{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;transition:.28s}
+.cell:hover{border-color:var(--mint);transform:translateY(-4px)}
+.cell .em{position:absolute;top:22px;left:24px;font-size:28px}
+.cell h3{font-size:18px;font-weight:600;margin-bottom:4px}
+.cell p{font-size:13px;color:var(--dim)}
+.cell.big{grid-column:span 2;grid-row:span 2;justify-content:flex-end;background:linear-gradient(150deg,var(--panel),var(--panel-2))}
+.cell.big h3{font-size:26px}
+.cell.big .em{font-size:40px}
+.cell.wide{grid-column:span 2}
+.cell .stat{font-family:'IBM Plex Mono',monospace;font-size:44px;color:var(--mint);font-weight:500;line-height:1;margin-bottom:10px}
+@media(max-width:900px){.bento{grid-template-columns:repeat(2,1fr)}.cell.big{grid-column:span 2}}
+@media(max-width:560px){.bento{grid-template-columns:1fr}.cell.big,.cell.wide{grid-column:span 1}}
+
+/* membership pricing */
+#membership{background:var(--panel-2);border-block:1px solid var(--line)}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:stretch}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:38px 32px;display:flex;flex-direction:column;position:relative;transition:.28s}
+.plan:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.plan.feat{border-color:var(--mint);box-shadow:0 0 0 1px var(--mint)}
+.plan .flag{position:absolute;top:-13px;left:32px;background:var(--mint);color:#06251a;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;padding:5px 14px;border-radius:999px;font-weight:500}
+.plan h3{font-size:22px;font-weight:700;margin-bottom:6px}
+.plan .sub{font-size:13.5px;color:var(--dim);margin-bottom:24px}
+.plan .amt{font-size:42px;font-weight:700;letter-spacing:-.02em;margin-bottom:2px}
+.plan .amt small{font-size:14px;color:var(--faint);font-weight:400}
+.plan .per{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--faint);margin-bottom:26px}
+.plan ul{list-style:none;margin-bottom:30px;flex:1}
+.plan li{padding:9px 0;font-size:14px;color:var(--dim);border-bottom:1px dashed var(--line);display:flex;gap:12px}
+.plan li::before{content:"▸";color:var(--mint)}
+.plan .btn{width:100%}
+
+/* community */
+.comm{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.voice{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:30px;transition:.25s}
+.voice:hover{border-color:var(--mint)}
+.voice .handle{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--mint);margin-bottom:14px}
+.voice p{font-size:15px;color:var(--ink);margin-bottom:18px}
+.voice .who{font-size:13px;color:var(--faint)}
+
+/* events strip */
+.events{display:flex;gap:16px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
+.event{min-width:250px;scroll-snap-align:start;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
+.event time{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--mint);display:block;margin-bottom:10px}
+.event h3{font-size:17px;font-weight:600;margin-bottom:6px}
+.event p{font-size:13px;color:var(--dim)}
+
+/* cta */
+.cta{text-align:center;position:relative;overflow:hidden}
+.cta h2{font-size:clamp(32px,5vw,58px);font-weight:700;letter-spacing:-.02em;margin:16px 0 18px}
+.cta h2 .hl{color:var(--mint)}
+.cta p{color:var(--dim);max-width:52ch;margin:0 auto 38px}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--line);padding:34px 0;font-size:13px;color:var(--faint)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:var(--dim)}footer a:hover{color:var(--mint)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:.65s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.cursor{animation:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="#"><span class="dot"></span>commonwealth</a>
+    <div class="menu">
+      <a href="#space">The Space</a>
+      <a href="#membership">Membership</a>
+      <a href="#community">Community</a>
+      <a href="#events">Events</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle light and dark theme">☀️</button>
+      <a class="btn btn-mint nav-cta" href="#join">Book a Tour</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap hero-in">
+    <div>
+      <span class="pill">// co-living · indiranagar, bengaluru</span>
+      <h1>Your flat, your gym, your café, your <span class="hl">people.</span></h1>
+      <p>Commonwealth is a designer co-living community for people building careers and startups. One membership covers a furnished suite, coworking lounge, chef's kitchen, gym — and 200 neighbours worth knowing.</p>
+      <div class="hero-actions">
+        <a class="btn btn-mint" href="#membership">See Memberships</a>
+        <a class="btn btn-ghost" href="https://wa.me/919530301131?text=Hi%20Commonwealth%2C%20I%27d%20like%20to%20book%20a%20tour.">Book a Tour →</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hm"><b>212</b><span>residents</span></div>
+        <div class="hm"><b>96%</b><span>renew_rate</span></div>
+        <div class="hm"><b>0</b><span>brokerage</span></div>
+        <div class="hm"><b>1</b><span>bill_monthly</span></div>
+      </div>
+    </div>
+    <div class="term" aria-hidden="true">
+      <div class="term-bar"><i></i><i></i><i></i></div>
+      <div class="term-body">
+        <div><span class="c">$</span> <span class="v">move-in --to commonwealth</span></div>
+        <div><span class="k">✓</span> <span class="v">furnished suite</span> <span class="c">.......... ready</span></div>
+        <div><span class="k">✓</span> <span class="v">gigabit wifi</span> <span class="c">............ live</span></div>
+        <div><span class="k">✓</span> <span class="v">meals + housekeeping</span> <span class="c">.... daily</span></div>
+        <div><span class="k">✓</span> <span class="v">gym + coworking</span> <span class="c">......... 24/7</span></div>
+        <div><span class="k">✓</span> <span class="v">deposit</span> <span class="c">............ 1 month only</span></div>
+        <div><span class="c">→ welcome home.</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="space">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Everything under one very good roof</h2>
+      <p>Designed by architects, run by people who live here too. No broker, no furniture shopping, no five separate bills.</p>
+    </div>
+    <div class="bento">
+      <div class="cell big reveal"><span class="em">🛋️</span><h3>Designer Suites</h3><p>Queen bed, workspace, blackout curtains, smart lock and weekly linen change. Private or twin — both feel like a boutique hotel that lets you stay forever.</p></div>
+      <div class="cell reveal"><span class="em">💻</span><h3>Coworking Lounge</h3><p>Focus pods, call booths and monitors on every desk.</p></div>
+      <div class="cell reveal"><span class="em">🏋️</span><h3>24/7 Gym</h3><p>Strength rack, cardio zone and Saturday yoga.</p></div>
+      <div class="cell reveal"><div class="stat">1 Gbps</div><h3>Fibre Internet</h3><p>Enterprise-grade, with mesh coverage everywhere.</p></div>
+      <div class="cell reveal"><span class="em">👨‍🍳</span><h3>Chef's Kitchen</h3><p>Breakfast and dinner daily, plus a residents' pantry.</p></div>
+      <div class="cell wide reveal"><span class="em">🎬</span><h3>Rooftop Cinema &amp; Café</h3><p>Friday screenings, single-origin coffee, and the best sunset view in Indiranagar.</p></div>
+      <div class="cell reveal"><span class="em">🧺</span><h3>Laundry Room</h3><p>App-connected washers — get a ping when your load's done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="membership">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>One membership. Zero surprise bills.</h2>
+      <p>Rent, food, utilities, internet, gym, housekeeping and community — one predictable monthly number.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>Club Twin</h3>
+        <p class="sub">Shared suite for the community-first mover</p>
+        <div class="amt">₹19,000<small> /mo</small></div>
+        <p class="per">// deposit: 1 month · lock-in: none</p>
+        <ul>
+          <li>Twin suite with personal workspace</li>
+          <li>Breakfast &amp; dinner, 7 days</li>
+          <li>All amenities &amp; events included</li>
+          <li>Housekeeping 3× weekly</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20Club%20Twin%20membership%20at%20Commonwealth.">Choose Club Twin</a>
+      </div>
+      <div class="plan feat reveal">
+        <span class="flag">MOST CHOSEN</span>
+        <h3>Studio Private</h3>
+        <p class="sub">Your own suite, everything included</p>
+        <div class="amt">₹29,500<small> /mo</small></div>
+        <p class="per">// deposit: 1 month · lock-in: none</p>
+        <ul>
+          <li>Private suite, queen bed, smart lock</li>
+          <li>Breakfast &amp; dinner, 7 days</li>
+          <li>Dedicated coworking desk</li>
+          <li>Housekeeping 5× weekly</li>
+          <li>2 guest-stay nights monthly</li>
+        </ul>
+        <a class="btn btn-mint" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20Studio%20Private%20membership%20at%20Commonwealth.">Choose Studio Private</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Studio XL</h3>
+        <p class="sub">Corner suites with balcony &amp; kitchenette</p>
+        <div class="amt">₹38,000<small> /mo</small></div>
+        <p class="per">// deposit: 1 month · lock-in: none</p>
+        <ul>
+          <li>XL corner suite with balcony</li>
+          <li>Kitchenette &amp; mini fridge</li>
+          <li>All Studio Private benefits</li>
+          <li>Priority event &amp; cinema seats</li>
+          <li>Free parking slot</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/919530301131?text=I%27m%20interested%20in%20the%20Studio%20XL%20membership%20at%20Commonwealth.">Choose Studio XL</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="community">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>The neighbours are the amenity</h2>
+      <p>Designers, developers, doctors, founders — the residents' Slack has 212 members and zero landlord.</p>
+    </div>
+    <div class="comm">
+      <div class="voice reveal">
+        <div class="handle">@tanay.builds</div>
+        <p>"Found my startup's first designer at the Thursday demo night. My rent basically networks for me."</p>
+        <div class="who">Tanay Gupta · Founder, fintech · 14 months here</div>
+      </div>
+      <div class="voice reveal">
+        <div class="handle">@meghna.codes</div>
+        <p>"Moved cities with two suitcases on a Sunday, was working from the lounge Monday 9 AM. Zero setup. Zero brokers. Still can't believe it."</p>
+        <div class="who">Meghna Rao · SDE-2, product company · 2 years here</div>
+      </div>
+      <div class="voice reveal">
+        <div class="handle">@dr.ashwin</div>
+        <p>"Night shifts at the hospital, gym at 3 AM, breakfast saved for me at noon. This place bends around real schedules."</p>
+        <div class="who">Dr. Ashwin Iyer · Resident doctor · 9 months here</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="events">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>This month at Commonwealth</h2>
+      <p>Every event is optional. Most people come anyway.</p>
+    </div>
+    <div class="events reveal">
+      <div class="event"><time>SAT · JUL 11 · 10:00</time><h3>Terrace Yoga + Brunch</h3><p>90 minutes of vinyasa, followed by the kitchen's legendary akki roti.</p></div>
+      <div class="event"><time>THU · JUL 16 · 19:30</time><h3>Demo Night #42</h3><p>Five residents show what they're building. Pizza is on the house.</p></div>
+      <div class="event"><time>FRI · JUL 17 · 20:30</time><h3>Rooftop Cinema</h3><p>Residents' pick this week — bring a blanket, popcorn's covered.</p></div>
+      <div class="event"><time>SUN · JUL 26 · 07:00</time><h3>Cubbon Park Run Club</h3><p>5k together, dosas after. All paces welcome, walkers included.</p></div>
+      <div class="event"><time>FRI · JUL 31 · 20:00</time><h3>Open Mic + Chai</h3><p>Music, poetry, stand-up — 6 slots, sign up on the residents' board.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="join">
+  <div class="wrap reveal">
+    <span class="pill">// tours daily 10:00–20:00</span>
+    <h2>Come see it. <span class="hl">Stay for the people.</span></h2>
+    <p>Book a 30-minute tour — walk the suites, try the coffee, meet whoever's in the lounge. If it clicks, you can move in the same week.</p>
+    <div class="cta-actions">
+      <a class="btn btn-mint" href="https://wa.me/919530301131?text=Hi%20Commonwealth%2C%20I%27d%20like%20to%20book%20a%20tour%20this%20week.">Book a Tour on WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+919530301131">Call +91 95303 01131</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Commonwealth Co-living, 12th Main, Indiranagar, Bengaluru 560008</span>
+    <span>Website by <a href="https://www.saahvik.com">Saahvik</a> · Template: Commonwealth ★★★★</span>
+  </div>
+</footer>
+
+<script>
+// theme toggle with persistence
+const root=document.documentElement,btn=document.getElementById('themeBtn');
+const saved=localStorage.getItem('cw-theme');if(saved)root.dataset.theme=saved;
+const sync=()=>btn.textContent=root.dataset.theme==='dark'?'☀️':'🌙';sync();
+btn.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('cw-theme',root.dataset.theme);sync()});
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
