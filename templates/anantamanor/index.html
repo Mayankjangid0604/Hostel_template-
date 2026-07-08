@@ -1,0 +1,735 @@
+<title>AnantaManor — Structured Living, Focused Minds</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AnantaManor — Student Co-Living. Structured Living, Focused Minds.">
+<style>
+  :root{
+    --black:#111111;
+    --white:#ffffff;
+    --grey-1:#f4f4f4;
+    --grey-2:#e2e2e2;
+    --grey-3:#bdbdbd;
+    --grey-4:#8a8a8a;
+    --grey-5:#4a4a4a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Helvetica Neue',Arial,'Segoe UI',sans-serif;
+    color:var(--black);
+    background:var(--white);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ===== NAV ===== */
+  header.nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:var(--white);
+    border-bottom:1px solid var(--black);
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:22px 32px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .brand{
+    font-size:19px;
+    font-weight:700;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+  }
+  .brand span{color:var(--grey-4);}
+  nav.links{
+    display:flex;
+    gap:36px;
+  }
+  nav.links a{
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    font-weight:600;
+    padding-bottom:4px;
+    border-bottom:1px solid transparent;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  nav.links a:hover{
+    border-bottom-color:var(--black);
+  }
+  .nav-cta{
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-weight:700;
+    border:1px solid var(--black);
+    padding:10px 20px;
+    transition:background .2s ease,color .2s ease;
+  }
+  .nav-cta:hover{
+    background:var(--black);
+    color:var(--white);
+  }
+  .nav-toggle{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    border:1px solid var(--black);
+    padding:10px 12px;
+  }
+  .nav-toggle span{
+    width:20px;
+    height:2px;
+    background:var(--black);
+    display:block;
+  }
+  #nav-check{display:none;}
+
+  /* ===== HERO ===== */
+  .hero{
+    background:var(--black);
+    color:var(--white);
+    padding:160px 32px 130px;
+    position:relative;
+  }
+  .hero-inner{
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .hero-eyebrow{
+    font-size:12px;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+    color:var(--grey-3);
+    margin-bottom:28px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  .hero-eyebrow::before{
+    content:"";
+    display:inline-block;
+    width:48px;
+    height:1px;
+    background:var(--grey-4);
+  }
+  .hero h1{
+    font-size:clamp(42px,8vw,96px);
+    font-weight:700;
+    letter-spacing:-0.02em;
+    line-height:1.03;
+    text-transform:uppercase;
+    max-width:900px;
+  }
+  .hero p.lead{
+    margin-top:34px;
+    font-size:18px;
+    color:var(--grey-3);
+    max-width:520px;
+    line-height:1.7;
+  }
+  .hero-actions{
+    margin-top:56px;
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    font-size:13px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-weight:700;
+    padding:16px 32px;
+    border:1px solid var(--white);
+    transition:background .2s ease,color .2s ease;
+  }
+  .btn-solid{
+    background:var(--white);
+    color:var(--black);
+  }
+  .btn-solid:hover{
+    background:transparent;
+    color:var(--white);
+  }
+  .btn-outline{
+    color:var(--white);
+  }
+  .btn-outline:hover{
+    background:var(--white);
+    color:var(--black);
+  }
+  .hero-meta{
+    margin-top:110px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--grey-5);
+    padding-top:32px;
+  }
+  .hero-meta div{
+    padding-right:24px;
+  }
+  .hero-meta div + div{
+    border-left:1px solid var(--grey-5);
+    padding-left:24px;
+  }
+  .hero-meta .num{
+    font-size:28px;
+    font-weight:700;
+  }
+  .hero-meta .lbl{
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--grey-4);
+    margin-top:8px;
+  }
+
+  /* ===== SECTION GENERAL ===== */
+  section{
+    padding:120px 32px;
+    border-bottom:1px solid var(--grey-2);
+  }
+  section:last-of-type{border-bottom:none;}
+  .section-inner{
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .section-head{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    margin-bottom:80px;
+    align-items:end;
+  }
+  .kicker{
+    font-size:12px;
+    letter-spacing:0.25em;
+    text-transform:uppercase;
+    color:var(--grey-4);
+    margin-bottom:18px;
+    display:block;
+  }
+  .section-head h2{
+    font-size:clamp(30px,4.5vw,52px);
+    font-weight:700;
+    letter-spacing:-0.01em;
+    line-height:1.08;
+    text-transform:uppercase;
+  }
+  .section-head .desc{
+    font-size:16px;
+    color:var(--grey-5);
+    line-height:1.8;
+    align-self:end;
+  }
+
+  /* ===== PHILOSOPHY ===== */
+  .philosophy-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    border-top:1px solid var(--black);
+  }
+  .phil-item{
+    border-right:1px solid var(--grey-2);
+    padding:40px 36px 0;
+  }
+  .phil-item:last-child{border-right:none;}
+  .phil-index{
+    font-size:13px;
+    color:var(--grey-4);
+    letter-spacing:0.1em;
+    margin-bottom:24px;
+  }
+  .phil-item h3{
+    font-size:20px;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    margin-bottom:16px;
+    font-weight:700;
+  }
+  .phil-item p{
+    font-size:15px;
+    color:var(--grey-5);
+    line-height:1.8;
+  }
+
+  /* ===== ROOMS ===== */
+  .rooms-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+  }
+  .room-card{
+    border:1px solid var(--black);
+    padding:48px 36px;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+  }
+  .room-card + .room-card{
+    border-left:none;
+  }
+  .room-card.featured{
+    background:var(--black);
+    color:var(--white);
+  }
+  .room-tag{
+    font-size:11px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--grey-4);
+    margin-bottom:26px;
+  }
+  .room-card.featured .room-tag{color:var(--grey-3);}
+  .room-card h3{
+    font-size:26px;
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:0.01em;
+    margin-bottom:6px;
+  }
+  .room-price{
+    margin:28px 0 30px;
+    padding-top:24px;
+    border-top:1px solid var(--grey-3);
+  }
+  .room-card.featured .room-price{border-top-color:var(--grey-5);}
+  .room-price .amount{
+    font-size:38px;
+    font-weight:700;
+  }
+  .room-price .per{
+    font-size:13px;
+    color:var(--grey-4);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+  }
+  .room-card.featured .room-price .per{color:var(--grey-3);}
+  .room-features{
+    flex-grow:1;
+    margin-bottom:36px;
+  }
+  .room-features li{
+    font-size:14px;
+    padding:10px 0;
+    border-top:1px solid var(--grey-2);
+    color:var(--grey-5);
+  }
+  .room-card.featured .room-features li{
+    border-top:1px solid var(--grey-5);
+    color:var(--grey-3);
+  }
+  .room-features li:first-child{border-top:none;}
+  .room-btn{
+    text-align:center;
+    padding:15px;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-weight:700;
+    border:1px solid var(--black);
+    transition:background .2s ease, color .2s ease;
+  }
+  .room-btn:hover{
+    background:var(--black);
+    color:var(--white);
+  }
+  .room-card.featured .room-btn{
+    border-color:var(--white);
+  }
+  .room-card.featured .room-btn:hover{
+    background:var(--white);
+    color:var(--black);
+  }
+
+  /* ===== FACILITIES ===== */
+  .facilities-list{
+    border-top:1px solid var(--black);
+  }
+  .facility-row{
+    display:grid;
+    grid-template-columns:80px 1fr 2fr;
+    gap:24px;
+    align-items:center;
+    padding:28px 0;
+    border-bottom:1px solid var(--grey-2);
+  }
+  .facility-row .fnum{
+    font-size:13px;
+    color:var(--grey-4);
+  }
+  .facility-row h4{
+    font-size:18px;
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:0.02em;
+  }
+  .facility-row p{
+    font-size:14px;
+    color:var(--grey-5);
+    line-height:1.7;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact{
+    background:var(--black);
+    color:var(--white);
+  }
+  .contact .kicker{color:var(--grey-4);}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:60px;
+  }
+  .contact-grid h2{
+    font-size:clamp(30px,4.5vw,50px);
+    text-transform:uppercase;
+    font-weight:700;
+    line-height:1.1;
+    margin-bottom:28px;
+  }
+  .contact-grid > div:first-child p{
+    color:var(--grey-3);
+    font-size:16px;
+    max-width:440px;
+    line-height:1.8;
+    margin-bottom:44px;
+  }
+  .contact-actions{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+  .contact-details{
+    border-left:1px solid var(--grey-5);
+    padding-left:48px;
+  }
+  .contact-detail{
+    padding:22px 0;
+    border-bottom:1px solid var(--grey-5);
+  }
+  .contact-detail:first-child{padding-top:0;}
+  .contact-detail .clbl{
+    font-size:11px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--grey-4);
+    margin-bottom:8px;
+  }
+  .contact-detail .cval{
+    font-size:18px;
+    font-weight:600;
+  }
+  .contact-detail a.cval:hover{
+    color:var(--grey-3);
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    padding:40px 32px;
+    border-top:1px solid var(--grey-2);
+  }
+  .footer-inner{
+    max-width:1180px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .footer-inner p{
+    font-size:12px;
+    letter-spacing:0.04em;
+    color:var(--grey-4);
+  }
+  .footer-inner .fbrand{
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--black);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:900px){
+    nav.links{display:none;}
+    .nav-toggle{display:flex;}
+    #nav-check:checked ~ .nav-inner nav.links{
+      display:flex;
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:var(--white);
+      border-bottom:1px solid var(--black);
+      flex-direction:column;
+      gap:0;
+      padding:8px 32px;
+    }
+    #nav-check:checked ~ .nav-inner nav.links a{
+      padding:16px 0;
+      border-bottom:1px solid var(--grey-2);
+      width:100%;
+    }
+    .hero{padding:120px 24px 90px;}
+    .hero-meta{grid-template-columns:repeat(2,1fr);row-gap:28px;}
+    .hero-meta div:nth-child(2n+1){padding-left:0;border-left:none;}
+    .hero-meta div:nth-child(3),.hero-meta div:nth-child(4){border-top:1px solid var(--grey-5);padding-top:28px;}
+    section{padding:80px 24px;}
+    .section-head{grid-template-columns:1fr;gap:24px;}
+    .philosophy-grid{grid-template-columns:1fr;}
+    .phil-item{border-right:none;border-bottom:1px solid var(--grey-2);padding-bottom:40px;margin-bottom:40px;}
+    .rooms-grid{grid-template-columns:1fr;}
+    .room-card + .room-card{border-left:1px solid var(--black);border-top:none;}
+    .facility-row{grid-template-columns:1fr;gap:8px;}
+    .contact-grid{grid-template-columns:1fr;gap:48px;}
+    .contact-details{border-left:none;padding-left:0;border-top:1px solid var(--grey-5);padding-top:32px;}
+    .footer-inner{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+
+<header class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-inner">
+    <a href="#top" class="brand">Ananta<span>Manor</span></a>
+    <nav class="links">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta" id="nav-book-link">Book a Visit</a>
+    <label for="nav-check" class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="border-bottom:none;padding-bottom:0;">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Student Co-Living</div>
+      <h1>Structured Living,<br>Focused Minds</h1>
+      <p class="lead">AnantaManor is a hostel built on order — clean rooms, clear routines, and the quiet a student actually needs to work.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/919530301131" class="btn btn-solid" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        <a href="#rooms" class="btn btn-outline">View Room Types</a>
+      </div>
+      <div class="hero-meta">
+        <div>
+          <div class="num">03</div>
+          <div class="lbl">Room Formats</div>
+        </div>
+        <div>
+          <div class="num">24/7</div>
+          <div class="lbl">Security &amp; Access</div>
+        </div>
+        <div>
+          <div class="num">100%</div>
+          <div class="lbl">Verified Residents</div>
+        </div>
+        <div>
+          <div class="num">05</div>
+          <div class="lbl">Minutes to Campus</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section id="philosophy">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Philosophy</span>
+          <h2>Built on Order, Not Ornament</h2>
+        </div>
+        <p class="desc">We designed AnantaManor around one idea — a student's environment shapes their output. No clutter, no noise, no distraction. Just a structure that supports the work.</p>
+      </div>
+      <div class="philosophy-grid">
+        <div class="phil-item">
+          <div class="phil-index">01</div>
+          <h3>Discipline</h3>
+          <p>Fixed quiet hours, consistent routines, and a house rhythm that removes decision fatigue from daily life.</p>
+        </div>
+        <div class="phil-item">
+          <div class="phil-index">02</div>
+          <h3>Clarity</h3>
+          <p>Every room, corridor, and common space is kept deliberately minimal — nothing competing for attention.</p>
+          </div>
+        <div class="phil-item">
+          <div class="phil-index">03</div>
+          <h3>Focus</h3>
+          <p>Dedicated study zones, reliable connectivity, and an environment engineered for long, uninterrupted work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS -->
+  <section id="rooms">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Accommodation</span>
+          <h2>Room Types</h2>
+        </div>
+        <p class="desc">Three formats, one standard. Every room shares the same fittings, the same discipline, and the same attention to detail — only the layout and price change.</p>
+      </div>
+
+      <div class="rooms-grid">
+        <div class="room-card">
+          <div class="room-tag">Format 01</div>
+          <h3>Single</h3>
+          <div class="room-price">
+            <span class="amount">&#8377;10,800</span>
+            <div class="per">per month</div>
+          </div>
+          <ul class="room-features">
+            <li>Private room, single occupancy</li>
+            <li>Study desk &amp; wardrobe</li>
+            <li>Attached washroom</li>
+            <li>High-speed Wi-Fi</li>
+          </ul>
+          <a href="https://wa.me/919530301131" class="room-btn" target="_blank" rel="noopener">Reserve Single</a>
+        </div>
+
+        <div class="room-card featured">
+          <div class="room-tag">Format 02 — Most Booked</div>
+          <h3>Double</h3>
+          <div class="room-price">
+            <span class="amount">&#8377;7,800</span>
+            <div class="per">per month</div>
+          </div>
+          <ul class="room-features">
+            <li>Shared room, two occupants</li>
+            <li>Individual desk &amp; wardrobe</li>
+            <li>Shared washroom</li>
+            <li>High-speed Wi-Fi</li>
+          </ul>
+          <a href="https://wa.me/919530301131" class="room-btn" target="_blank" rel="noopener">Reserve Double</a>
+        </div>
+
+        <div class="room-card">
+          <div class="room-tag">Format 03</div>
+          <h3>Triple</h3>
+          <div class="room-price">
+            <span class="amount">&#8377;5,600</span>
+            <div class="per">per month</div>
+          </div>
+          <ul class="room-features">
+            <li>Shared room, three occupants</li>
+            <li>Individual desk &amp; wardrobe</li>
+            <li>Shared washroom</li>
+            <li>High-speed Wi-Fi</li>
+          </ul>
+          <a href="https://wa.me/919530301131" class="room-btn" target="_blank" rel="noopener">Reserve Triple</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACILITIES -->
+  <section id="facilities">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Facilities</span>
+          <h2>What's Included</h2>
+        </div>
+        <p class="desc">A short list, by design. Everything a student needs, nothing they don't.</p>
+      </div>
+
+      <div class="facilities-list">
+        <div class="facility-row">
+          <div class="fnum">01</div>
+          <h4>Wi-Fi</h4>
+          <p>High-speed internet across rooms and common areas, sized for study and video calls.</p>
+        </div>
+        <div class="facility-row">
+          <div class="fnum">02</div>
+          <h4>Meals</h4>
+          <p>Fixed daily meal schedule — breakfast, lunch, and dinner, prepared on site.</p>
+        </div>
+        <div class="facility-row">
+          <div class="fnum">03</div>
+          <h4>Laundry</h4>
+          <p>Scheduled laundry service included with every room format.</p>
+        </div>
+        <div class="facility-row">
+          <div class="fnum">04</div>
+          <h4>Security</h4>
+          <p>24/7 on-site security with monitored entry and exit.</p>
+        </div>
+        <div class="facility-row">
+          <div class="fnum">05</div>
+          <h4>Study Zones</h4>
+          <p>Dedicated quiet rooms separate from sleeping quarters, open around the clock.</p>
+        </div>
+        <div class="facility-row">
+          <div class="fnum">06</div>
+          <h4>Housekeeping</h4>
+          <p>Daily housekeeping for common spaces, weekly for private rooms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div>
+          <span class="kicker">Contact</span>
+          <h2>Come See the Structure for Yourself</h2>
+          <p>Book a visit, ask about availability, or reserve a room directly over WhatsApp. We respond within the day.</p>
+          <div class="contact-actions">
+            <a href="https://wa.me/919530301131" class="btn btn-solid" target="_blank" rel="noopener">Message on WhatsApp</a>
+            <a href="tel:+919530301131" class="btn btn-outline">Call +91 95303 01131</a>
+          </div>
+        </div>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="clbl">Phone</div>
+            <a href="tel:+919530301131" class="cval">+91 95303 01131</a>
+          </div>
+          <div class="contact-detail">
+            <div class="clbl">WhatsApp</div>
+            <a href="https://wa.me/919530301131" class="cval" target="_blank" rel="noopener">wa.me/919530301131</a>
+          </div>
+          <div class="contact-detail">
+            <div class="clbl">Hostel</div>
+            <div class="cval">AnantaManor — Student Co-Living</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span class="fbrand">AnantaManor</span>
+    <p>Website by Saahvik &middot; Template: AnantaManor (&#9733;)</p>
+  </div>
+</footer>

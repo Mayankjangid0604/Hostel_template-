@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrightVasa Girls Hostel — Nurturing Academic Excellence</title>
+<meta name="description" content="BrightVasa Girls Hostel — a scholarly, safe home for students with dedicated study halls, a library corner, quiet zones and results-focused academic support.">
+<style>
+  :root{
+    --teal:#0d9488;
+    --teal-dark:#0f766e;
+    --teal-light:#ccfbf1;
+    --cream:#faf6ec;
+    --cream-2:#f2ead6;
+    --paper:#fffdf7;
+    --ink:#233029;
+    --ink-soft:#5b6660;
+    --line:#e2d9c2;
+    --gold:#b8860b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Georgia','Times New Roman',serif;
+    line-height:1.65;
+  }
+  h1,h2,h3,h4{font-family:Georgia,'Times New Roman',serif;font-weight:normal;color:#16261f}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .eyebrow{
+    font-family:Georgia,serif;
+    font-style:italic;
+    letter-spacing:.06em;
+    color:var(--teal-dark);
+    font-size:14px;
+    margin-bottom:12px;
+    display:inline-block;
+  }
+  .eyebrow::before{content:"§ ";color:var(--gold)}
+  .btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:var(--teal);
+    color:#fff;
+    border-radius:3px;
+    font-family:Georgia,serif;
+    font-size:15px;
+    letter-spacing:.02em;
+    border:1px solid var(--teal);
+    transition:.25s;
+    cursor:pointer;
+  }
+  .btn:hover{background:var(--teal-dark);border-color:var(--teal-dark)}
+  .btn-outline{
+    background:transparent;
+    color:var(--teal-dark);
+    border:1px solid var(--teal);
+  }
+  .btn-outline:hover{background:var(--teal);color:#fff}
+  .btn-sm{padding:9px 18px;font-size:13px}
+
+  /* NAV */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(250,246,236,.95);
+    border-bottom:2px solid var(--teal);
+    backdrop-filter:blur(6px);
+  }
+  .nav-in{
+    display:flex;align-items:center;justify-content:space-between;
+    height:78px;
+  }
+  .brand{
+    font-size:24px;
+    display:flex;align-items:baseline;gap:8px;
+  }
+  .brand .crest{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:34px;height:34px;border-radius:50%;
+    background:var(--teal);color:#fff;
+    font-size:15px;font-family:Georgia,serif;
+    flex:none;
+  }
+  .brand small{
+    display:block;font-family:Georgia,serif;font-style:italic;
+    font-size:11px;color:var(--ink-soft);letter-spacing:.03em;
+  }
+  nav.menu{display:flex;gap:30px;font-size:15px}
+  nav.menu a{position:relative;padding:4px 0;color:#3a4841}
+  nav.menu a:hover{color:var(--teal-dark)}
+  .nav-actions{display:flex;align-items:center;gap:14px}
+  .nav-toggle{display:none}
+  @media(max-width:880px){
+    nav.menu{display:none}
+  }
+
+  /* HERO */
+  .hero{
+    padding:80px 0 90px;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(13,148,136,.10), transparent 55%),
+      linear-gradient(180deg,var(--cream),var(--cream-2));
+    border-bottom:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"“ ”";
+    position:absolute;
+    font-size:340px;
+    font-family:Georgia,serif;
+    color:rgba(13,148,136,.06);
+    top:-120px;right:-40px;
+    line-height:1;
+  }
+  .hero-in{display:grid;grid-template-columns:1.15fr 1fr;gap:50px;align-items:center;position:relative;z-index:1}
+  @media(max-width:900px){.hero-in{grid-template-columns:1fr}}
+  .hero h1{
+    font-size:clamp(34px,5vw,54px);
+    line-height:1.18;
+    margin-bottom:20px;
+  }
+  .hero h1 span{color:var(--teal-dark);font-style:italic}
+  .hero p.lede{
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:52ch;
+    margin-bottom:30px;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+  .hero-stats{display:flex;gap:34px;flex-wrap:wrap}
+  .hero-stats div{border-left:3px solid var(--teal);padding-left:14px}
+  .hero-stats b{display:block;font-size:26px;color:var(--teal-dark)}
+  .hero-stats span{font-size:13px;color:var(--ink-soft);font-style:italic}
+
+  .hero-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:34px;
+    box-shadow:0 18px 40px -22px rgba(15,60,50,.35);
+    position:relative;
+  }
+  .hero-card::before{
+    content:"";position:absolute;inset:8px;
+    border:1px solid var(--teal-light);
+    border-radius:4px;pointer-events:none;
+  }
+  .hero-card h3{font-size:20px;margin-bottom:6px;color:var(--teal-dark)}
+  .hero-card p{font-size:14px;color:var(--ink-soft);margin-bottom:18px;font-style:italic}
+  .hero-card ul{list-style:none}
+  .hero-card li{
+    padding:10px 0;border-top:1px dashed var(--line);
+    font-size:14.5px;display:flex;gap:10px;align-items:flex-start;
+  }
+  .hero-card li:first-of-type{border-top:none}
+  .hero-card li::before{content:"✎";color:var(--gold)}
+
+  section{padding:88px 0}
+  .section-head{max-width:640px;margin:0 auto 50px;text-align:center}
+  .section-head h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:14px}
+  .section-head p{color:var(--ink-soft);font-size:16px}
+
+  /* ACADEMIC EXCELLENCE */
+  #academics{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .ac-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:28px;
+  }
+  @media(max-width:900px){.ac-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.ac-grid{grid-template-columns:1fr}}
+  .ac-card{
+    text-align:center;padding:30px 20px;
+    border:1px solid var(--line);border-radius:6px;
+    background:var(--cream);
+  }
+  .ac-card .num{
+    width:52px;height:52px;border-radius:50%;
+    background:var(--teal-light);color:var(--teal-dark);
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;margin:0 auto 16px;
+    border:1px solid var(--teal);
+  }
+  .ac-card h3{font-size:18px;margin-bottom:8px}
+  .ac-card p{font-size:14px;color:var(--ink-soft)}
+
+  /* ROOMS */
+  .rooms{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+  }
+  @media(max-width:900px){.rooms{grid-template-columns:1fr}}
+  .room{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    display:flex;flex-direction:column;
+    transition:.25s;
+  }
+  .room:hover{box-shadow:0 18px 40px -24px rgba(15,60,50,.4);transform:translateY(-3px)}
+  .room.featured{border-color:var(--teal);border-width:2px}
+  .room-top{
+    background:linear-gradient(135deg,var(--teal-dark),var(--teal));
+    color:#fff;padding:26px 26px 20px;position:relative;
+  }
+  .room-top .tag{
+    position:absolute;top:14px;right:14px;
+    background:var(--gold);color:#fff;font-size:11px;
+    padding:4px 10px;border-radius:20px;letter-spacing:.04em;
+  }
+  .room-top h3{color:#fff;font-size:22px;margin-bottom:6px}
+  .room-top .price{font-size:28px}
+  .room-top .price small{font-size:13px;font-weight:normal;opacity:.85}
+  .room-body{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column}
+  .room-body ul{list-style:none;margin-bottom:24px;flex:1}
+  .room-body li{
+    padding:9px 0;border-bottom:1px dashed var(--line);
+    font-size:14.5px;color:#3a4841;
+    display:flex;gap:8px;
+  }
+  .room-body li::before{content:"✓";color:var(--teal-dark)}
+  .room-body li:last-child{border-bottom:none}
+
+  /* STUDY FACILITIES */
+  #study{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .study-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  @media(max-width:900px){.study-grid{grid-template-columns:1fr}}
+  .study-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:6px;
+    padding:32px 28px;position:relative;
+  }
+  .study-card .icon{
+    font-size:30px;margin-bottom:16px;color:var(--teal-dark);
+  }
+  .study-card h3{font-size:20px;margin-bottom:10px}
+  .study-card p{font-size:14.5px;color:var(--ink-soft);margin-bottom:14px}
+  .study-card .hrs{
+    font-size:12.5px;font-style:italic;color:var(--gold);
+    border-top:1px dashed var(--line);padding-top:12px;
+  }
+
+  /* CAMPUS LIFE */
+  .life-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  @media(max-width:900px){.life-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.life-grid{grid-template-columns:1fr}}
+  .life-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:6px;
+    padding:26px 22px;text-align:center;
+  }
+  .life-card .em{font-size:26px;margin-bottom:12px}
+  .life-card h4{font-size:16px;margin-bottom:8px}
+  .life-card p{font-size:13.5px;color:var(--ink-soft)}
+
+  blockquote.quote{
+    max-width:760px;margin:60px auto 0;text-align:center;
+    font-style:italic;font-size:22px;line-height:1.6;color:#2c3b34;
+    padding:0 20px;
+  }
+  blockquote.quote::before{content:"“";color:var(--teal);font-size:40px;line-height:0;vertical-align:-14px}
+  blockquote.quote cite{
+    display:block;margin-top:18px;font-size:13px;font-style:normal;
+    letter-spacing:.06em;color:var(--ink-soft);text-transform:uppercase;
+  }
+
+  /* CONTACT */
+  #contact{background:var(--teal-dark);color:#eafaf7}
+  #contact .section-head h2{color:#fff}
+  #contact .section-head p{color:#cfe9e4}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+  .contact-info h3{color:#fff;font-size:20px;margin-bottom:18px}
+  .contact-info ul{list-style:none}
+  .contact-info li{
+    padding:12px 0;border-bottom:1px solid rgba(255,255,255,.15);
+    display:flex;gap:12px;font-size:15px;
+  }
+  .contact-info li span.lbl{color:#a9e3da;font-style:italic;min-width:90px;display:inline-block}
+  .contact-actions{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap}
+  .btn-white{background:#fff;color:var(--teal-dark);border-color:#fff}
+  .btn-white:hover{background:var(--teal-light)}
+  .btn-line{background:transparent;color:#fff;border:1px solid #fff}
+  .btn-line:hover{background:rgba(255,255,255,.12)}
+
+  form.enquiry{
+    background:#0c6d63;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:6px;
+    padding:30px;
+  }
+  form.enquiry h3{color:#fff;font-size:19px;margin-bottom:18px}
+  form.enquiry label{display:block;font-size:13px;color:#cfe9e4;margin-bottom:6px;font-style:italic}
+  form.enquiry input,form.enquiry select,form.enquiry textarea{
+    width:100%;padding:11px 13px;margin-bottom:16px;border-radius:4px;
+    border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);
+    color:#fff;font-family:Georgia,serif;font-size:14px;
+  }
+  form.enquiry input::placeholder,form.enquiry textarea::placeholder{color:#bfe1da}
+  form.enquiry ::selection{background:var(--gold)}
+  form.enquiry button{width:100%}
+
+  footer{
+    background:#0a2c26;color:#b7cfc8;padding:34px 0;text-align:center;font-size:13.5px;
+  }
+  footer .fmark{color:var(--gold)}
+  footer a{color:#dcecc7}
+
+  .divider{
+    text-align:center;color:var(--teal);font-size:20px;margin:0 0 46px;letter-spacing:.5em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-in">
+    <a href="#top" class="brand">
+      <span class="crest">BV</span>
+      <span>
+        BrightVasa
+        <small>Girls Hostel</small>
+      </span>
+    </a>
+    <nav class="menu">
+      <a href="#academics">Academics</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#study">Study Facilities</a>
+      <a href="#life">Campus Life</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-outline btn-sm" href="tel:+919530301131">Call</a>
+      <a class="btn btn-sm" href="https://wa.me/919530301131" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <span class="eyebrow">Admissions Open · Academic Year 2026</span>
+      <h1>Nurturing <span>Academic Excellence</span> in a Home Away From Home</h1>
+      <p class="lede">BrightVasa Girls Hostel is built around one idea: a calm, disciplined, scholarly environment
+        where every student can focus on her studies, her ambitions and her results — supported by dedicated
+        study spaces, a resident library corner and a community that values learning.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://wa.me/919530301131" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+        <a class="btn btn-outline" href="#rooms">View Room Types</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>92%</b><span>Residents improved exam scores</span></div>
+        <div><b>3</b><span>Dedicated study zones</span></div>
+        <div><b>24×7</b><span>Warden &amp; security supervision</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>The Scholar's Day</h3>
+      <p>A typical academic routine at BrightVasa</p>
+      <ul>
+        <li>6:00 AM — Wake &amp; morning revision hour</li>
+        <li>8:30 AM — Breakfast &amp; college / coaching departure</li>
+        <li>7:00 PM — Evening study hall opens</li>
+        <li>9:00 PM — Doubt-clearing &amp; peer study circles</li>
+        <li>10:30 PM — Lights dimmed in dormitories, quiet zones stay open</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="academics">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why BrightVasa</span>
+      <h2>An Environment Designed for Academic Excellence</h2>
+      <p>Every corner of BrightVasa is arranged to support serious, sustained study — not just accommodation.</p>
+    </div>
+    <div class="ac-grid">
+      <div class="ac-card">
+        <div class="num">I</div>
+        <h3>Silent Study Hours</h3>
+        <p>Fixed daily silent hours across the hostel so every resident gets uninterrupted, focused study time.</p>
+      </div>
+      <div class="ac-card">
+        <div class="num">II</div>
+        <h3>Mentor Check-ins</h3>
+        <p>Weekly progress check-ins with wardens to track academic goals, attendance and exam preparation.</p>
+      </div>
+      <div class="ac-card">
+        <div class="num">III</div>
+        <h3>Result-Focused Culture</h3>
+        <p>Merit boards, topper felicitations and peer study circles that keep academic ambition front and centre.</p>
+      </div>
+      <div class="ac-card">
+        <div class="num">IV</div>
+        <h3>Distraction-Free Rooms</h3>
+        <p>Well-lit study desks in every room, high-speed Wi-Fi and a curfew designed around exam schedules.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rooms">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Accommodation</span>
+      <h2>Room Types &amp; Fees</h2>
+      <p>Comfortable, well-appointed rooms — each one designed with a proper study corner.</p>
+    </div>
+    <div class="rooms">
+      <div class="room featured">
+        <div class="room-top">
+          <span class="tag">Most Preferred</span>
+          <h3>Single AC Room</h3>
+          <div class="price">₹11,000 <small>/ month</small></div>
+        </div>
+        <div class="room-body">
+          <ul>
+            <li>Private air-conditioned room</li>
+            <li>Personal study desk &amp; reading lamp</li>
+            <li>Attached washroom</li>
+            <li>High-speed Wi-Fi &amp; wardrobe</li>
+            <li>Priority library-corner access</li>
+          </ul>
+          <a class="btn" href="https://wa.me/919530301131" target="_blank" rel="noopener">Reserve This Room</a>
+        </div>
+      </div>
+      <div class="room">
+        <div class="room-top">
+          <h3>Double Sharing</h3>
+          <div class="price">₹7,800 <small>/ month</small></div>
+        </div>
+        <div class="room-body">
+          <ul>
+            <li>Shared room for two students</li>
+            <li>Individual study desks</li>
+            <li>Common washroom on floor</li>
+            <li>High-speed Wi-Fi</li>
+            <li>Access to study hall &amp; quiet zones</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/919530301131" target="_blank" rel="noopener">Reserve This Room</a>
+        </div>
+      </div>
+      <div class="room">
+        <div class="room-top">
+          <h3>Triple Sharing</h3>
+          <div class="price">₹5,800 <small>/ month</small></div>
+        </div>
+        <div class="room-body">
+          <ul>
+            <li>Budget-friendly room for three</li>
+            <li>Shared study table arrangement</li>
+            <li>Common washroom on floor</li>
+            <li>Wi-Fi &amp; power backup</li>
+            <li>Access to study hall &amp; quiet zones</li>
+          </ul>
+          <a class="btn btn-outline" href="https://wa.me/919530301131" target="_blank" rel="noopener">Reserve This Room</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="study">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">For the Serious Student</span>
+      <h2>Study Facilities</h2>
+      <p>Three dedicated spaces so every resident finds the environment that suits how she studies best.</p>
+    </div>
+    <div class="study-grid">
+      <div class="study-card">
+        <div class="icon">&#9998;</div>
+        <h3>Central Study Hall</h3>
+        <p>A large, well-lit common hall with individual desks, ideal for long revision sessions, group discussion
+          and pre-exam preparation.</p>
+        <div class="hrs">Open 6:00 AM – 11:00 PM daily</div>
+      </div>
+      <div class="study-card">
+        <div class="icon">&#128218;</div>
+        <h3>Library Corner</h3>
+        <p>A curated shelf of reference books, past papers, competitive-exam material and magazines, with a
+          reading nook for quiet browsing.</p>
+        <div class="hrs">Open all day, self-issue system</div>
+      </div>
+      <div class="study-card">
+        <div class="icon">&#128172;</div>
+        <h3>Quiet Zones</h3>
+        <p>Small, partitioned pods on every floor for focused, silent solo study — no phones, no conversation,
+          just concentration.</p>
+        <div class="hrs">Silent hours strictly enforced</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="life">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Beyond the Books</span>
+      <h2>Campus Life at BrightVasa</h2>
+      <p>A balanced routine — because academic excellence grows best alongside a healthy, supportive community.</p>
+    </div>
+    <div class="life-grid">
+      <div class="life-card">
+        <div class="em">&#127869;</div>
+        <h4>Nutritious Mess</h4>
+        <p>Home-style vegetarian meals planned around a student's energy and focus needs.</p>
+      </div>
+      <div class="life-card">
+        <div class="em">&#128737;</div>
+        <h4>24×7 Security</h4>
+        <p>CCTV-monitored premises, biometric entry and a resident lady warden at all times.</p>
+      </div>
+      <div class="life-card">
+        <div class="em">&#127942;</div>
+        <h4>Merit Recognition</h4>
+        <p>Monthly toppers' board and small scholarships for outstanding academic performance.</p>
+      </div>
+      <div class="life-card">
+        <div class="em">&#127793;</div>
+        <h4>Wellness Breaks</h4>
+        <p>Weekend yoga, indoor games and a quiet garden courtyard to recharge between study sessions.</p>
+      </div>
+    </div>
+    <blockquote class="quote">
+      BrightVasa gave me the discipline and the silence I needed. I improved two full grades in my first semester
+      here — the study hall genuinely changed how I prepare.
+      <cite>— Resident, Batch of 2025</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Get in Touch</span>
+      <h2>Book a Visit or Reserve a Seat</h2>
+      <p>Limited seats available for the current academic session. Speak to our admissions desk today.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <ul>
+          <li><span class="lbl">Phone</span> <a href="tel:+919530301131">+91 95303 01131</a></li>
+          <li><span class="lbl">WhatsApp</span> <a href="https://wa.me/919530301131" target="_blank" rel="noopener">Chat with us</a></li>
+          <li><span class="lbl">Hostel</span> BrightVasa Girls Hostel</li>
+          <li><span class="lbl">Office Hrs</span> 9:00 AM – 8:00 PM, all days</li>
+        </ul>
+        <div class="contact-actions">
+          <a class="btn btn-white" href="https://wa.me/919530301131" target="_blank" rel="noopener">Message on WhatsApp</a>
+          <a class="btn btn-line" href="tel:+919530301131">Call Now</a>
+        </div>
+      </div>
+      <form class="enquiry" onsubmit="return false;">
+        <h3>Send an Enquiry</h3>
+        <label for="name">Full Name</label>
+        <input id="name" type="text" placeholder="Your name">
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" placeholder="10-digit mobile number">
+        <label for="room">Preferred Room Type</label>
+        <select id="room">
+          <option>Single AC — ₹11,000/mo</option>
+          <option>Double Sharing — ₹7,800/mo</option>
+          <option>Triple Sharing — ₹5,800/mo</option>
+        </select>
+        <label for="msg">Message</label>
+        <textarea id="msg" rows="3" placeholder="Tell us a little about your requirement"></textarea>
+        <button class="btn btn-white" type="submit">Submit Enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 BrightVasa Girls Hostel. All rights reserved.</p>
+    <p style="margin-top:6px">Website by <a href="#">Saahvik</a> · Template: <span class="fmark">BrightVasa (&#9733;)</span></p>
+  </div>
+</footer>
+
+</body>
+</html>

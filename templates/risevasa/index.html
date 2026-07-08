@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RiseVasa Girls Hostel — A Safe Haven for Future Leaders</title>
+<meta name="description" content="RiseVasa Girls Hostel — a safe, modern, glass-styled home away from home for students, with 24/7 CCTV, female wardens, biometric entry and comfortable rooms.">
+<style>
+  :root{
+    --violet:#7c3aed;
+    --violet-dark:#5b21b6;
+    --pink:#ec4899;
+    --cyan:#22d3ee;
+    --ink:#1e1330;
+    --dim:#5b5470;
+    --glass-bg:rgba(255,255,255,.18);
+    --glass-bg-strong:rgba(255,255,255,.32);
+    --glass-brd:rgba(255,255,255,.45);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    line-height:1.65;
+    min-height:100vh;
+    overflow-x:hidden;
+    background:linear-gradient(-45deg,#7c3aed,#ec4899,#22d3ee,#5b21b6);
+    background-size:400% 400%;
+    animation:gradientShift 16s ease infinite;
+  }
+  @keyframes gradientShift{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  /* Floating decorative orbs */
+  .orb{position:fixed;border-radius:50%;filter:blur(70px);z-index:-1;opacity:.55;animation:floaty 18s ease-in-out infinite}
+  .orb1{width:380px;height:380px;background:#fff;top:-100px;left:-100px;animation-delay:0s}
+  .orb2{width:320px;height:320px;background:#22d3ee;top:40%;right:-120px;animation-delay:-6s}
+  .orb3{width:340px;height:340px;background:#ec4899;bottom:-140px;left:30%;animation-delay:-11s}
+  @keyframes floaty{
+    0%,100%{transform:translate(0,0) scale(1)}
+    50%{transform:translate(30px,-40px) scale(1.08)}
+  }
+
+  .glass{
+    background:var(--glass-bg);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid var(--glass-brd);
+    border-radius:22px;
+    box-shadow:0 8px 32px rgba(31,20,60,.18);
+  }
+
+  /* Navbar */
+  header{
+    position:sticky;top:0;z-index:100;
+    padding:16px 0;
+  }
+  .nav-in{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 26px;
+  }
+  .brand{
+    font-weight:800;font-size:22px;color:#fff;letter-spacing:-.02em;
+    display:flex;align-items:center;gap:8px;
+  }
+  .brand .dot{color:var(--cyan)}
+  .menu{display:flex;gap:30px;font-size:14.5px;font-weight:600;color:#fff}
+  .menu a{opacity:.9;transition:.2s}
+  .menu a:hover{opacity:1;text-shadow:0 0 12px rgba(255,255,255,.6)}
+  .nav-cta{
+    padding:10px 22px;border-radius:12px;font-weight:700;font-size:13.5px;
+    background:#fff;color:var(--violet-dark);
+  }
+  .nav-cta:hover{background:var(--cyan);color:#12213a}
+  .hamburger{display:none}
+  @media(max-width:840px){
+    .menu{display:none}
+  }
+
+  /* Hero */
+  .hero{
+    padding:90px 0 110px;
+    text-align:center;
+    color:#fff;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    padding:9px 20px;border-radius:999px;margin-bottom:28px;
+  }
+  .hero h1{
+    font-size:clamp(36px,6vw,64px);
+    font-weight:800;letter-spacing:-.02em;line-height:1.08;
+    margin-bottom:20px;
+    text-shadow:0 6px 30px rgba(0,0,0,.15);
+  }
+  .hero h1 span{
+    background:linear-gradient(120deg,#fff,var(--cyan));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.tag{
+    font-size:19px;font-weight:600;opacity:.95;margin-bottom:14px;
+  }
+  .hero p.sub{
+    max-width:56ch;margin:0 auto 40px;font-size:16px;opacity:.88;
+  }
+  .hero-actions{
+    display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:60px;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 30px;border-radius:14px;font-weight:700;font-size:15px;
+    cursor:pointer;transition:.25s;border:1px solid transparent;
+  }
+  .btn-solid{background:#fff;color:var(--violet-dark)}
+  .btn-solid:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,.25)}
+  .btn-glass{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    border-color:rgba(255,255,255,.5);
+    color:#fff;
+  }
+  .btn-glass:hover{background:rgba(255,255,255,.28);transform:translateY(-3px)}
+
+  .stat-row{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  }
+  .stat-card{padding:24px 18px;color:#fff}
+  .stat-card b{display:block;font-size:30px;font-weight:800}
+  .stat-card span{font-size:12.5px;opacity:.85}
+  @media(max-width:760px){.stat-row{grid-template-columns:repeat(2,1fr)}}
+
+  /* Section shared */
+  section{padding:96px 0}
+  .head{text-align:center;max-width:640px;margin:0 auto 54px;color:#fff}
+  .head .eyebrow{
+    font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--cyan);margin-bottom:12px;
+  }
+  .head h2{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
+  .head p{opacity:.9;font-size:15.5px}
+
+  /* Why choose us */
+  .why-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  }
+  .why-card{
+    padding:32px 26px;color:#fff;transition:.3s;
+  }
+  .why-card:hover{transform:translateY(-8px);background:var(--glass-bg-strong)}
+  .why-card .ic{
+    width:54px;height:54px;border-radius:16px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:26px;margin-bottom:18px;
+    background:rgba(255,255,255,.25);
+  }
+  .why-card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+  .why-card p{font-size:14px;opacity:.88}
+  @media(max-width:960px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.why-grid{grid-template-columns:1fr}}
+
+  /* Rooms */
+  .rooms-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  }
+  .room-card{
+    padding:0;overflow:hidden;color:#fff;display:flex;flex-direction:column;transition:.3s;
+  }
+  .room-card:hover{transform:translateY(-8px)}
+  .room-top{
+    padding:34px 28px 22px;
+    background:linear-gradient(135deg,rgba(255,255,255,.28),rgba(255,255,255,.05));
+    border-bottom:1px solid var(--glass-brd);
+  }
+  .room-top .rlabel{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.85;margin-bottom:10px}
+  .room-top h3{font-size:24px;font-weight:800;margin-bottom:14px}
+  .room-top .price{font-size:34px;font-weight:800}
+  .room-top .price small{font-size:14px;font-weight:600;opacity:.8}
+  .room-body{padding:26px 28px 30px;flex:1;display:flex;flex-direction:column}
+  .room-body ul{margin-bottom:24px;flex:1}
+  .room-body li{padding:8px 0;font-size:14px;display:flex;gap:10px;border-bottom:1px solid rgba(255,255,255,.18)}
+  .room-body li::before{content:"✓";color:var(--cyan);font-weight:800}
+  .room-card.feat{border:2px solid var(--cyan)}
+  .room-card .flag{
+    align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+    padding:5px 14px;border-radius:999px;background:var(--cyan);color:#0e2434;margin-bottom:10px;
+  }
+  @media(max-width:960px){.rooms-grid{grid-template-columns:1fr}}
+
+  /* Safety */
+  .safety-wrap{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;
+  }
+  .safety-list{display:flex;flex-direction:column;gap:16px}
+  .safety-item{
+    padding:22px 24px;color:#fff;display:flex;gap:18px;align-items:flex-start;
+  }
+  .safety-item .ic{
+    width:48px;height:48px;flex:none;border-radius:14px;
+    background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:22px;
+  }
+  .safety-item h3{font-size:16.5px;font-weight:700;margin-bottom:4px}
+  .safety-item p{font-size:13.5px;opacity:.88}
+  .safety-panel{
+    padding:40px 34px;color:#fff;text-align:center;
+  }
+  .safety-panel .big-ic{font-size:56px;margin-bottom:18px}
+  .safety-panel h3{font-size:24px;font-weight:800;margin-bottom:12px}
+  .safety-panel p{opacity:.9;font-size:15px;margin-bottom:22px}
+  .safety-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .safety-badges span{
+    font-size:12.5px;font-weight:700;padding:8px 16px;border-radius:999px;
+    background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.4);
+  }
+  @media(max-width:900px){.safety-wrap{grid-template-columns:1fr}}
+
+  /* Contact */
+  .contact-panel{
+    padding:56px 44px;color:#fff;
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+  }
+  .contact-panel h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;margin-bottom:16px;letter-spacing:-.02em}
+  .contact-panel p{opacity:.9;margin-bottom:26px;font-size:15px}
+  .contact-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .contact-info{display:flex;flex-direction:column;gap:18px}
+  .info-row{
+    display:flex;align-items:center;gap:14px;padding:16px 18px;
+    background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:16px;
+  }
+  .info-row .ic{font-size:22px}
+  .info-row b{display:block;font-size:14px}
+  .info-row span{font-size:12.5px;opacity:.85}
+  @media(max-width:820px){.contact-panel{grid-template-columns:1fr}}
+
+  footer{
+    padding:34px 0;text-align:center;color:#fff;font-size:13px;opacity:.9;
+  }
+  footer .star{color:var(--cyan)}
+
+  .reveal-note{display:none}
+  @media (prefers-reduced-motion:reduce){
+    body{animation:none}
+    .orb{animation:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<header>
+  <div class="wrap">
+    <div class="nav-in glass">
+      <div class="brand">RiseVasa <span class="dot">•</span> Girls Hostel</div>
+      <nav class="menu">
+        <a href="#why">Why Us</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#safety">Safety</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="https://wa.me/919530301131">Book a Visit</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="badge glass">🌸 Exclusively for Women · New Batch Enrolling</span>
+    <h1>Welcome to <span>RiseVasa</span><br>Girls Hostel</h1>
+    <p class="tag">A Safe Haven for Future Leaders</p>
+    <p class="sub">Modern rooms, home-style meals and round-the-clock security — RiseVasa gives every student the freedom to focus on what matters, in a space that always feels like home.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="https://wa.me/919530301131">💬 Chat on WhatsApp</a>
+      <a class="btn btn-glass" href="tel:+919530301131">📞 Call +91 95303 01131</a>
+    </div>
+    <div class="stat-row">
+      <div class="stat-card glass"><b>24/7</b><span>CCTV Monitoring</span></div>
+      <div class="stat-card glass"><b>100%</b><span>Female Staff</span></div>
+      <div class="stat-card glass"><b>3</b><span>Room Options</span></div>
+      <div class="stat-card glass"><b>500+</b><span>Happy Residents</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Why RiseVasa</div>
+      <h2>Built Around Your Comfort &amp; Safety</h2>
+      <p>Everything a student needs to live well, stay safe and stay focused — all in one place.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card glass">
+        <div class="ic">🛡️</div>
+        <h3>24/7 Security</h3>
+        <p>CCTV-covered common areas, corridors and entry points monitored round the clock.</p>
+      </div>
+      <div class="why-card glass">
+        <div class="ic">🍲</div>
+        <h3>Home-Style Meals</h3>
+        <p>Nutritious, hygienic vegetarian &amp; non-vegetarian meals prepared fresh every day.</p>
+      </div>
+      <div class="why-card glass">
+        <div class="ic">📶</div>
+        <h3>High-Speed WiFi</h3>
+        <p>Uninterrupted internet across every room and study lounge for classes and coursework.</p>
+      </div>
+      <div class="why-card glass">
+        <div class="ic">🚻</div>
+        <h3>Female-Only Space</h3>
+        <p>A fully women-managed environment with female wardens present at all times.</p>
+      </div>
+      <div class="why-card glass">
+        <div class="ic">🧺</div>
+        <h3>Laundry &amp; Housekeeping</h3>
+        <p>Daily housekeeping and scheduled laundry service included in every plan.</p>
+      </div>
+      <div class="why-card glass">
+        <div class="ic">🚑</div>
+        <h3>Medical Support</h3>
+        <p>On-call doctor and a first-aid station for quick assistance whenever needed.</p>
+      </div>
+      <div class="why-card glass">
+        <div class="ic">📍</div>
+        <h3>Prime Location</h3>
+        <p>Walking distance to major colleges, hospitals, markets and public transport.</p>
+      </div>
+      <div class="why-card glass">
+        <div class="ic">🔑</div>
+        <h3>Biometric Entry</h3>
+        <p>Keyless biometric access ensures only registered residents can enter the premises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rooms">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Accommodation</div>
+      <h2>Room Types &amp; Pricing</h2>
+      <p>Choose the sharing option that fits your comfort and budget — no hidden charges.</p>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-card glass">
+        <div class="room-top">
+          <div class="rlabel">Private Comfort</div>
+          <h3>Single AC Room</h3>
+          <div class="price">₹11,500<small>/mo</small></div>
+        </div>
+        <div class="room-body">
+          <ul>
+            <li>Private air-conditioned room</li>
+            <li>Attached washroom</li>
+            <li>Study table &amp; wardrobe</li>
+            <li>High-speed WiFi</li>
+            <li>3 meals a day included</li>
+          </ul>
+          <a class="btn btn-glass" href="https://wa.me/919530301131">Enquire Now</a>
+        </div>
+      </div>
+      <div class="room-card glass feat">
+        <div class="room-top">
+          <span class="flag">Most Popular</span>
+          <div class="rlabel">Shared Comfort</div>
+          <h3>Double Sharing</h3>
+          <div class="price">₹8,200<small>/mo</small></div>
+        </div>
+        <div class="room-body">
+          <ul>
+            <li>Shared room for 2 residents</li>
+            <li>Common washroom on floor</li>
+            <li>Individual study table</li>
+            <li>High-speed WiFi</li>
+            <li>3 meals a day included</li>
+          </ul>
+          <a class="btn btn-solid" href="https://wa.me/919530301131">Enquire Now</a>
+        </div>
+      </div>
+      <div class="room-card glass">
+        <div class="room-top">
+          <div class="rlabel">Budget Friendly</div>
+          <h3>Triple Sharing</h3>
+          <div class="price">₹6,200<small>/mo</small></div>
+        </div>
+        <div class="room-body">
+          <ul>
+            <li>Shared room for 3 residents</li>
+            <li>Common washroom on floor</li>
+            <li>Personal locker &amp; wardrobe</li>
+            <li>High-speed WiFi</li>
+            <li>3 meals a day included</li>
+          </ul>
+          <a class="btn btn-glass" href="https://wa.me/919530301131">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="safety">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Your Safety First</div>
+      <h2>Safety &amp; Security</h2>
+      <p>Parents trust RiseVasa because safety here isn't an afterthought — it's the foundation.</p>
+    </div>
+    <div class="safety-wrap">
+      <div class="safety-list">
+        <div class="safety-item glass">
+          <div class="ic">📹</div>
+          <div>
+            <h3>24/7 CCTV Surveillance</h3>
+            <p>Every entrance, corridor and common area is covered by round-the-clock CCTV monitoring with recorded footage.</p>
+          </div>
+        </div>
+        <div class="safety-item glass">
+          <div class="ic">👮‍♀️</div>
+          <div>
+            <h3>Dedicated Female Wardens</h3>
+            <p>Experienced female wardens stay on-site at all times to support residents and manage the premises.</p>
+          </div>
+        </div>
+        <div class="safety-item glass">
+          <div class="ic">🔐</div>
+          <div>
+            <h3>Biometric Entry System</h3>
+            <p>Only registered residents can access the hostel through secure biometric authentication at the gate.</p>
+          </div>
+        </div>
+        <div class="safety-item glass">
+          <div class="ic">⏰</div>
+          <div>
+            <h3>Monitored Curfew Hours</h3>
+            <p>A sensible, safety-focused entry/exit policy with logged movement for every resident.</p>
+          </div>
+        </div>
+      </div>
+      <div class="safety-panel glass">
+        <div class="big-ic">🛡️</div>
+        <h3>Zero-Compromise Security</h3>
+        <p>From biometric gates to a fully female staff, every layer of RiseVasa is designed to give your family complete peace of mind.</p>
+        <div class="safety-badges">
+          <span>CCTV Covered</span>
+          <span>Female Warden</span>
+          <span>Biometric Gate</span>
+          <span>Fire Safety</span>
+          <span>Visitor Log</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-panel glass">
+      <div>
+        <h2>Ready to Move In?</h2>
+        <p>Schedule a visit or speak to our team to know more about room availability, amenities and admission process.</p>
+        <div class="contact-actions">
+          <a class="btn btn-solid" href="https://wa.me/919530301131">💬 WhatsApp Us</a>
+          <a class="btn btn-glass" href="tel:+919530301131">📞 Call Now</a>
+        </div>
+      </div>
+      <div class="contact-info">
+        <div class="info-row">
+          <span class="ic">📞</span>
+          <div><b>+91 95303 01131</b><span>Call for room availability</span></div>
+        </div>
+        <div class="info-row">
+          <span class="ic">💬</span>
+          <div><b>WhatsApp Us</b><span>wa.me/919530301131</span></div>
+        </div>
+        <div class="info-row">
+          <span class="ic">🏠</span>
+          <div><b>Girls-Only Hostel</b><span>Safe, verified, and family-approved</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Website by Saahvik · Template: RiseVasa (<span class="star">★</span>)
+  </div>
+</footer>
+
+</body>
+</html>

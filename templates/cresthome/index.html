@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrestHome PG — Professional Student Living in the Heart of the City</title>
+<meta name="description" content="CrestHome PG offers professionally managed paying-guest accommodation for students — secure, well-run, and designed for focused living.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1a365d;
+  --navy-2:#254a7a;
+  --navy-3:#0f2540;
+  --gold:#b7862e;
+  --ink:#1e2530;
+  --dim:#5c6675;
+  --line:#dfe4ec;
+  --bg:#ffffff;
+  --soft:#f4f6f9;
+  --soft-2:#eef1f6;
+  --green:#1f7a4d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Merriweather',Georgia,serif;font-weight:900;color:var(--navy);line-height:1.25}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+ul{list-style:none}
+
+/* ---- Buttons ---- */
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:4px;font-weight:700;font-size:14.5px;letter-spacing:.01em;transition:.2s;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn-primary{background:var(--gold);color:#fff}
+.btn-primary:hover{background:#9c6f24;transform:translateY(-2px);box-shadow:0 12px 26px rgba(183,134,46,.3)}
+.btn-outline{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-navy{border-color:var(--navy);color:var(--navy)}
+.btn-navy:hover{background:var(--navy);color:#fff}
+.btn-whatsapp{background:#1f7a4d;color:#fff}
+.btn-whatsapp:hover{background:#175f3c;transform:translateY(-2px);box-shadow:0 12px 26px rgba(31,122,77,.3)}
+
+/* ---- Section basics ---- */
+section{padding:88px 0}
+.section-head{max-width:640px;margin:0 auto 52px;text-align:center}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.section-head h2{font-size:clamp(28px,3.6vw,38px);margin-bottom:14px}
+.section-head p{color:var(--dim);font-size:16.5px}
+
+/* ---- Nav ---- */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Merriweather',serif;font-weight:900;font-size:20px;color:var(--navy)}
+.brand-mark{width:38px;height:38px;border-radius:4px;background:linear-gradient(155deg,var(--navy),var(--navy-2));display:flex;align-items:center;justify-content:center;color:#fff;font-size:17px;font-weight:900;font-family:'Merriweather',serif}
+.brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.1em;color:var(--gold);text-transform:uppercase}
+.menu{display:flex;gap:32px;font-size:14.5px;font-weight:600;color:var(--navy)}
+.menu a{position:relative;padding:6px 0}
+.menu a:hover{color:var(--gold)}
+.nav-actions{display:flex;align-items:center;gap:14px}
+.nav-phone{font-weight:700;font-size:14px;color:var(--navy);display:flex;align-items:center;gap:7px}
+.nav-cta{padding:11px 22px;font-size:13.5px}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{width:24px;height:2px;background:var(--navy)}
+.mobile-menu{display:none;flex-direction:column;gap:2px;background:#fff;border-top:1px solid var(--line);padding:14px 0}
+.mobile-menu a{padding:12px 24px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--soft-2)}
+@media(max-width:900px){
+  .menu,.nav-phone{display:none}
+  .burger{display:flex}
+  .mobile-menu.open{display:flex}
+}
+
+/* ---- Hero ---- */
+.hero{background:linear-gradient(165deg,var(--navy-3),var(--navy) 55%,var(--navy-2));color:#fff;padding:100px 0 110px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:
+  linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:44px 44px;opacity:.5}
+.hero::after{content:"";position:absolute;right:-160px;top:-140px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(183,134,46,.25),transparent 65%)}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:8px 16px;border-radius:30px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#dbe6f5;margin-bottom:22px}
+.hero h1{color:#fff;font-size:clamp(34px,4.6vw,52px);margin-bottom:18px}
+.hero h1 span{color:#e3c07f}
+.hero p{color:#c7d3e5;font-size:17.5px;max-width:50ch;margin-bottom:32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hero-stats{display:flex;gap:40px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.15);padding-top:30px}
+.hero-stats b{display:block;font-family:'Merriweather',serif;font-size:28px;color:#fff}
+.hero-stats span{font-size:12.5px;color:#9fb2cf;letter-spacing:.03em}
+.hero-card{background:#fff;color:var(--ink);border-radius:8px;padding:30px;box-shadow:0 40px 80px rgba(0,0,0,.35)}
+.hero-card h3{font-size:16px;color:var(--navy);margin-bottom:4px}
+.hero-card .hc-sub{font-size:13px;color:var(--dim);margin-bottom:18px}
+.hc-row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.hc-row:last-of-type{border:0}
+.hc-row b{color:var(--navy)}
+.hc-tag{font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:4px;background:#eaf4ee;color:var(--green)}
+.hero-card .btn{width:100%;justify-content:center;margin-top:16px}
+@media(max-width:900px){.hero-in{grid-template-columns:1fr}.hero-card{order:-1}}
+
+/* ---- About ---- */
+.about{background:var(--bg)}
+.about-in{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
+.about-visual{background:linear-gradient(150deg,var(--soft),var(--soft-2));border:1px solid var(--line);border-radius:8px;padding:44px;position:relative}
+.about-visual .big-mark{font-size:70px;font-family:'Merriweather',serif;color:var(--navy);opacity:.14;position:absolute;top:20px;right:26px}
+.pillar-list{display:grid;gap:20px;position:relative;z-index:1}
+.pillar{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+.pillar .ic{width:42px;height:42px;flex:0 0 42px;border-radius:6px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:19px}
+.pillar h4{font-size:15px;margin-bottom:4px;color:var(--navy)}
+.pillar p{font-size:13.5px;color:var(--dim)}
+.about-text .eyebrow{margin-bottom:14px}
+.about-text h2{font-size:clamp(26px,3.4vw,34px);margin-bottom:18px}
+.about-text p{color:var(--dim);font-size:16px;margin-bottom:16px}
+.about-checks{display:grid;gap:12px;margin:26px 0}
+.about-checks li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink)}
+.about-checks li b{color:var(--green);flex:0 0 auto}
+@media(max-width:900px){.about-in{grid-template-columns:1fr}}
+
+/* ---- Rooms ---- */
+.rooms{background:var(--soft)}
+.room-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.room-card{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:.25s;position:relative}
+.room-card:hover{transform:translateY(-6px);box-shadow:0 26px 50px rgba(26,54,93,.14)}
+.room-card.featured{border:2px solid var(--gold)}
+.room-flag{position:absolute;top:0;right:0;background:var(--gold);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:7px 16px;border-radius:0 0 0 8px}
+.room-top{padding:34px 28px 24px;border-bottom:1px solid var(--line);background:linear-gradient(160deg,var(--navy-3),var(--navy))}
+.room-top .r-ic{font-size:30px;margin-bottom:14px}
+.room-top h3{color:#fff;font-size:19px;margin-bottom:6px}
+.room-top .r-sub{color:#a9bcda;font-size:13px}
+.room-price{padding:24px 28px 6px}
+.room-price b{font-family:'Merriweather',serif;font-size:34px;color:var(--navy)}
+.room-price span{font-size:14px;color:var(--dim)}
+.room-feats{padding:6px 28px 28px;flex:1;display:grid;gap:10px}
+.room-feats li{font-size:14px;color:var(--ink);display:flex;gap:9px;align-items:flex-start}
+.room-feats li b{color:var(--green)}
+.room-card .btn{margin:0 28px 28px}
+@media(max-width:960px){.room-grid{grid-template-columns:1fr}}
+
+/* ---- Facilities ---- */
+.fac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.fac-card{border:1px solid var(--line);border-radius:8px;padding:28px 22px;text-align:center;transition:.2s}
+.fac-card:hover{border-color:var(--navy);box-shadow:0 16px 34px rgba(26,54,93,.1);transform:translateY(-4px)}
+.fac-card .f-ic{width:56px;height:56px;margin:0 auto 16px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:24px}
+.fac-card h4{font-size:15px;color:var(--navy);margin-bottom:6px}
+.fac-card p{font-size:13px;color:var(--dim)}
+@media(max-width:900px){.fac-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.fac-grid{grid-template-columns:1fr}}
+
+/* ---- Testimonials ---- */
+.testi{background:var(--navy-3);color:#fff;position:relative;overflow:hidden}
+.testi::after{content:"";position:absolute;left:-140px;bottom:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(183,134,46,.18),transparent 65%)}
+.testi .section-head h2{color:#fff}
+.testi .section-head p{color:#aebbd2}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:1}
+.testi-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:28px}
+.testi-stars{color:#e3c07f;font-size:15px;margin-bottom:14px;letter-spacing:2px}
+.testi-card p{color:#d3ddec;font-size:14.5px;margin-bottom:20px}
+.testi-who{display:flex;gap:12px;align-items:center}
+.testi-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(155deg,var(--gold),#8a611f);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;font-family:'Merriweather',serif}
+.testi-who b{display:block;font-size:14px;color:#fff}
+.testi-who span{font-size:12px;color:#9fb2cf}
+@media(max-width:960px){.testi-grid{grid-template-columns:1fr}}
+
+/* ---- Contact ---- */
+.contact-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.contact-info h2{font-size:clamp(26px,3.4vw,34px);margin-bottom:16px}
+.contact-info p{color:var(--dim);font-size:16px;margin-bottom:28px}
+.info-list{display:grid;gap:18px;margin-bottom:30px}
+.info-item{display:flex;gap:16px;align-items:flex-start}
+.info-item .ic{width:44px;height:44px;flex:0 0 44px;border-radius:6px;background:var(--soft);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:19px}
+.info-item b{display:block;font-size:14.5px;color:var(--navy);margin-bottom:2px}
+.info-item span{font-size:14px;color:var(--dim)}
+.contact-actions{display:flex;gap:14px;flex-wrap:wrap}
+.contact-form{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:36px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;font-weight:600;color:var(--navy)}
+.field input,.field select,.field textarea{border:1px solid var(--line);border-radius:5px;padding:12px 14px;font-family:inherit;font-size:14.5px;background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--navy);outline-offset:1px}
+.contact-form .btn{width:100%;justify-content:center;margin-top:6px}
+.form-note{font-size:12.5px;color:var(--dim);margin-top:12px;text-align:center}
+@media(max-width:900px){.contact-in{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+
+/* ---- Footer ---- */
+footer{background:var(--navy-3);color:#c7d3e5;padding:60px 0 26px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-brand .brand{color:#fff}
+.foot-brand p{margin-top:14px;font-size:13.5px;color:#93a3c1;max-width:32ch}
+.foot-col h5{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#e3c07f;margin-bottom:16px}
+.foot-col a{display:block;font-size:14px;color:#c7d3e5;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:#87a9c0;color:#8fa0bf}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
+
+/* ---- WhatsApp float ---- */
+.wa-float{position:fixed;bottom:26px;right:26px;background:#1f7a4d;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 14px 30px rgba(31,122,77,.4);z-index:90;transition:.2s}
+.wa-float:hover{transform:scale(1.08)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="#top" class="brand">
+      <span class="brand-mark">C</span>
+      <span>CrestHome PG<small>Est. Trusted Student Residency</small></span>
+    </a>
+    <div class="menu">
+      <a href="#about">About</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="tel:+919530301131" class="nav-phone">📞 +91 95303 01131</a>
+      <a href="#contact" class="btn btn-navy nav-cta">Enquire Now</a>
+      <button class="burger" id="burgerBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#facilities">Facilities</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+919530301131">📞 +91 95303 01131</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <span class="hero-badge">🏛️ Professionally Managed PG Accommodation</span>
+      <h1>Professional Student Living in the <span>Heart of the City</span></h1>
+      <p>CrestHome PG delivers institutional-grade hostel accommodation for students and working professionals — disciplined operations, verified security, and facilities built around your daily routine.</p>
+      <div class="hero-actions">
+        <a href="#rooms" class="btn btn-primary">View Room Tariffs</a>
+        <a href="https://wa.me/919530301131" target="_blank" rel="noopener" class="btn btn-outline">💬 Chat on WhatsApp</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>500+</b><span>Residents Placed</span></div>
+        <div><b>9+ Yrs</b><span>In Operation</span></div>
+        <div><b>24×7</b><span>Security &amp; Support</span></div>
+        <div><b>4.8★</b><span>Resident Rating</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Book a Site Visit</h3>
+      <p class="hc-sub">Talk to our resident manager today</p>
+      <div class="hc-row"><span>Single AC Room</span><b>₹11,000/mo</b></div>
+      <div class="hc-row"><span>Double Sharing</span><b>₹8,000/mo</b></div>
+      <div class="hc-row"><span>Triple Sharing</span><b>₹6,000/mo <span class="hc-tag">Best Value</span></b></div>
+      <a href="https://wa.me/919530301131" target="_blank" rel="noopener" class="btn btn-whatsapp">💬 WhatsApp Us Now</a>
+    </div>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <div class="wrap about-in">
+    <div class="about-visual">
+      <span class="big-mark">C</span>
+      <div class="pillar-list">
+        <div class="pillar">
+          <div class="ic">🛡️</div>
+          <div><h4>Verified &amp; Secure</h4><p>Biometric entry, CCTV coverage, and background-verified staff across all floors.</p></div>
+        </div>
+        <div class="pillar">
+          <div class="ic">📋</div>
+          <div><h4>Structured Operations</h4><p>Documented house policies, transparent billing, and formal resident agreements.</p></div>
+        </div>
+        <div class="pillar">
+          <div class="ic">🤝</div>
+          <div><h4>Dedicated Management</h4><p>An on-site resident manager and support desk available every single day.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="eyebrow">About CrestHome PG</span>
+      <h2>A Residency Built on Discipline, Trust and Comfort</h2>
+      <p>CrestHome PG was founded to bring a corporate standard of reliability to student housing. We understand that a hostel is more than a room — it is the foundation for a student's academic and professional year.</p>
+      <p>Every process, from admission to daily housekeeping, is run with institutional discipline so that residents and parents alike can trust the environment their student lives in.</p>
+      <ul class="about-checks">
+        <li><b>✔</b> Formal resident onboarding with signed house agreement</li>
+        <li><b>✔</b> Transparent, itemised monthly billing — no hidden charges</li>
+        <li><b>✔</b> Dedicated grievance redressal within 24 hours</li>
+        <li><b>✔</b> Parent-verified visitor and safety protocol</li>
+      </ul>
+      <a href="#contact" class="btn btn-navy">Schedule a Visit</a>
+    </div>
+  </div>
+</section>
+
+<section class="rooms" id="rooms">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Accommodation &amp; Tariff</span>
+      <h2>Room Types Designed for Every Budget</h2>
+      <p>Transparent, fixed monthly tariffs with no hidden costs — choose the arrangement that suits your routine.</p>
+    </div>
+    <div class="room-grid">
+
+      <div class="room-card featured">
+        <span class="room-flag">Most Private</span>
+        <div class="room-top">
+          <div class="r-ic">🛏️</div>
+          <h3>Single AC Room</h3>
+          <span class="r-sub">Fully private accommodation</span>
+        </div>
+        <div class="room-price"><b>₹11,000</b><span>/month</span></div>
+        <ul class="room-feats">
+          <li><b>✔</b> Private air-conditioned room</li>
+          <li><b>✔</b> Dedicated study desk &amp; wardrobe</li>
+          <li><b>✔</b> High-speed Wi-Fi included</li>
+          <li><b>✔</b> Daily housekeeping</li>
+          <li><b>✔</b> Priority hot-water slot</li>
+        </ul>
+        <a href="https://wa.me/919530301131" target="_blank" rel="noopener" class="btn btn-navy">Reserve This Room</a>
+      </div>
+
+      <div class="room-card">
+        <div class="room-top">
+          <div class="r-ic">🛌</div>
+          <h3>Double Sharing</h3>
+          <span class="r-sub">Shared with one roommate</span>
+        </div>
+        <div class="room-price"><b>₹8,000</b><span>/month</span></div>
+        <ul class="room-feats">
+          <li><b>✔</b> Non-AC, well-ventilated room</li>
+          <li><b>✔</b> Individual study desk &amp; storage</li>
+          <li><b>✔</b> High-speed Wi-Fi included</li>
+          <li><b>✔</b> Daily housekeeping</li>
+          <li><b>✔</b> Common washroom &amp; hot water</li>
+        </ul>
+        <a href="https://wa.me/919530301131" target="_blank" rel="noopener" class="btn btn-navy">Reserve This Room</a>
+      </div>
+
+      <div class="room-card">
+        <div class="room-top">
+          <div class="r-ic">🛎️</div>
+          <h3>Triple Sharing</h3>
+          <span class="r-sub">Economical shared accommodation</span>
+        </div>
+        <div class="room-price"><b>₹6,000</b><span>/month</span></div>
+        <ul class="room-feats">
+          <li><b>✔</b> Non-AC, spacious room</li>
+          <li><b>✔</b> Shared study zone &amp; storage</li>
+          <li><b>✔</b> High-speed Wi-Fi included</li>
+          <li><b>✔</b> Daily housekeeping</li>
+          <li><b>✔</b> Most budget-friendly option</li>
+        </ul>
+        <a href="https://wa.me/919530301131" target="_blank" rel="noopener" class="btn btn-navy">Reserve This Room</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="facilities" id="facilities">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Facilities</span>
+      <h2>Everything Included, Nothing Compromised</h2>
+      <p>A complete infrastructure designed around a disciplined, productive student lifestyle.</p>
+    </div>
+    <div class="fac-grid">
+      <div class="fac-card"><div class="f-ic">🍽️</div><h4>Nutritious Mess</h4><p>Balanced vegetarian &amp; non-veg meals, four times a day.</p></div>
+      <div class="fac-card"><div class="f-ic">📶</div><h4>High-Speed Wi-Fi</h4><p>Unlimited broadband across every room and common area.</p></div>
+      <div class="fac-card"><div class="f-ic">🧺</div><h4>Laundry Service</h4><p>Scheduled wash and fold service included in tariff.</p></div>
+      <div class="fac-card"><div class="f-ic">🛡️</div><h4>24×7 Security</h4><p>CCTV monitoring, biometric access, and on-site guards.</p></div>
+      <div class="fac-card"><div class="f-ic">📚</div><h4>Study Lounge</h4><p>Dedicated quiet zone with desks for focused study hours.</p></div>
+      <div class="fac-card"><div class="f-ic">🧹</div><h4>Housekeeping</h4><p>Daily room and common-area cleaning by trained staff.</p></div>
+      <div class="fac-card"><div class="f-ic">🚰</div><h4>RO Water &amp; Hot Water</h4><p>Purified drinking water and geysers on every floor.</p></div>
+      <div class="fac-card"><div class="f-ic">🅿️</div><h4>Parking Facility</h4><p>Secure two-wheeler parking within the premises.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="testi" id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Resident Testimonials</span>
+      <h2>What Our Residents Say</h2>
+      <p>Real feedback from students who call CrestHome PG their home away from home.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"CrestHome runs like a proper institution — timely mess, quick maintenance response, and genuine care from the management team."</p>
+        <div class="testi-who">
+          <div class="testi-avatar">RK</div>
+          <div><b>Rohit Kumar</b><span>Engineering Student</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"As a parent, the transparent billing and security protocols gave me complete confidence sending my daughter here."</p>
+        <div class="testi-who">
+          <div class="testi-avatar">SM</div>
+          <div><b>Sunita Mehta</b><span>Parent</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Clean rooms, reliable Wi-Fi, and a management that actually answers the phone. Best decision for my final year."</p>
+        <div class="testi-who">
+          <div class="testi-avatar">AP</div>
+          <div><b>Ananya Pillai</b><span>Postgraduate Student</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="contact-info">
+      <span class="eyebrow">Get in Touch</span>
+      <h2>Speak With Our Resident Management Team</h2>
+      <p>Reach out for a tariff sheet, room availability, or to schedule a guided site visit at CrestHome PG.</p>
+      <div class="info-list">
+        <div class="info-item"><div class="ic">📞</div><div><b>Call Us</b><span>+91 95303 01131</span></div></div>
+        <div class="info-item"><div class="ic">💬</div><div><b>WhatsApp</b><span>Instant response, 9 AM – 9 PM</span></div></div>
+        <div class="info-item"><div class="ic">📍</div><div><b>Location</b><span>City Centre, near main campus &amp; business district</span></div></div>
+        <div class="info-item"><div class="ic">🕒</div><div><b>Office Hours</b><span>Monday – Sunday, 9:00 AM – 8:00 PM</span></div></div>
+      </div>
+      <div class="contact-actions">
+        <a href="https://wa.me/919530301131" target="_blank" rel="noopener" class="btn btn-whatsapp">💬 WhatsApp Us</a>
+        <a href="tel:+919530301131" class="btn btn-navy">📞 Call Now</a>
+      </div>
+    </div>
+    <form class="contact-form" id="enquiryForm">
+      <div class="form-row">
+        <div class="field"><label for="fname">Full Name</label><input type="text" id="fname" name="fname" placeholder="Your name" required></div>
+        <div class="field"><label for="fphone">Phone Number</label><input type="tel" id="fphone" name="fphone" placeholder="Your phone number" required></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="froom">Room Type</label>
+          <select id="froom" name="froom">
+            <option>Single AC — ₹11,000/mo</option>
+            <option>Double Sharing — ₹8,000/mo</option>
+            <option>Triple Sharing — ₹6,000/mo</option>
+          </select>
+        </div>
+        <div class="field"><label for="fdate">Preferred Move-in Date</label><input type="date" id="fdate" name="fdate"></div>
+      </div>
+      <div class="field full">
+        <label for="fmsg">Message</label>
+        <textarea id="fmsg" name="fmsg" rows="4" placeholder="Tell us about your requirements"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+      <p class="form-note">We typically respond within 2 business hours.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand"><span class="brand-mark">C</span><span>CrestHome PG</span></a>
+        <p>Professionally managed student residency committed to safety, structure and comfort.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navigate</h5>
+        <a href="#about">About Us</a>
+        <a href="#rooms">Room Types</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#testimonials">Testimonials</a>
+      </div>
+      <div class="foot-col">
+        <h5>Accommodation</h5>
+        <a href="#rooms">Single AC — ₹11,000/mo</a>
+        <a href="#rooms">Double Sharing — ₹8,000/mo</a>
+        <a href="#rooms">Triple Sharing — ₹6,000/mo</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="tel:+919530301131">📞 +91 95303 01131</a>
+        <a href="https://wa.me/919530301131" target="_blank" rel="noopener">💬 WhatsApp Chat</a>
+        <a href="#contact">Schedule a Visit</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 CrestHome PG. All rights reserved.</span>
+      <span>Website by Saahvik · Template: CrestHome (★)</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919530301131" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+(function(){
+  var burger = document.getElementById('burgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', function(){
+    menu.classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(function(a){
+    a.addEventListener('click', function(){ menu.classList.remove('open'); });
+  });
+
+  var form = document.getElementById('enquiryForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('fname').value.trim();
+    var room = document.getElementById('froom').value;
+    var text = encodeURIComponent('Hello CrestHome PG, my name is ' + (name || 'a prospective resident') + '. I am interested in: ' + room + '. Please share more details.');
+    window.open('https://wa.me/919530301131?text=' + text, '_blank');
+  });
+})();
+</script>
+
+</body>
+</html>
