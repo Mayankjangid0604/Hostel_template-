@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrernaVasa Girls Hostel — A Home Away From Home for Your Daughter</title>
+<meta name="description" content="PrernaVasa Girls Hostel — a safe, clean and caring home for your daughter. CCTV secured, women-only staff, hygienic mess and warden support round the clock.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#0284c7;
+  --sky-dark:#026aa3;
+  --sky-light:#e0f2fe;
+  --bg:#ffffff;
+  --bg-soft:#f8fafc;
+  --ink:#0f172a;
+  --dim:#5b6b82;
+  --faint:#94a3b8;
+  --line:#e6ecf3;
+  --warm:#fb7185;
+  --warm-light:#fff1f2;
+  --gold:#f59e0b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,.display{font-family:'Poppins',sans-serif;font-weight:700;line-height:1.2;color:var(--ink)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+ul{list-style:none}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;
+  font-weight:700;color:var(--sky-dark);
+  background:var(--sky-light);
+  padding:7px 16px;border-radius:999px;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 28px;border-radius:12px;
+  font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;
+  cursor:pointer;transition:.25s;border:2px solid transparent;
+}
+.btn-primary{background:var(--sky);color:#fff;box-shadow:0 10px 24px -8px rgba(2,132,199,.5)}
+.btn-primary:hover{background:var(--sky-dark);transform:translateY(-2px);box-shadow:0 14px 28px -8px rgba(2,132,199,.6)}
+.btn-ghost{background:#fff;color:var(--sky-dark);border-color:var(--sky-light)}
+.btn-ghost:hover{border-color:var(--sky);background:var(--sky-light)}
+.btn-whatsapp{background:#25D366;color:#fff;box-shadow:0 10px 24px -8px rgba(37,211,102,.5)}
+.btn-whatsapp:hover{background:#1ebc59;transform:translateY(-2px)}
+
+/* Nav */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-weight:800;font-size:21px;color:var(--ink)}
+.brand .dot{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(135deg,var(--sky),#38bdf8);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:18px;box-shadow:0 6px 14px -4px rgba(2,132,199,.55);
+}
+.brand span{color:var(--sky-dark)}
+.menu{display:flex;gap:32px;align-items:center;font-size:14.5px;font-weight:600;color:var(--dim)}
+.menu a:hover{color:var(--sky-dark)}
+.nav-cta{display:flex;gap:12px;align-items:center}
+.nav-cta .btn{padding:11px 20px;font-size:14px}
+.burger{display:none;background:none;border:none;font-size:26px;color:var(--sky-dark);cursor:pointer}
+@media(max-width:900px){
+  .menu{display:none}
+  .nav-cta .btn-ghost{display:none}
+  .burger{display:block}
+}
+
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;
+  padding:88px 0 100px;
+  background:linear-gradient(180deg,#f0f9ff 0%,#ffffff 70%);
+}
+.hero::before{
+  content:"";position:absolute;top:-160px;right:-140px;width:520px;height:520px;
+  border-radius:50%;background:radial-gradient(circle,rgba(2,132,199,.14),transparent 65%);
+}
+.hero::after{
+  content:"";position:absolute;bottom:-180px;left:-160px;width:460px;height:460px;
+  border-radius:50%;background:radial-gradient(circle,rgba(251,113,133,.10),transparent 65%);
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(34px,4.6vw,54px);margin:20px 0 20px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--sky)}
+.hero p.lead{font-size:18px;color:var(--dim);max-width:52ch;margin-bottom:32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.hero-trust{display:flex;gap:28px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--dim)}
+.trust-item .ic{width:34px;height:34px;border-radius:50%;background:var(--sky-light);color:var(--sky-dark);display:flex;align-items:center;justify-content:center;font-size:16px;flex:none}
+.hero-card{
+  background:#fff;border:1px solid var(--line);border-radius:24px;
+  padding:34px;box-shadow:0 30px 60px -24px rgba(15,23,42,.15);
+  position:relative;
+}
+.hero-card .badge{
+  position:absolute;top:-16px;right:24px;
+  background:var(--gold);color:#fff;font-weight:700;font-size:13px;
+  padding:8px 16px;border-radius:999px;box-shadow:0 8px 16px -4px rgba(245,158,11,.5);
+}
+.hero-card h3{font-size:19px;margin-bottom:6px}
+.hero-card p{color:var(--dim);font-size:14.5px;margin-bottom:22px}
+.hc-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hc-stat{background:var(--bg-soft);border-radius:14px;padding:16px}
+.hc-stat b{display:block;font-family:'Poppins',sans-serif;font-size:24px;color:var(--sky-dark)}
+.hc-stat span{font-size:12.5px;color:var(--dim);font-weight:600}
+@media(max-width:940px){.hero-grid{grid-template-columns:1fr}.hero-card{max-width:460px}}
+
+/* Sections generic */
+section{padding:96px 0}
+.section-soft{background:var(--bg-soft)}
+.head{max-width:640px;margin:0 auto 56px;text-align:center}
+.head h2{font-size:clamp(28px,3.6vw,40px);margin:16px 0 14px}
+.head p{color:var(--dim);font-size:16.5px}
+.head.left{margin:0 0 48px;text-align:left}
+
+/* About */
+.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
+.about-visual{
+  background:linear-gradient(150deg,var(--sky-light),#eff9ff);
+  border-radius:28px;padding:38px;border:1px solid var(--line);
+  display:grid;grid-template-columns:1fr 1fr;gap:18px;
+}
+.about-visual .tile{background:#fff;border-radius:18px;padding:20px;box-shadow:0 12px 24px -12px rgba(15,23,42,.12)}
+.about-visual .tile .ic{font-size:26px;margin-bottom:10px}
+.about-visual .tile b{display:block;font-family:'Poppins',sans-serif;font-size:15px;margin-bottom:4px}
+.about-visual .tile p{font-size:13px;color:var(--dim);margin:0}
+.about-copy h2{font-size:clamp(28px,3.6vw,38px);margin-bottom:18px}
+.about-copy p{color:var(--dim);font-size:16.5px;margin-bottom:16px}
+.about-copy .signoff{margin-top:24px;display:flex;align-items:center;gap:14px}
+.about-copy .signoff .av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--warm),var(--gold));flex:none}
+.about-copy .signoff b{display:block;font-family:'Poppins',sans-serif;font-size:15px}
+.about-copy .signoff span{font-size:13px;color:var(--dim)}
+@media(max-width:900px){.about{grid-template-columns:1fr}}
+
+/* Safety */
+.safety-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.safety-card{
+  background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 26px;
+  transition:.25s;
+}
+.safety-card:hover{transform:translateY(-6px);box-shadow:0 20px 36px -20px rgba(2,132,199,.35);border-color:var(--sky-light)}
+.safety-card .ic{
+  width:54px;height:54px;border-radius:14px;background:var(--sky-light);color:var(--sky-dark);
+  display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;
+}
+.safety-card h3{font-size:17px;margin-bottom:8px}
+.safety-card p{font-size:14.5px;color:var(--dim)}
+@media(max-width:940px){.safety-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.safety-grid{grid-template-columns:1fr}}
+
+/* Rooms */
+.room-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.room-card{
+  background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;
+  display:flex;flex-direction:column;transition:.25s;
+}
+.room-card:hover{box-shadow:0 24px 44px -24px rgba(15,23,42,.2);transform:translateY(-4px)}
+.room-card.feat{border-color:var(--sky);position:relative}
+.room-top{
+  padding:30px 28px 24px;background:linear-gradient(150deg,var(--sky-light),#f0f9ff);
+  position:relative;
+}
+.room-top .ribbon{
+  position:absolute;top:18px;right:18px;background:var(--sky);color:#fff;
+  font-size:11.5px;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:.02em;
+}
+.room-top h3{font-size:20px;margin-bottom:6px}
+.room-top .price{font-family:'Poppins',sans-serif;font-weight:800;font-size:30px;color:var(--sky-dark)}
+.room-top .price small{font-size:14px;font-weight:600;color:var(--dim)}
+.room-body{padding:26px 28px 30px;flex:1;display:flex;flex-direction:column}
+.room-body ul{margin-bottom:24px;flex:1}
+.room-body li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--dim);margin-bottom:12px}
+.room-body li b{color:var(--sky-dark);flex:none}
+@media(max-width:940px){.room-grid{grid-template-columns:1fr}}
+
+/* Facilities */
+.fac-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.fac-item{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:26px 16px;text-align:center;transition:.25s;
+}
+.fac-item:hover{background:var(--sky-light);border-color:var(--sky);transform:translateY(-4px)}
+.fac-item .ic{font-size:28px;margin-bottom:12px}
+.fac-item span{font-size:13.5px;font-weight:600;color:var(--ink)}
+@media(max-width:940px){.fac-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.fac-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Testimonials */
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.test-card{
+  background:var(--warm-light);border:1px solid #ffe4e6;border-radius:22px;padding:30px;
+}
+.test-card .stars{color:var(--gold);font-size:15px;margin-bottom:16px;letter-spacing:2px}
+.test-card p{font-size:15.5px;color:var(--ink);margin-bottom:20px;font-style:italic}
+.test-who{display:flex;align-items:center;gap:12px}
+.test-who .av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--warm));flex:none}
+.test-who b{display:block;font-family:'Poppins',sans-serif;font-size:14.5px}
+.test-who span{font-size:12.5px;color:var(--dim)}
+@media(max-width:940px){.test-grid{grid-template-columns:1fr}}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact-card{
+  background:#fff;border:1px solid var(--line);border-radius:24px;padding:36px;
+  box-shadow:0 24px 48px -28px rgba(15,23,42,.18);
+}
+.c-row{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px}
+.c-row .ic{width:46px;height:46px;border-radius:12px;background:var(--sky-light);color:var(--sky-dark);display:flex;align-items:center;justify-content:center;font-size:20px;flex:none}
+.c-row b{display:block;font-size:15px;margin-bottom:2px}
+.c-row span,.c-row a{font-size:14.5px;color:var(--dim)}
+.c-row a:hover{color:var(--sky-dark)}
+.contact-cta{
+  background:linear-gradient(150deg,var(--sky),#0369a1);border-radius:24px;
+  padding:40px;color:#fff;
+}
+.contact-cta h3{color:#fff;font-size:24px;margin-bottom:12px}
+.contact-cta p{color:#dceefc;margin-bottom:26px;font-size:15.5px}
+.contact-cta .btn-ghost{background:#fff;color:var(--sky-dark);border-color:#fff}
+.contact-cta .btn-whatsapp{width:100%;justify-content:center}
+.contact-cta .cta-actions{display:flex;flex-direction:column;gap:12px}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+/* Footer */
+footer{background:#0f172a;color:#cbd5e1;padding:56px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-brand{display:flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-weight:800;font-size:19px;color:#fff;margin-bottom:14px}
+.foot-brand .dot{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--sky),#38bdf8);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px}
+footer p{font-size:14px;color:#94a3b8;max-width:32ch}
+footer h4{color:#fff;font-size:14.5px;margin-bottom:16px;font-family:'Poppins',sans-serif}
+footer li{margin-bottom:10px;font-size:14px}
+footer a:hover{color:#38bdf8}
+.foot-bottom{border-top:1px solid #1e293b;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13.5px;color:#64748b}
+.foot-bottom b{color:#94a3b8}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
+
+.wa-float{
+  position:fixed;bottom:24px;right:24px;z-index:120;
+  width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:28px;
+  box-shadow:0 14px 28px -8px rgba(37,211,102,.6);transition:.25s;
+}
+.wa-float:hover{transform:scale(1.08)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><span class="dot">P</span>Prerna<span>Vasa</span></a>
+    <nav class="menu">
+      <a href="#about">About</a>
+      <a href="#safety">Safety</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#testimonials">Parents Say</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+919530301131" class="btn btn-ghost">Call Us</a>
+      <a href="https://wa.me/919530301131" class="btn btn-primary" target="_blank" rel="noopener">Book a Visit</a>
+    </div>
+    <button class="burger" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<section id="top" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">🌸 A Girls-Only Hostel Parents Trust</span>
+      <h1>PrernaVasa Girls Hostel — <em>A Home Away From Home</em> for Your Daughter</h1>
+      <p class="lead">Bright rooms, home-style meals, and round-the-clock care — built on safety, cleanliness and the kind of warmth every parent hopes to find when their daughter moves away from home.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/919530301131" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+        <a href="#rooms" class="btn btn-ghost">View Room &amp; Pricing</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="ic">🎥</span> 24×7 CCTV Monitored</div>
+        <div class="trust-item"><span class="ic">👩‍💼</span> All-Women Staff</div>
+        <div class="trust-item"><span class="ic">🔒</span> Biometric Entry</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <span class="badge">★ 4.8/5 by Parents</span>
+      <h3>Why Families Choose PrernaVasa</h3>
+      <p>Over the years we've welcomed hundreds of daughters and their families into a hostel that feels like an extension of home.</p>
+      <div class="hc-stats">
+        <div class="hc-stat"><b>500+</b><span>Happy Residents</span></div>
+        <div class="hc-stat"><b>24×7</b><span>Warden On-Call</span></div>
+        <div class="hc-stat"><b>100%</b><span>Verified Staff</span></div>
+        <div class="hc-stat"><b>9 Yrs</b><span>Serving Families</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="about-visual">
+      <div class="tile"><div class="ic">🏡</div><b>Homely Interiors</b><p>Sunlit rooms designed to feel warm, never institutional.</p></div>
+      <div class="tile"><div class="ic">🍲</div><b>Home-Style Meals</b><p>Nutritious, hygienic food cooked fresh, just like at home.</p></div>
+      <div class="tile"><div class="ic">🧺</div><b>Daily Housekeeping</b><p>Spotless rooms and common areas, cleaned every single day.</p></div>
+      <div class="tile"><div class="ic">🤝</div><b>Caring Wardens</b><p>Someone your daughter can always turn to, day or night.</p></div>
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">Our Promise</span>
+      <h2>We Understand What You're Trusting Us With</h2>
+      <p>Sending your daughter away for studies or work is one of the biggest decisions a family makes. At PrernaVasa, we don't just provide a bed and a roof — we build a genuine community of care, where every girl is looked after as if she were our own.</p>
+      <p>From the moment she walks in, our all-women staff, warm mess food, and secure premises are designed to give both her and you complete peace of mind.</p>
+      <div class="signoff">
+        <div class="av"></div>
+        <div>
+          <b>Mrs. Kavita Sharma</b>
+          <span>Hostel Warden &amp; Caretaker, PrernaVasa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="safety" class="section-soft">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Her Safety, Our Priority</span>
+      <h2>Built for Peace of Mind</h2>
+      <p>Every corner of PrernaVasa is designed with one question in mind — would we feel safe leaving our own daughter here? The answer is always yes.</p>
+    </div>
+    <div class="safety-grid">
+      <div class="safety-card">
+        <div class="ic">🎥</div>
+        <h3>24×7 CCTV Surveillance</h3>
+        <p>Entrances, corridors and common areas are monitored round the clock for complete visibility.</p>
+      </div>
+      <div class="safety-card">
+        <div class="ic">🔐</div>
+        <h3>Biometric &amp; Card Entry</h3>
+        <p>Only registered residents can enter — no outsider access, ever, without verification.</p>
+      </div>
+      <div class="safety-card">
+        <div class="ic">👩‍✈️</div>
+        <h3>All-Women Staff &amp; Security</h3>
+        <p>From wardens to housekeeping to guards at the gate — every staff member is female and background verified.</p>
+      </div>
+      <div class="safety-card">
+        <div class="ic">📞</div>
+        <h3>Parent Update Calls</h3>
+        <p>Regular check-in calls and instant alerts for late returns, so you're always in the loop.</p>
+      </div>
+      <div class="safety-card">
+        <div class="ic">🚨</div>
+        <h3>SOS &amp; Emergency Response</h3>
+        <p>In-room emergency buttons and a warden on-call 24×7 for immediate assistance.</p>
+      </div>
+      <div class="safety-card">
+        <div class="ic">🕘</div>
+        <h3>Safe Entry Curfew</h3>
+        <p>A sensible, well-communicated curfew that keeps every resident accounted for each evening.</p>
+      </div>
+      <div class="safety-card">
+        <div class="ic">🧯</div>
+        <h3>Fire &amp; Safety Compliant</h3>
+        <p>Fire extinguishers, clear exits and regular safety drills across the building.</p>
+      </div>
+      <div class="safety-card">
+        <div class="ic">🏥</div>
+        <h3>First-Aid &amp; Doctor on Call</h3>
+        <p>A stocked first-aid station and a trusted doctor on-call for any health need.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rooms">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Comfortable Stays</span>
+      <h2>Room Types &amp; Pricing</h2>
+      <p>Simple, transparent pricing — every room is clean, secure and comes with the same warm care, whichever you choose.</p>
+    </div>
+    <div class="room-grid">
+      <div class="room-card">
+        <div class="room-top">
+          <h3>Triple Sharing</h3>
+          <div class="price">₹6,000<small>/month</small></div>
+        </div>
+        <div class="room-body">
+          <ul>
+            <li><b>✓</b> 3 beds with individual study desks</li>
+            <li><b>✓</b> Personal wardrobe &amp; locker</li>
+            <li><b>✓</b> Ceiling fan, natural light</li>
+            <li><b>✓</b> Shared washroom, cleaned daily</li>
+            <li><b>✓</b> Home-style meals included</li>
+          </ul>
+          <a href="https://wa.me/919530301131" class="btn btn-ghost" target="_blank" rel="noopener">Enquire Now</a>
+        </div>
+      </div>
+      <div class="room-card feat">
+        <div class="room-top">
+          <span class="ribbon">Most Popular</span>
+          <h3>Double Sharing</h3>
+          <div class="price">₹8,000<small>/month</small></div>
+        </div>
+        <div class="room-body">
+          <ul>
+            <li><b>✓</b> 2 beds, more space &amp; privacy</li>
+            <li><b>✓</b> Personal wardrobe &amp; study table</li>
+            <li><b>✓</b> Attached balcony (select rooms)</li>
+            <li><b>✓</b> Shared washroom, cleaned daily</li>
+            <li><b>✓</b> Home-style meals included</li>
+            <li><b>✓</b> Wi-Fi &amp; power backup</li>
+          </ul>
+          <a href="https://wa.me/919530301131" class="btn btn-primary" target="_blank" rel="noopener">Enquire Now</a>
+        </div>
+      </div>
+      <div class="room-card">
+        <div class="room-top">
+          <h3>Single AC Room</h3>
+          <div class="price">₹11,200<small>/month</small></div>
+        </div>
+        <div class="room-body">
+          <ul>
+            <li><b>✓</b> Private room with air conditioning</li>
+            <li><b>✓</b> Attached washroom</li>
+            <li><b>✓</b> Study table, wardrobe &amp; locker</li>
+            <li><b>✓</b> Priority housekeeping</li>
+            <li><b>✓</b> Home-style meals included</li>
+            <li><b>✓</b> Wi-Fi &amp; power backup</li>
+          </ul>
+          <a href="https://wa.me/919530301131" class="btn btn-ghost" target="_blank" rel="noopener">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="facilities" class="section-soft">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Everyday Comforts</span>
+      <h2>Facilities That Feel Like Home</h2>
+      <p>Everything your daughter needs for a comfortable, healthy and productive stay.</p>
+    </div>
+    <div class="fac-grid">
+      <div class="fac-item"><div class="ic">📶</div><span>High-Speed Wi-Fi</span></div>
+      <div class="fac-item"><div class="ic">🍽️</div><span>Hygienic Mess</span></div>
+      <div class="fac-item"><div class="ic">🧺</div><span>Laundry Service</span></div>
+      <div class="fac-item"><div class="ic">📚</div><span>Study Room</span></div>
+      <div class="fac-item"><div class="ic">⚡</div><span>Power Backup</span></div>
+      <div class="fac-item"><div class="ic">🚰</div><span>RO Water</span></div>
+      <div class="fac-item"><div class="ic">🩺</div><span>First-Aid Station</span></div>
+      <div class="fac-item"><div class="ic">🛗</div><span>Lift Access</span></div>
+      <div class="fac-item"><div class="ic">📺</div><span>Common TV Lounge</span></div>
+      <div class="fac-item"><div class="ic">🧘‍♀️</div><span>Recreation Area</span></div>
+      <div class="fac-item"><div class="ic">🚗</div><span>Visitor Parking</span></div>
+      <div class="fac-item"><div class="ic">🛎️</div><span>Housekeeping Daily</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Words From Parents</span>
+      <h2>Trusted by Families Like Yours</h2>
+      <p>We know it isn't easy to let your daughter live away from home. Here's what parents have told us.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p>"When we visited PrernaVasa before enrolling our daughter, the CCTV coverage and women-only staff immediately put us at ease. Two years on, we still call it the best decision we made."</p>
+        <div class="test-who">
+          <div class="av"></div>
+          <div><b>Mr. Rajesh Verma</b><span>Father of resident, Jaipur</span></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p>"The warden calls us personally if our daughter is even a little late. That kind of attention is rare — it genuinely feels like she has a second family here."</p>
+        <div class="test-who">
+          <div class="av"></div>
+          <div><b>Mrs. Sunita Rathore</b><span>Mother of resident, Udaipur</span></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p>"Clean rooms, home-cooked food, and a warm environment. Our daughter settled in within a week and now calls PrernaVasa her second home."</p>
+        <div class="test-who">
+          <div class="av"></div>
+          <div><b>Mr. Ashok Gupta</b><span>Father of resident, Kota</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section-soft">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Get In Touch</span>
+      <h2 style="margin:16px 0 14px;font-size:clamp(26px,3.4vw,34px)">We'd Love to Show You Around</h2>
+      <p style="color:var(--dim);margin-bottom:32px">Schedule a visit with your daughter and see PrernaVasa for yourself — meet our wardens, tour the rooms and ask us anything.</p>
+      <div class="contact-card">
+        <div class="c-row">
+          <div class="ic">📍</div>
+          <div><b>Address</b><span>PrernaVasa Girls Hostel, Near City Center, Civil Lines, Jaipur, Rajasthan</span></div>
+        </div>
+        <div class="c-row">
+          <div class="ic">📞</div>
+          <div><b>Phone</b><br><a href="tel:+919530301131">+91 95303 01131</a></div>
+        </div>
+        <div class="c-row">
+          <div class="ic">💬</div>
+          <div><b>WhatsApp</b><br><a href="https://wa.me/919530301131" target="_blank" rel="noopener">Chat with us anytime</a></div>
+        </div>
+        <div class="c-row" style="margin-bottom:0">
+          <div class="ic">🕘</div>
+          <div><b>Visiting Hours</b><span>Mon – Sun, 9:00 AM – 7:00 PM</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-cta">
+      <span class="eyebrow" style="background:rgba(255,255,255,.18);color:#fff">Book a Free Visit</span>
+      <h3 style="margin-top:16px">Ready to Give Her a Safe, Caring Home?</h3>
+      <p>Reach out today and let us walk you through everything — safety measures, rooms, meals and more.</p>
+      <div class="cta-actions">
+        <a href="https://wa.me/919530301131" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Message Us on WhatsApp</a>
+        <a href="tel:+919530301131" class="btn btn-ghost" style="justify-content:center">📞 Call +91 95303 01131</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><span class="dot">P</span>PrernaVasa Girls Hostel</div>
+        <p>A safe, clean and caring home away from home — built on trust, and chosen by families across Rajasthan.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#safety">Safety</a></li>
+          <li><a href="#rooms">Rooms &amp; Pricing</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#testimonials">Parent Reviews</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="tel:+919530301131">Call Warden</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <ul>
+          <li><a href="tel:+919530301131">+91 95303 01131</a></li>
+          <li><a href="https://wa.me/919530301131" target="_blank" rel="noopener">WhatsApp Chat</a></li>
+          <li>Civil Lines, Jaipur</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 PrernaVasa Girls Hostel. All rights reserved.</span>
+      <span><b>Website by Saahvik</b> · Template: PrernaVasa (★)</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919530301131" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+</body>
+</html>

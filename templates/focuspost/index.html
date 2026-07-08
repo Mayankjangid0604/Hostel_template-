@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FocusPost Co-Living — Elevate Your Study Experience</title>
+<meta name="description" content="FocusPost Co-Living is a premium student hostel built for focus and community — sleek dark-mode rooms, high-speed WiFi, study lounges and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --card-2:#182234;
+    --text:#e2e8f0;
+    --muted:#94a3b8;
+    --accent:#06b6d4;
+    --accent-2:#22d3ee;
+    --border:rgba(148,163,184,.15);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Manrope',system-ui,-apple-system,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 28px;border-radius:10px;font-weight:700;font-size:14.5px;
+    cursor:pointer;border:1px solid transparent;font-family:inherit;
+    transition:.25s ease;
+  }
+  .btn-accent{
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#04222b;
+    box-shadow:0 0 0 rgba(6,182,212,0);
+  }
+  .btn-accent:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 34px rgba(6,182,212,.35), 0 0 30px rgba(34,211,238,.25);
+  }
+  .btn-ghost{
+    background:transparent;color:var(--text);border-color:var(--border);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent-2);box-shadow:0 0 20px rgba(6,182,212,.15)}
+
+  /* Nav */
+  nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-in{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 0;
+  }
+  .brand{
+    font-weight:800;font-size:20px;letter-spacing:-.02em;
+    display:flex;align-items:center;gap:10px;
+  }
+  .brand-dot{
+    width:12px;height:12px;border-radius:3px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    box-shadow:0 0 14px rgba(6,182,212,.7);
+  }
+  .menu{display:flex;gap:32px;font-size:14.5px;color:var(--muted);font-weight:600}
+  .menu a:hover{color:var(--accent-2)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-cta .btn{padding:11px 22px;font-size:13.5px}
+  .burger{display:none}
+  @media(max-width:860px){
+    .menu{display:none}
+  }
+
+  /* Hero */
+  .hero{
+    position:relative;
+    padding:130px 0 110px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-220px;left:50%;
+    transform:translateX(-50%);
+    width:900px;height:600px;
+    background:radial-gradient(closest-side, rgba(6,182,212,.28), transparent 70%);
+    filter:blur(10px);
+    pointer-events:none;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    bottom:-260px;left:20%;
+    width:600px;height:500px;
+    background:radial-gradient(closest-side, rgba(34,211,238,.12), transparent 70%);
+    pointer-events:none;
+  }
+  .hero-in{position:relative;z-index:1}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    font-weight:700;color:var(--accent-2);
+    padding:8px 18px;border-radius:999px;
+    background:rgba(6,182,212,.08);
+    border:1px solid rgba(6,182,212,.3);
+    margin-bottom:28px;
+  }
+  .hero h1{
+    font-size:clamp(38px,6vw,68px);
+    font-weight:800;letter-spacing:-.03em;line-height:1.06;
+    margin-bottom:22px;
+  }
+  .hero h1 span{
+    background:linear-gradient(120deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p{
+    color:var(--muted);font-size:18px;max-width:56ch;margin:0 auto 40px;
+  }
+  .hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:70px}
+  .hero-stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+    max-width:920px;margin:0 auto;
+  }
+  .stat{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:26px 18px;
+    text-align:left;
+    transition:.25s ease;
+  }
+  .stat:hover{
+    border-color:rgba(6,182,212,.4);
+    box-shadow:0 10px 30px rgba(6,182,212,.12);
+    transform:translateY(-3px);
+  }
+  .stat b{
+    display:block;font-size:30px;font-weight:800;
+    background:linear-gradient(120deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    margin-bottom:4px;
+  }
+  .stat span{font-size:12.5px;color:var(--muted)}
+  @media(max-width:760px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
+
+  /* Sections */
+  section{padding:100px 0}
+  .head{text-align:center;max-width:640px;margin:0 auto 56px}
+  .tag{
+    display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    font-weight:700;color:var(--accent-2);margin-bottom:14px;
+  }
+  .head h2{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
+  .head p{color:var(--muted);font-size:16px}
+
+  .section-alt{background:linear-gradient(180deg, transparent, rgba(30,41,59,.4), transparent)}
+
+  /* Features */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr}}
+  @media(max-width:600px){.grid-3{grid-template-columns:1fr}}
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:32px 26px;
+    transition:.3s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(6,182,212,.45);
+    box-shadow:0 16px 40px rgba(6,182,212,.15), 0 0 0 1px rgba(6,182,212,.08);
+  }
+  .icon-box{
+    width:52px;height:52px;border-radius:13px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(6,182,212,.12);
+    border:1px solid rgba(6,182,212,.3);
+    margin-bottom:20px;
+    font-size:24px;
+  }
+  .card h3{font-size:18px;font-weight:700;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:14.5px}
+
+  /* Room types */
+  .room-card{
+    background:linear-gradient(180deg, var(--card), var(--card-2));
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:34px 28px;
+    display:flex;flex-direction:column;
+    transition:.3s ease;
+    position:relative;
+  }
+  .room-card.featured{
+    border-color:rgba(6,182,212,.55);
+    box-shadow:0 0 0 1px rgba(6,182,212,.2), 0 20px 50px rgba(6,182,212,.15);
+  }
+  .room-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 46px rgba(6,182,212,.18);
+    border-color:rgba(6,182,212,.5);
+  }
+  .badge{
+    position:absolute;top:-13px;right:24px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#04222b;font-size:11.5px;font-weight:800;
+    letter-spacing:.05em;text-transform:uppercase;
+    padding:6px 14px;border-radius:999px;
+    box-shadow:0 0 18px rgba(6,182,212,.5);
+  }
+  .room-card h3{font-size:20px;font-weight:800;margin-bottom:6px}
+  .room-card .price{
+    font-size:36px;font-weight:800;margin:14px 0 4px;
+    background:linear-gradient(120deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .room-card .price sub{font-size:14px;color:var(--muted);font-weight:600}
+  .room-card ul{margin:20px 0 26px;flex-grow:1}
+  .room-card li{
+    display:flex;align-items:center;gap:10px;
+    font-size:14.5px;color:var(--muted);
+    padding:8px 0;border-bottom:1px dashed var(--border);
+  }
+  .room-card li:last-child{border-bottom:none}
+  .check{color:var(--accent-2);font-weight:800}
+
+  /* Amenities */
+  .amenities-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  }
+  @media(max-width:900px){.amenities-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:500px){.amenities-grid{grid-template-columns:1fr}}
+  .amenity{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:22px 18px;
+    text-align:center;
+    transition:.25s ease;
+  }
+  .amenity:hover{
+    border-color:rgba(6,182,212,.4);
+    box-shadow:0 10px 26px rgba(6,182,212,.13);
+    transform:translateY(-3px);
+  }
+  .amenity .em{font-size:26px;margin-bottom:10px}
+  .amenity span{font-size:13.5px;font-weight:600;color:var(--text)}
+
+  /* Contact */
+  .contact-wrap{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:40px;
+    align-items:stretch;
+  }
+  @media(max-width:860px){.contact-wrap{grid-template-columns:1fr}}
+  .contact-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:40px;
+  }
+  .contact-card h3{font-size:24px;font-weight:800;margin-bottom:12px}
+  .contact-card p{color:var(--muted);margin-bottom:28px}
+  .contact-row{
+    display:flex;align-items:center;gap:14px;
+    padding:16px 0;border-top:1px solid var(--border);
+  }
+  .contact-row:first-of-type{border-top:none}
+  .c-icon{
+    width:42px;height:42px;border-radius:11px;
+    background:rgba(6,182,212,.12);
+    border:1px solid rgba(6,182,212,.3);
+    display:flex;align-items:center;justify-content:center;font-size:18px;
+    flex-shrink:0;
+  }
+  .contact-row b{display:block;font-size:14px}
+  .contact-row span{font-size:13.5px;color:var(--muted)}
+  .contact-actions{display:flex;flex-direction:column;justify-content:center;gap:16px}
+  .contact-actions .btn{justify-content:center;width:100%}
+  .glow-panel{
+    background:linear-gradient(160deg, rgba(6,182,212,.1), rgba(30,41,59,.4));
+    border:1px solid rgba(6,182,212,.3);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 0 40px rgba(6,182,212,.1);
+  }
+  .glow-panel h4{font-size:15px;font-weight:700;margin-bottom:10px;color:var(--accent-2)}
+  .glow-panel p{font-size:13.5px;color:var(--muted);margin-bottom:0}
+
+  /* Footer */
+  footer{
+    border-top:1px solid var(--border);
+    padding:40px 0;
+    text-align:center;
+  }
+  footer p{color:var(--muted);font-size:13.5px}
+  footer .star{color:var(--accent-2)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <div class="brand"><span class="brand-dot"></span> FocusPost Co-Living</div>
+    <ul class="menu">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="tel:+919530301131">Call Us</a>
+      <a class="btn btn-accent" href="https://wa.me/919530301131" target="_blank" rel="noopener">Book a Visit</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <span class="eyebrow">Student Co-Living · Now Enrolling</span>
+    <h1>Elevate Your <span>Study Experience</span></h1>
+    <p>FocusPost Co-Living blends distraction-free rooms, blazing WiFi and a quiet, focused community — built for students who take their goals seriously.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="https://wa.me/919530301131" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn btn-ghost" href="#rooms">View Room Types</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>500+</b><span>Residents Housed</span></div>
+      <div class="stat"><b>24/7</b><span>Security &amp; Access</span></div>
+      <div class="stat"><b>100 Mbps</b><span>Fibre Internet</span></div>
+      <div class="stat"><b>4.8★</b><span>Resident Rating</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="features" class="section-alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Why FocusPost</span>
+      <h2>Designed for Deep Work</h2>
+      <p>Every corner of FocusPost is built to help you focus, recharge and grow — without the usual hostel chaos.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon-box">📶</div>
+        <h3>High-Speed WiFi</h3>
+        <p>Dedicated fibre lines with backup power keep you online for classes, calls and deadlines — always.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box">🔒</div>
+        <h3>24/7 Security</h3>
+        <p>Biometric entry, CCTV-monitored corridors and on-site wardens for round-the-clock peace of mind.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box">📚</div>
+        <h3>Silent Study Zones</h3>
+        <p>Dedicated quiet floors and reading lounges designed specifically for focused, uninterrupted study.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box">🍽️</div>
+        <h3>Chef-Curated Meals</h3>
+        <p>Balanced, hygienic meals three times a day, prepared fresh with a rotating weekly menu.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box">🧺</div>
+        <h3>Laundry &amp; Housekeeping</h3>
+        <p>Scheduled laundry pickup and daily housekeeping so you never lose time on chores.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box">🚴</div>
+        <h3>Prime Location</h3>
+        <p>Minutes from campus, metro stations, cafes and everything else you need within walking distance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rooms">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Room Types</span>
+      <h2>Pick Your Perfect Space</h2>
+      <p>Transparent pricing, no hidden charges — choose the room that fits your budget and lifestyle.</p>
+    </div>
+    <div class="grid-3">
+      <div class="room-card">
+        <h3>Single Room</h3>
+        <p style="color:var(--muted);font-size:14px">Your own private space, fully furnished.</p>
+        <div class="price">₹10,200<sub>/mo</sub></div>
+        <ul>
+          <li><span class="check">✓</span> Private room &amp; attached bath</li>
+          <li><span class="check">✓</span> Study desk &amp; wardrobe</li>
+          <li><span class="check">✓</span> High-speed WiFi</li>
+          <li><span class="check">✓</span> 3 meals a day</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/919530301131" target="_blank" rel="noopener">Enquire Now</a>
+      </div>
+      <div class="room-card featured">
+        <span class="badge">Most Popular</span>
+        <h3>Double Sharing</h3>
+        <p style="color:var(--muted);font-size:14px">Shared comfort with a roommate of your choice.</p>
+        <div class="price">₹7,500<sub>/mo</sub></div>
+        <ul>
+          <li><span class="check">✓</span> Twin-sharing room</li>
+          <li><span class="check">✓</span> Individual study desks</li>
+          <li><span class="check">✓</span> High-speed WiFi</li>
+          <li><span class="check">✓</span> 3 meals a day</li>
+          <li><span class="check">✓</span> Housekeeping included</li>
+        </ul>
+        <a class="btn btn-accent" href="https://wa.me/919530301131" target="_blank" rel="noopener">Enquire Now</a>
+      </div>
+      <div class="room-card">
+        <h3>Triple Sharing</h3>
+        <p style="color:var(--muted);font-size:14px">Budget-friendly living with a built-in friend group.</p>
+        <div class="price">₹5,700<sub>/mo</sub></div>
+        <ul>
+          <li><span class="check">✓</span> Triple-sharing room</li>
+          <li><span class="check">✓</span> Shared study zone</li>
+          <li><span class="check">✓</span> High-speed WiFi</li>
+          <li><span class="check">✓</span> 3 meals a day</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/919530301131" target="_blank" rel="noopener">Enquire Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="amenities" class="section-alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Amenities</span>
+      <h2>Everything You Need, On-Site</h2>
+      <p>From daily essentials to lifestyle comforts, FocusPost has it covered.</p>
+    </div>
+    <div class="amenities-grid">
+      <div class="amenity"><div class="em">🛏️</div><span>Furnished Rooms</span></div>
+      <div class="amenity"><div class="em">🧊</div><span>Water Purifier</span></div>
+      <div class="amenity"><div class="em">🧹</div><span>Housekeeping</span></div>
+      <div class="amenity"><div class="em">🎮</div><span>Recreation Room</span></div>
+      <div class="amenity"><div class="em">🧴</div><span>Hot Water 24/7</span></div>
+      <div class="amenity"><div class="em">🅿️</div><span>Parking</span></div>
+      <div class="amenity"><div class="em">🧯</div><span>Fire Safety</span></div>
+      <div class="amenity"><div class="em">📹</div><span>CCTV Surveillance</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Contact</span>
+      <h2>Come See FocusPost In Person</h2>
+      <p>Reach out and we'll help you find the room that fits — questions answered within minutes.</p>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-card">
+        <h3>Get In Touch</h3>
+        <p>Our team is available every day to answer questions, schedule visits and help you move in smoothly.</p>
+        <div class="contact-row">
+          <div class="c-icon">📞</div>
+          <div>
+            <b>Call Us</b>
+            <span><a href="tel:+919530301131">+91 95303 01131</a></span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="c-icon">💬</div>
+          <div>
+            <b>WhatsApp</b>
+            <span><a href="https://wa.me/919530301131" target="_blank" rel="noopener">Message us on WhatsApp</a></span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="c-icon">📍</div>
+          <div>
+            <b>Visit Us</b>
+            <span>Near Campus Gate, Student District</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-actions">
+        <div class="glow-panel">
+          <h4>Limited Seats Available</h4>
+          <p>Rooms for this term are filling fast. Reach out today to lock in your spot at FocusPost Co-Living.</p>
+        </div>
+        <a class="btn btn-accent" href="https://wa.me/919530301131" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+919530301131">Call +91 95303 01131</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Website by Saahvik &middot; Template: FocusPost (<span class="star">&#9733;</span>)</p>
+  </div>
+</footer>
+
+</body>
+</html>
